@@ -1,121 +1,125 @@
 from github import Github
 from collections import Counter
-import datetime
+import pandas as pd
+import numpy as np
+import json
 import re
 
 with open('github-token', 'r') as token_file:
     token = token_file.read().rstrip("\n")
 
 g = Github(token)
-contributors = {}
+pull_file_suffix = "pulls.csv"
+user_file_suffix = "users.csv"
+detailed_pull_file_suffix = "detailed_pulls.csv"
 
-def get_repos_for_org(org):
-    repos = []
-    for repo in g.get_organization("cloudfoundry").get_repos(type="public"):
-        repos.append(repo.name)
-    return repos
+def crawl(org = "kubernetes", repo = "kubernetes"):
+    crawl_pulls(org, repo)
+    pulls = get_pulls(org, repo)
 
-def get_issues_for_org(org):
-    return g.get_organization(org).get_issues(filter="all", state="closed")
+    crawl_pull_authors(pulls, org, repo)
+    users = get_pull_authors(org, repo)
 
-def calculate_issue_processing_time(org):
-    # note that PRs are included here as they are a special type of an issue
-    # WARNING: apparently only works if one is part of that specific org
-    
-    # timedelta is needed for time calculation because issue.closed_at
-    # returns datetime object with '%Y-%m-%dT%H:%M:%SZ format'
-    employee_processing_time = datetime.timedelta(0)
-    volunteer_processing_time = datetime.timedelta(0)
-    employee_issue_count = 0
-    volunteer_issue_count = 0
+    merge_pulls_with_users(pulls, users, org, repo)
+    get_companies(org, repo)
 
-    i = 0
-    issues = get_issues_for_org(org)
-    print("Start iterating over issues...")
-    for issue in issues:
-        print(issue.title)
-        i += 1
-        if i >= 10:
-            break
-        user = issue.user.login
-        if _is_employee(user, org):
-            employee_issue_count += 1
-            employee_processing_time = employee_processing_time + (issue.closed_at - issue.created_at)
-        else:
-            volunteer_issue_count += 1
-            volunteer_processing_time = volunteer_processing_time + (issue.closed_at - issue.created_at)
-          
-    print("# of volunteer issues: " + str(volunteer_issue_count))
-    print("# of employee issues: " + str(employee_issue_count))
-    volunteer_avg_time = volunteer_processing_time.total_seconds() / volunteer_issue_count
-    employee_avg_time = employee_processing_time.total_seconds() / employee_issue_count
-    return volunteer_avg_time, employee_avg_time
-
-def get_company_orgs_for_org(org):
-    # dummy implementation for testing only
-    return ["sap-cloudfoundry", "SAP", "pivotal-cf", "pivotal", "SUSE"]
-
-def get_company_mail_addresses_for_org(org):
-    # dummy implementation for testing only
-    return ["@sap.com"]
-
-def get_companies_for_org(org):
-    # dummy implementation for testing only
-    return ["SAP SE", "@SAP", "@Pivotal", "SAP", "@SUSE"]
-
-def calculate_pr_acceptance_rate(org, repo = None):
-    if repo is not None:
-        repo_objects = [g.get_repo(org + "/" + repo)]
-    else:
-        repo_objects = g.get_organization(org).get_repos(type="public")
-
-    volunteer_merged_pulls = 0
-    volunteer_closed_pulls = 0
-    employee_merged_pulls = 0   
-    employee_closed_pulls = 0
-
-    for repo_object in repo_objects:
-        pr_composition = _calculate_pr_composition_for_repo(repo_object, org)       
-        volunteer_merged_pulls += pr_composition[0] 
-        volunteer_closed_pulls += pr_composition[1]
-        employee_merged_pulls += pr_composition[2]    
-        employee_closed_pulls += pr_composition[3] 
-
-    volunteer_pulls_count = volunteer_closed_pulls + volunteer_merged_pulls
-    employee_pulls_count = employee_closed_pulls + employee_merged_pulls
-
-    if employee_pulls_count is 0 or volunteer_pulls_count is 0:
-        # TODO instead of returning 0,0 raise exception so that pr acceptance rate in overall org does not get influenced
-        return 0, 0
-
-    volunteer_acceptance_rate = volunteer_merged_pulls / volunteer_pulls_count
-    employee_acceptance_rate = employee_merged_pulls / employee_pulls_count
-
-    return volunteer_acceptance_rate, employee_acceptance_rate
-
-def _calculate_pr_composition_for_repo(repo_object, org):
-    volunteer_closed_pulls = []
-    volunteer_merged_pulls = []
-    employee_closed_pulls = []
-    employee_merged_pulls = []
-    
-    # only consider 'closed' PRs for our analysis
+def crawl_pulls(org, repo):
+    repo_object = g.get_repo(org + "/" + repo)
+    pulls = []
     for pull in repo_object.get_pulls(state="closed"):      
-        user = pull.user.login
-        print(pull.state)
-        print(user)
-        if _is_employee(user, org):
-            if pull.merged_at is not None:
-                employee_merged_pulls.append(pull)
-            else:
-                employee_closed_pulls.append(pull)
-        else:
-            if pull.merged_at is not None:
-                volunteer_merged_pulls.append(pull)
-            else:
-                volunteer_closed_pulls.append(pull)
-    return (len(volunteer_merged_pulls), len(volunteer_closed_pulls), len(employee_merged_pulls), len(employee_closed_pulls))
+        pull_dict = {
+            "number": pull.number,
+            "user_login": pull.user.login,
+            "created_at": pull.created_at,
+            "closed_at": pull.closed_at,
+            "merged_at": pull.merged_at,
+            "title": pull.title
+            }
+        pulls.append(pull_dict)
+    pulls_df = pd.DataFrame(pulls, columns=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
+    pulls_df.to_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t')
 
+def get_pulls(org, repo):
+    return pd.read_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
+
+def crawl_pull_authors(pulls, org, repo):
+    users = []
+    for user_login_name in _get_top_user_logins(pulls, 5):
+        print(user_login_name)
+        user = g.get_user(user_login_name)
+        user_orgs = []
+        for user_org in user.get_orgs():
+            user_orgs.append(user_org.login)
+        user_dict = {
+            "user_login": user_login_name, 
+            "user_company": user.company, 
+            "user_mail": _extract_mail_domain(user.email), 
+            "user_orgs": ','.join(user_orgs)
+            }
+        users.append(user_dict)
+
+    users_df = pd.DataFrame(users, columns=["user_login", "user_company", "user_mail", "user_orgs"])
+    users_df.to_csv(org + "_" + repo + "_" + user_file_suffix, sep='\t')
+
+def get_pull_authors(org, repo):
+    return pd.read_csv(org + "_" + repo + "_" + user_file_suffix, sep='\t', header=1, names=["user_login", "user_company", "user_mail", "user_orgs"])
+
+def merge_pulls_with_users(pulls, users, org, repo):
+    merge = pd.merge(pulls, users, on='user_login')
+    print(merge.iloc[1:100])
+    merge.to_csv(org + "_" + repo + "_" + detailed_pull_file_suffix, sep='\t')
+
+def get_companies(org, repo):
+    companies = {
+        "Google": {
+            "regex_identifier": "google",
+        },
+        "RedHat": {
+            "regex_identifier": "red\s?hat",
+        },
+        "Huawei": {
+            "regex_identifier": "huawei",
+        },
+        "ZTE": {
+            "regex_identifier": "zte",
+        },
+        "Microsoft": {
+            "regex_identifier": "microsoft",
+        },
+        "VMware": {
+            "regex_identifier": "vmware",
+        }
+    }
+
+    pull_authors = get_pull_authors(org, repo)
+    user_companies = pull_authors["user_company"].values
+    user_mails = pull_authors["user_mail"].values
+    cleaned_user_companies = set(x for x in user_companies if str(x) != 'nan')
+    cleaned_user_mails = set(x for x in user_mails if str(x) != 'nan')
+
+    for k, v in companies.items():
+        regex = re.compile(v["regex_identifier"], re.IGNORECASE)
+        companies[k]["companies"] = list(filter(regex.search, cleaned_user_companies))
+        companies[k]["mail_addresses"] = list(filter(regex.search, cleaned_user_mails))
+        companies[k]["merged_pulls"] = []
+        companies[k]["closed_pulls"] = []
+
+    with open('companies.json', 'w') as f:
+        json.dump(companies, f, sort_keys=True, indent=4)
+
+def compare_users_with_devstats_data(devstats_filename):
+    with open(devstats_filename, 'r') as f:
+        datastore = json.load(f)
+        df = pd.DataFrame(datastore)
+        devstats_users = df["login"].values
+
+        users = _get_user_logins(get_pull_authors("kubernetes", "kubernetes"))
+        users_count = users
+        intersection = {user for user in users if user in devstats_users}
+        print(intersection)
+        print("# of users: " + str(len(users)))
+        print("# of common users: " + str(len(intersection)))
+        print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
 
 def _extract_mail_domain(mail_address):
     if mail_address is None:
@@ -126,27 +130,20 @@ def _extract_mail_domain(mail_address):
     else:
         return mail_domain.group()
 
-        
-def _is_employee(contributor, org):
-    if contributor not in contributors:
-        _determine_is_employee(contributor, org)
-    return contributors[contributor]
+def _get_user_logins(pulls):
+    user_logins = pulls["user_login"].values
+    # user_logins = np.delete(user_logins, 0)
+    # user_logins = list(dict.fromkeys(user_logins))
+    user_logins = list(set(user_logins))
+    print(len(user_logins))
+    return user_logins
 
-
-def _determine_is_employee(user_login_name, org):
-    orgs = get_company_orgs_for_org(org)
-    companies = get_companies_for_org(org)
-    mail_addresses = get_company_mail_addresses_for_org(org)
-
-    user = g.get_user(user_login_name)
-    user_orgs = []
-    for user_org in user.get_orgs():
-        user_orgs.append(user_org.login)
-    user_company = user.company
-    user_mail = _extract_mail_domain(user.email)
-
-    # len(S1.intersection(S2)) > 0
-    if user_company in companies or user_mail in mail_addresses or any(x in user_orgs for x in orgs):
-        contributors[user_login_name] = True
-    else: 
-        contributors[user_login_name] = False
+def _get_top_user_logins(pulls, number_of_pulls):
+    user_logins = pulls["user_login"].values
+    counter = Counter(user_logins)
+    top_user_logins = []
+    for user in counter:
+        if counter[user] >= number_of_pulls:
+            top_user_logins.append(user)
+    print(len(top_user_logins))
+    return top_user_logins
