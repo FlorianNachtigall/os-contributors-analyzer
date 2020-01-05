@@ -1,0 +1,671 @@
+	number	user_login	created_at	closed_at	title	priority
+0	788	Zebradil	2019-12-16 20:27:49	2019-12-17 04:26:55	List of available binaries?	5
+1	781	emahnovets	2019-12-04 11:15:37	2019-12-17 09:30:29	"Got ""the server doesn't have a resource type ""pods"""" instead of ""Unauthorized"" or something like this when kubeconfig is not configured"	5
+2	775	oke-py	2019-11-27 09:26:13	2019-11-30 13:24:39	`kubectl create secret` does not understand ~ as HOME directory	5
+3	772	gireeshp	2019-11-25 05:01:58	2019-12-05 05:12:45	kubectl create secret not working, but same with yaml works	5
+4	770	legal90	2019-11-20 16:23:16	2019-11-20 16:23:25	uninstall	5
+5	765	steeling	2019-11-11 23:54:02	2019-12-09 06:41:50	Diff exit code is not helpful	5
+6	759	bakkiung	2019-11-07 04:28:11	2019-11-07 20:46:33	kubectl get svc not working in AWS cloud 9 	5
+7	758	guillaumedossantos	2019-11-05 09:29:09	2019-11-14 14:22:14	failing kubernetes auth with oidc and azure apps and authorization with a specified Security Group	5
+8	756	Martin8023	2019-11-04 05:34:01	2019-11-06 06:32:46	when i used kubectl get pods, i just could saw name and age	5
+9	752	Dominik-K	2019-11-01 10:20:54	2019-12-13 01:20:55	port-forward: named port not working with service	1
+10	751	khteh	2019-11-01 05:30:10	2019-11-27 13:18:14	`kubectl -w` does not show READY, STATUS and RESTARTS	5
+11	746	bronger	2019-10-28 09:00:08	2019-10-28 13:01:50	Using emacsclient as external editor does not work	5
+12	744	ahmetb	2019-10-24 01:27:31	2019-10-30 05:45:11	kubectl does not send Authorization header (or use specified auth plugin) over plain HTTP	5
+13	739	sfxworks	2019-10-14 06:02:38	2019-10-14 07:51:10	kubectl taking long to execute	5
+14	737	arashout	2019-10-10 17:03:44	2019-10-10 18:20:54	The connection to the server localhost:8080 was refused - did you specify the right host or port? 	5
+15	732	oke-py	2019-10-03 20:23:22	2019-10-04 13:06:04	Kubectl Book: typos	5
+16	731	oke-py	2019-10-03 20:17:39	2019-10-04 06:57:58	Kubectl Book: typo (grammatical error)	5
+17	730	oke-py	2019-10-03 20:13:20	2019-10-03 23:13:55	Kubectl Book: duplicated kubectl get	5
+18	729	oke-py	2019-10-03 08:59:40	2019-10-03 19:38:31	Kubectl Book: extra hyphen for --all-namespaces flag	5
+19	722	franitel	2019-09-16 11:10:13	2019-10-14 10:13:07	Issue with kubectl describe ingress in 1.15.3	5
+20	718	sallyom	2019-09-14 14:56:57	2019-12-13 18:41:56	kubectl apply should work with multiple files, `kubectl apply -f *.yaml`	5
+21	717	kivagant-ba	2019-09-13 11:39:25	2019-09-25 11:29:22	How to find all ReplicaSets that have not enough running replicas?	5
+22	716	ZP-AlwaysWin	2019-09-10 03:50:15	2019-09-11 01:01:06	replace 200 with http.StatusOK	5
+23	714	ezgambac	2019-09-07 02:01:54	2019-09-09 22:34:44	Fail if missing/wrong cluster role or role ref	5
+24	712	sh0rez	2019-09-02 17:31:01	2019-12-03 13:14:10	Object exceeds last-applied-configuration annotation	5
+25	710	wellingtoncosta	2019-08-30 18:53:08	2019-09-03 18:44:46	Error when run kubectl get services	5
+26	708	kfox1111	2019-08-23 22:57:04	2019-08-23 23:44:21	lock file	5
+27	703	sober-wang	2019-08-16 03:35:24	2019-09-30 00:51:00	I want kubectl  support ftp curl.	5
+28	699	eranreshef	2019-08-13 07:03:12	2019-08-29 16:29:57	"""--all-namespaces"" option is not working for ""kubectl wait"""	5
+29	698	DirectXMan12	2019-08-13 00:12:01	2019-12-04 21:43:33	Client-side apply has a pathological case with deeply nested identical objects	2
+30	696	aomega08	2019-08-08 08:22:38	2020-01-05 10:00:21	Kubectl can wipe a cluster with a single command	5
+31	694	anjiawei1991	2019-08-02 07:39:36	2019-12-30 09:37:57	proposal: add autocomplete for explain command	5
+32	692	benjamin-bergia	2019-08-01 12:59:14	2019-09-30 07:40:21	kubectl apply from git remote repo	5
+33	691	kkolk	2019-07-29 19:36:54	2020-01-02 16:56:10	Unexpected behavior with kubectl run and --env	5
+34	689	iamtakingiteasy	2019-07-24 13:53:54	2019-10-23 13:30:26	How to select resource api version when doing kubectl describe?	5
+35	687	akarasik	2019-07-23 08:15:18	2019-12-20 09:41:35	"Occasionally ""broken pipe"" and ""connection reset by peer"" on version 1.11.6"	5
+36	686	balopat	2019-07-22 23:30:39	2019-12-20 01:33:36	Service port forwarding recovery on restarted pods	5
+37	682	dependabot[bot]	2019-07-14 14:15:23	2019-07-15 11:30:11	Bump lodash from 4.17.5 to 4.17.13 in /docs/book	5
+38	681	Aracki	2019-07-14 11:21:03	2019-12-14 07:18:31	Should kubectl describe command display port names?	5
+39	680	dwmkerr	2019-07-13 07:47:12	2019-07-13 07:47:40	Support kubectl configuration file loading from a '~/.kube/config.d' directory	5
+40	679	A-And	2019-07-11 17:03:15	2019-12-13 23:10:33	kubectl kustomize outputs UTF-16LE under PowerShell 	2
+41	677	Warok21	2019-07-10 14:41:21	2019-11-28 09:02:47	"A copy of your changes has been stored to ""/tmp/kubectl-edit-4jyoa.yaml"" error: Edit cancelled, no valid changes were saved. "	5
+42	676	oke-py	2019-07-09 06:16:47	2019-12-11 19:31:55	How to contribute to the kubectl book is confusing	5
+43	675	dustin-decker	2019-07-09 02:18:58	2019-07-16 21:33:35	kubectl describe ingress not working (1.15.0 against 1.12.7 server)	5
+44	674	12307	2019-07-05 08:49:18	2019-07-05 10:22:25	can not import kubectl in my project by go.mod	5
+45	673	FujiHaruka	2019-07-02 14:37:12	2019-07-07 05:30:35	Fix broken link in the kubectl book	5
+46	672	liztio	2019-06-26 20:46:01	2019-11-23 22:21:49	Add flag for foregroundDeletion	5
+47	671	codezomb	2019-06-26 05:31:48	2019-06-26 05:44:43	v1.15 describe ingress is not backwards compatible	5
+48	670	rmalwade	2019-06-25 12:25:10	2019-06-28 21:00:12	Getting an error while using kubectl get nodes command from Windows 10 PowerShell	5
+49	663	mentos1386	2019-06-04 11:53:55	2019-06-06 09:27:49	Kubectl proxy not working with sockets (exec command) 403 Forbidden	5
+50	661	fejta-bot	2019-05-29 16:38:00	2019-06-02 16:41:40	Create a SECURITY_CONTACTS file.	5
+51	660	primeroz	2019-05-24 14:36:19	2019-07-19 07:07:53	Kubectl silently remove all annotation if any of them is set to the string true without quotes	1
+52	658	d-kuro	2019-05-23 18:08:09	2019-05-23 21:14:21	Fix patchesJson6902 example patch file.	5
+53	657	d-kuro	2019-05-21 08:51:44	2019-05-23 21:12:22	Remove unnecessary space.	5
+54	656	jorisroovers	2019-05-17 12:22:57	2019-05-20 18:36:34	kubectl exec does not accept pod/ resource type prefix	5
+55	655	seans3	2019-05-16 23:00:58	2019-05-28 22:08:04	Clear entire kubectl repo before turning on staging publishing bot	5
+56	654	lentzi90	2019-05-12 17:12:03	2019-05-13 15:52:09	Recommended labels are not used for created deployments and services	5
+57	653	tariq1890	2019-05-10 21:50:46	2019-05-16 22:45:44	migrate to go modules	5
+58	652	mb-m	2019-05-08 09:26:17	2019-07-25 23:01:42	Kubectl user exec should accept zero-length environment values	5
+59	651	maxb	2019-05-07 15:16:19	2019-06-24 19:48:13	Bug in InitClientAndConfig	5
+60	649	pwittrock	2019-05-02 00:54:00	2019-05-02 16:50:23	Copy feedback form to each page	5
+61	648	abhi-396	2019-04-26 11:10:10	2019-04-26 12:21:19	My Kubernets pul.	5
+62	647	pwittrock	2019-04-23 00:25:19	2019-04-30 21:46:58	Add reference documentation for Kustomize in Kubectl	5
+63	645	anmoel	2019-04-18 09:39:00	2019-04-22 16:09:46	fix typo in JSON Path Symbols Table	5
+64	643	abhishekjiitr	2019-04-15 21:16:11	2019-04-22 16:07:46	Fix Invalid DNS ConfigMap Name	5
+65	642	abhishekjiitr	2019-04-13 13:09:46	2019-04-22 16:07:46	Example Configmap Invalid DNS Name	5
+66	641	pwittrock	2019-04-12 20:42:29	2019-04-12 20:49:52	Update docs to clarify namespace overrides	5
+67	640	soltysh	2019-04-11 18:43:57	2019-04-11 19:36:46	Update lodash to address CVE-2018-16487	5
+68	639	dellintosh	2019-04-04 20:30:59	2019-04-30 23:11:22	kubectl set env deletes namespace	5
+69	638	pwittrock	2019-04-04 14:44:31	2019-04-04 14:49:42	Book: update labeling recommendations	5
+70	637	pplu	2019-04-02 12:34:14	2019-07-18 04:08:28	kubectl --help exit code 0	5
+71	636	mikeraimondi	2019-04-01 15:20:52	2019-04-02 15:08:37	fix typo	5
+72	635	chrisz100	2019-03-28 11:43:25	2019-03-28 15:52:45	replaced Conainer with Container	5
+73	634	Rio	2019-03-28 10:56:16	2019-04-22 17:17:46	feat(docs): add section on environment style configmap/secret generation	5
+74	633	chrisz100	2019-03-28 10:53:35	2019-03-28 15:50:47	Fixed a typo in field merge semantics	5
+75	632	Rio	2019-03-28 10:41:21	2019-04-22 17:17:46	Configmap/Secret generation documentation is missing an option for generating from environment files	5
+76	631	Rio	2019-03-28 10:05:00	2019-08-25 12:03:47	Email address listed in docs contribution guide is bouncing	5
+77	630	Rio	2019-03-28 09:40:36	2019-03-28 15:48:47	fix(docs): Fix typo and command reference	5
+78	629	Rio	2019-03-28 09:38:53	2019-03-28 15:48:47	Typo in docs and command reference error in `cluster information`	5
+79	628	dhain	2019-03-27 15:56:12	2019-04-09 16:12:00	kubectl proxy, API watch request blocks until an event happens	5
+80	627	thomas-riccardi	2019-03-26 13:56:05	2019-03-28 15:52:45	"Typo in docs/book: ""Conainer"""	5
+81	626	BenHall	2019-03-26 10:28:19	2019-04-22 16:05:45	Dockerfile for GitBook	5
+82	625	superbrothers	2019-03-26 08:30:13	2019-06-25 09:28:42	kubectl docs: Need Open Graph tags	5
+83	624	jonas	2019-03-26 03:32:20	2019-03-29 16:06:13	Remove cp examples from the port-forward page	5
+84	623	dankohn	2019-03-25 21:50:00	2019-09-22 09:45:40	Please upload svg of kubectl logo	5
+85	622	Liujingfang1	2019-03-25 17:23:38	2019-03-28 16:08:17	request a repo in kubernetes-sigs	5
+86	621	pwittrock	2019-03-25 16:28:19	2019-03-25 16:28:30	Fix examples	5
+87	620	pwittrock	2019-03-22 23:32:52	2019-03-23 00:06:29	Kubectl Book Final Edits	5
+88	619	seans3	2019-03-21 23:48:38	2019-03-21 23:58:19	Adds kubectl logo to repository	5
+89	618	pwittrock	2019-03-20 20:33:05	2019-03-22 17:48:50	Address Doc Feedback	5
+90	617	pwittrock	2019-03-19 16:39:52	2019-03-19 16:56:27	kubectl book: Fix exec examples caused by bad refactoring	5
+91	616	pwittrock	2019-03-18 19:51:33	2019-03-18 20:12:21	GitBook: Update structure titles	5
+92	615	ticapix	2019-03-17 11:29:00	2019-03-24 12:50:45	kubectl get deploy -o yaml | kubectl apply -f - fails	5
+93	614	RPing	2019-03-16 11:31:19	2019-03-16 16:49:56	autocompletion on CustomResourceDefinition	5
+94	612	pwittrock	2019-03-14 22:19:49	2019-03-14 23:52:57	kubectl book - add `newName` function	5
+95	611	soltysh	2019-03-14 22:03:11	2019-03-14 22:17:32	Various fixes	5
+96	610	pwittrock	2019-03-14 17:16:14	2019-03-14 17:48:29	Refine App Composition and Deployment guidelines	5
+97	609	pwittrock	2019-03-13 15:46:33	2019-03-13 18:33:40	GitBook: Refine App Composition and Deployment guidelines	5
+98	608	pwittrock	2019-03-13 00:39:11	2019-03-13 15:09:36	Kubectl Book: Add Favicon and clean wording	5
+99	607	Liujingfang1	2019-03-12 20:55:53	2019-03-12 21:54:40	add google analytics to kubectl book	5
+100	606	Liujingfang1	2019-03-12 18:24:36	2019-03-12 20:30:07	a test pr for showing kubectl book	5
+101	605	HariSekhon	2019-03-12 11:21:14	2019-03-12 11:44:57	'kubectl desc' shortcut for 'kubectl describe'	5
+102	604	Liujingfang1	2019-03-11 21:42:38	2019-03-12 16:08:39	add gitbook-cli into kubectl book package.json	5
+103	603	jon-walton	2019-03-09 14:10:36	2019-07-08 20:00:37	"Windows 10 WSL - ""cannot allocate memory"" when calling a plugin"	5
+104	602	joelsmith	2019-03-08 18:08:38	2019-03-20 02:46:25	Update embargo doc link in SECURITY_CONTACTS and change PST to PSC	5
+105	601	ajmanlove	2019-03-07 21:21:02	2019-03-07 21:52:10	kubectl get logs does not return all expected log entries	5
+106	599	sassanh	2019-03-05 17:45:48	2019-03-05 17:50:57	Unresolved issue mistakenly closed, please reopen	5
+107	598	waynesi	2019-03-04 22:05:27	2019-12-13 23:10:35	"""kubectl rollout history --revision=n"" produces wrong/inconsistent output with ""-o yaml""?"	2
+108	597	philips	2019-03-04 16:16:43	2019-09-11 22:24:48	SECURITY_CONTACTS: please include developers of kubectl	5
+109	596	tehho	2019-03-04 09:17:43	2019-11-01 01:27:03	AAD with MFA Error while retrieving OAuth token: Unknown Error	5
+110	595	richstokes	2019-03-03 17:48:49	2019-07-31 20:12:08	"""error: unexpected EOF"" when following logs"	5
+111	592	rifelpet	2019-02-27 20:28:31	2019-04-27 04:47:52	"""describe ingress"" does not list service endpoints for ingresses not in kube-system"	5
+112	591	pwittrock	2019-02-26 02:09:03	2019-03-12 20:42:40	Refine Kubectl GitBook	5
+113	590	webdeb	2019-02-15 00:04:56	2019-02-16 20:03:24	Feature: allow to pass kubeconfig as a base64 string	5
+114	589	josefkorbel	2019-02-12 10:45:30	2019-02-12 11:28:44	Password with special charts being stripped down while depoying pod	5
+115	588	webdeb	2019-02-11 01:05:57	2019-09-30 17:13:14	Allow kubeconfig to be Base64 encoded string	5
+116	586	DizzyThermal	2019-02-06 20:38:12	2019-07-28 16:59:16	kubectl cluster-info dump: error: a versioned object must be passed to a printer	1
+117	584	mvehar	2019-02-04 09:12:33	2019-07-04 11:30:15	[BUG] kubectl -n <NAMESPACE> delete pod,svc,....,ns --all > deletes all namespaces	5
+118	583	ncouture	2019-02-03 19:41:52	2019-08-02 04:44:05	Support bash-like parameter expansion	5
+119	582	duglin	2019-02-03 14:56:30	2019-07-15 15:39:09	kubectl get all has lots of blank lines to stderr	2
+120	581	jamielennox	2019-02-03 07:53:03	2019-07-05 13:56:13	go-template should accept stdin	5
+121	580	mdeknowis	2019-01-30 10:01:23	2019-09-30 20:16:07	Missing access right leads to endless error output	1
+122	579	pwittrock	2019-01-28 18:47:34	2019-01-28 19:29:24	Update Kubectl GitBook	5
+123	578	kuengnee	2019-01-28 09:46:10	2019-07-05 04:47:14	Unable to to access k8s in aws eks	5
+124	577	groner	2019-01-25 16:41:04	2019-10-25 14:56:41	kubectl set env does not apply prefix when removing environment variables	5
+125	575	ahmetb	2019-01-10 17:46:37	2019-01-22 16:46:02	Regression: [Plugin] [1.12] plugin binaries are overshadowed by themselves if they appear in PATH twice	1
+126	574	ahmetb	2019-01-10 06:03:43	2019-02-01 12:45:13	"""plugins list"" command raises errors for non-existing dirs in $PATH"	2
+127	571	TheKangaroo	2018-12-21 12:02:03	2018-12-26 20:08:40	kubectl create secret docker-registry omits auth key in dockerconfigjson	5
+128	570	pwittrock	2018-12-18 22:43:53	2019-06-10 02:55:34	kustomize follow ups	5
+129	568	tomfotherby	2018-12-06 19:42:42	2019-10-30 21:51:30	kubectl describe hpa not working with v1.13.0	1
+130	567	willbeason	2018-12-04 21:16:55	2019-03-05 00:11:53	kubectl --dry-run does not catch invalid CRD metadata.name	5
+131	566	ahmetb	2018-11-30 18:09:48	2019-01-13 18:25:21	"Unclear what ""kubectl config view --merge"" does"	5
+132	565	avkudryashov	2018-11-26 12:17:19	2018-11-27 04:47:25	kubectl x509	5
+133	563	xichengliudui	2018-11-16 02:42:09	2018-12-04 08:32:17	Update notes	5
+134	562	sudeeshjohn	2018-11-15 08:23:22	2018-11-18 07:30:07	"kubelet --version shows info log ""proto: duplicate proto type registered: pluginregistration...."""	0
+135	561	pwittrock	2018-11-12 20:07:46	2018-11-12 20:22:10	Remove node_modules from GitBook	5
+136	560	xichengliudui	2018-11-12 07:08:43	2019-02-22 07:39:10	To add and update the function name	5
+137	559	pwittrock	2018-11-12 04:39:40	2018-11-12 19:57:07	Kubectl Book	5
+138	558	seans3	2018-11-08 18:46:30	2018-12-31 17:41:35	kubectl port-forward flaky e2e tests	2
+139	556	pwittrock	2018-11-07 17:36:22	2019-11-23 19:18:51	Create Better Documentation for Kubectl and Tooling	5
+140	555	TheKangaroo	2018-11-05 15:34:16	2019-04-04 17:12:20	kubectl --prune does not delete last managed item(s) in namespace	5
+141	553	joberget	2018-11-02 10:59:33	2019-04-01 12:57:43	Deb-package for Bionic Beaver 18.04	5
+142	552	troyswanson	2018-11-01 14:35:26	2019-01-19 11:35:48	kubectl version: needs better error message when server not available	3
+143	550	seans3	2018-10-30 00:05:43	2018-10-31 21:48:17	kubectl expose crashes when there are no selectors (apps group only)	1
+144	549	mml	2018-10-24 20:39:57	2018-10-31 22:41:00	'kubectl get cs' is misleading when the apiserver is unreachable	2
+145	548	Ark-kun	2018-10-23 03:22:05	2019-04-23 20:31:12	kubectl get --all-namespaces does not see namespaced pod in some cases	5
+146	547	mingfang	2018-10-20 15:26:23	2018-10-20 16:07:39	Move the CRDFinder to the cli-runtime repo	5
+147	546	mingfang	2018-10-20 05:32:00	2018-10-31 00:41:23	kubectl explain crd --recursive goes into an infinite loop	1
+148	545	hebbarsushma	2018-10-15 07:40:45	2018-10-15 16:06:33	"kubectl get pod -n default  -l "" ""  output behaviour "	5
+149	544	tech509201941	2018-10-06 14:25:34	2019-03-28 01:46:34	Can't access successfully created context	5
+150	543	tech509201941	2018-10-06 14:22:57	2019-06-08 08:13:33	Can't access cluster via kubeconfig: json access token error	5
+151	542	DazWilkin	2018-09-28 00:10:05	2019-06-21 03:04:58	`kubectl get events --watch` appears borked with non-default output formats	2
+152	541	seans3	2018-09-26 18:32:07	2018-09-28 20:16:15	Adds initial required SECURITY_CONTACTS file	5
+153	540	ahmetb	2018-09-25 18:46:35	2018-09-26 02:38:32	[1.12] plugin commands with dashes cannot be invoked with their original names	2
+154	539	ahmetb	2018-09-25 18:34:16	2018-09-27 16:51:07	[Plugin] [1.12] plugin binaries are overshadowed by themselves if they appear in PATH twice	1
+155	538	mxey	2018-09-25 13:24:20	2018-10-10 23:46:36	port-forward should support named ports	2
+156	536	Tibingeo	2018-09-24 15:22:37	2019-04-29 07:06:05	kubectl command sleeps after 5 minutes	5
+157	535	J-Siu	2018-09-23 08:17:41	2018-10-06 11:30:07	Selector does not work for service.	1
+158	534	adubkov	2018-09-19 19:57:08	2019-06-12 18:15:04	"Long run of ""kubectl run"" does not refresh IAM token"	3
+159	533	arno-joule	2018-09-19 18:47:34	2018-09-26 00:22:35	Request Header asking wrong media type: returns 406	5
+160	532	terrynie	2018-09-14 03:40:42	2018-09-14 06:57:44	Bug -- kubectl exec con't kill the process sometimes	5
+161	531	KeZhang	2018-09-04 03:49:55	2018-09-06 07:46:59	"If the cluster time is not same with the client time, the ""Age"" is incorrect"	5
+162	530	thinkerbot	2018-08-31 13:38:59	2018-10-19 11:57:33	JsonPath errors printed on stdout	3
+163	529	cblecker	2018-08-30 23:21:22	2018-09-04 14:24:24	kubernetes/kubectl: Switch to lgtm/approve for merge	5
+164	528	schollii	2018-08-29 13:32:41	2019-12-23 01:44:32	`kubectl describe pod/xxx` should show what resources selected the pod	3
+165	527	schollii	2018-08-29 13:23:40	2019-12-26 18:11:44	"Need a real ""get-all"" command"	3
+166	526	imran21	2018-08-29 08:21:02	2018-08-29 10:06:06	unexpected error during validation: unable to resolve Kubernetes cluster API URL dns: lookup api.clust1.kube.devopsimran.com on 172.31.0.2:53: server misbehaving	5
+167	525	johanot	2018-08-27 08:29:04	2019-06-17 21:02:15	Add --cascade or --force flag to kubectl delete namespace, for non-empty namespaces	5
+168	523	juanvallejo	2018-08-20 14:37:33	2018-08-24 13:47:29	The `patch` command should not require a KUBECONFIG when using --local	5
+169	522	dnltsk	2018-08-17 00:44:14	2018-09-26 00:13:52	kubectl get service doesn't work without -w	5
+170	521	donbowman	2018-08-14 12:49:19	2018-09-26 17:12:50	Kubectl exec output is not binary clean	2
+171	520	adampl	2018-08-11 17:53:20	2019-06-11 00:01:27	kubectl apply doesn't update nodeSelector	2
+172	519	psreed	2018-08-10 16:42:25	2019-06-07 03:45:42	[Windows] kubectl run not accepting valid JSON as --override on Windows (same JSON works on Mac) 	2
+173	518	JaroVojtek	2018-08-10 13:13:50	2019-01-23 21:13:07	kubectl not working properly : unable to upgrade connection: Unauthorized	5
+174	517	seans3	2018-08-03 20:20:32	2019-09-21 17:41:52	additionalPrinterColumns for CRD's doesn't work in k8s 1.11 for columns with array data	2
+175	516	seans3	2018-07-31 22:47:19	2018-09-20 10:11:29	[WIP] Kubectl main out of core repo with vendored dependencies	5
+176	515	Pehesi97	2018-07-26 20:31:39	2018-07-27 02:09:29	--recursive option with wildcards or regexes	5
+177	514	cbluth	2018-07-25 12:34:48	2019-06-06 11:29:51	Create ConfigMap from http source	3
+178	513	dj13may91	2018-07-19 09:50:50	2018-09-26 00:07:26	How can i get  API KEY of my kubernetes cluster to call authorised apis ?	5
+179	512	ahmetb	2018-07-19 01:26:56	2019-09-27 18:02:55	"--user not showing in help for ""create {cluster}rolebinding"""	2
+180	511	mengqiy	2018-07-18 16:47:23	2018-07-24 22:18:25	kubectl skew tests failing on GKE	5
+181	510	dj13may91	2018-07-17 06:03:13	2018-07-19 09:55:48	Kubectl top nodes/pods background url	5
+182	509	aleofreddi	2018-07-09 14:55:47	2019-04-24 15:51:03	kubectl convert -o name fails when using stdin	1
+183	507	carlosonunez	2018-07-06 07:46:07	2018-07-06 07:59:57	`kubectl config` seems to hash file names when --client-certificate is given a path	5
+184	506	mlda065	2018-07-05 01:47:08	2018-07-27 01:50:16	`get nodes -w` works differently to all other `get x -w`	5
+185	505	gkarthiks	2018-07-02 23:01:35	2019-01-07 20:09:26	kubectl go-template 'eq' not working with integers	2
+186	504	max8899	2018-06-28 05:39:28	2018-07-02 13:30:17	fix some typos	5
+187	503	chrissound	2018-06-27 19:59:55	2019-01-17 13:18:05	kubectl set image does not work on initContainers	2
+188	499	whs-dot-hk	2018-06-06 06:59:47	2018-06-09 02:01:28	Autocomplete for kubectl pod name	5
+189	497	chrissound	2018-06-04 14:55:31	2019-02-23 01:16:38	panic: interface conversion: interface {} is []interface {}, not map[string]interface {}	2
+190	495	vidhill	2018-06-01 21:38:15	2018-09-25 23:36:16	Way to get list of pods running in a service	5
+191	494	davidopp	2018-05-27 03:22:58	2018-05-27 06:50:59	Have an option to print the URL and body of the request that will be sent to the server	5
+192	493	ChrisRG711	2018-05-25 19:17:16	2019-05-06 14:26:41	[Windows] Unable to open kube config file	3
+193	492	gianrubio	2018-05-25 10:05:23	2018-10-22 18:26:39	Can we have an oficial kubectl image?	5
+194	491	ahmetb	2018-05-24 22:32:03	2018-12-26 15:35:46	"Possible to bypass Service validation via ""apply"", loses declarative spec and locks down the object forever"	1
+195	490	jessfraz	2018-05-24 14:43:05	2018-10-01 18:01:37	Create a SECURITY_CONTACTS file.	0
+196	489	ahmetb	2018-05-21 20:56:03	2018-06-22 21:52:41	kubectl config -o=jsonpath returns golang []byte represenation for string field	5
+197	488	monopole	2018-05-16 23:43:21	2018-05-17 17:50:50	update vendoring post kustomize delete	5
+198	487	mrbobbytables	2018-05-13 19:00:47	2018-09-25 23:05:36	Error describing cronjobs with kubectl v1.10+	5
+199	486	monopole	2018-05-11 22:21:14	2018-05-14 03:28:25	Remove kustomize	5
+200	485	monopole	2018-05-11 18:38:40	2018-05-11 18:38:53	owner mods	5
+201	484	monopole	2018-05-11 18:10:54	2018-05-11 18:11:04	add code of conduct	5
+202	483	zentron	2018-05-10 06:45:18	2019-09-17 22:58:31	Provide the ability to clear the current kubectl context without explicitly setting a new one	3
+203	482	seans3	2018-05-10 00:27:15	2018-05-10 15:05:51	Add owners section for subproject owners	5
+204	481	pwittrock	2018-05-09 20:18:58	2018-05-18 21:01:41	Kustomize: Support `kustomize edit add base`	5
+205	480	pwittrock	2018-05-09 19:44:49	2018-05-18 21:03:25	Kustomize: Support `kustomize edit add labels` and `kustomize edit add annotations`	5
+206	479	pwittrock	2018-05-09 19:43:43	2018-05-18 21:04:22	Kustomize: Help text for `kustomize edit add` shouldn't show secret.	5
+207	478	AdamDang	2018-05-09 14:55:38	2018-05-14 16:50:46	Typo fix: implmentation->implementation	5
+208	477	soltysh	2018-05-09 13:53:41	2018-05-09 14:55:59	Add myself to owners	5
+209	476	majewsky	2018-05-09 12:20:50	2018-10-12 18:20:00	kubectl shows localized messages even though LC_MESSAGES=C	3
+210	475	nikhilagrawal577	2018-05-09 08:33:10	2018-09-25 22:58:55	kubectl get pods --all-namespaces returns error 	5
+211	474	monopole	2018-05-08 19:26:14	2018-05-08 19:26:22	updateFig2	5
+212	473	monopole	2018-05-08 19:20:48	2018-05-08 19:20:55	updateFigs	5
+213	472	monopole	2018-05-08 19:10:27	2018-05-08 19:10:41	reorderGloss	5
+214	471	monopole	2018-05-08 18:42:04	2018-05-08 18:46:21	Replace term 'instance' with 'variant'.	5
+215	470	monopole	2018-05-08 17:35:07	2018-05-08 17:40:56	add apache license file for kustomize	5
+216	469	AdamDang	2018-05-08 16:00:28	2018-05-11 20:31:43	Typo fix: cluser->cluster	5
+217	468	Liujingfang1	2018-05-07 16:57:38	2018-05-07 22:13:33	Remove example-ldap repo from the integration test	5
+218	467	Liujingfang1	2018-05-04 17:58:42	2018-05-04 18:07:53	Add ldap demo	5
+219	466	Liujingfang1	2018-05-04 16:32:43	2018-05-04 18:08:52	change test script to use ldap from the new location	5
+220	465	Liujingfang1	2018-05-03 20:28:20	2018-05-04 19:37:31	Move example-ldap	5
+221	464	Liujingfang1	2018-05-03 20:27:41	2018-05-04 01:38:51	Add ldap example to demo data	5
+222	463	AdamDang	2018-05-03 14:38:38	2018-05-03 18:11:52	Typo fix: defintion->definition	5
+223	462	AdamDang	2018-05-02 11:30:02	2018-05-02 23:08:51	Typo fix in the returned info.	5
+224	461	gregkeys	2018-05-02 03:50:00	2019-02-23 01:16:37	--all-namespaces should work with kubectl set image deployments	3
+225	460	monopole	2018-05-01 22:44:36	2018-05-03 18:10:57	drop unused pngs	5
+226	459	monopole	2018-05-01 22:03:54	2018-05-01 22:10:08	Modify mysql and springboot demo to download their data from the code…	5
+227	458	monopole	2018-05-01 20:57:11	2018-05-01 20:57:19	capture springboot demo data	5
+228	457	monopole	2018-05-01 18:50:09	2018-05-01 20:02:18	add configGeneration to README in demos dir	5
+229	456	monopole	2018-05-01 18:05:20	2018-05-01 18:12:18	fix glitch in hello world	5
+230	455	monopole	2018-04-30 23:00:25	2018-04-30 23:27:15	pull helloWorld demo data into code repo	5
+231	453	monopole	2018-04-27 22:28:24	2018-04-30 22:45:16	configmapgenerator example	5
+232	452	AdamDang	2018-04-27 15:29:54	2018-04-30 20:39:31	Typo fix: resourse->resource	5
+233	451	richardmarshall	2018-04-27 14:28:54	2018-04-30 23:32:18	Add subcommand for adding patches to the kustomization file	5
+234	449	nikhilagrawal577	2018-04-26 10:38:31	2019-05-24 16:28:09	Kubectl Top nodes and kubectl describe nodes are showing different values	2
+235	448	monopole	2018-04-24 20:06:48	2018-04-24 21:44:30	add a tested breakfast configuration demo	5
+236	447	AdamDang	2018-04-23 14:39:49	2018-04-30 20:41:18	Typo fix in glossary.md	5
+237	446	monopole	2018-04-17 20:49:48	2018-04-17 20:50:18	new figs	5
+238	445	monopole	2018-04-17 18:20:29	2018-04-17 18:26:17	kustomize.yaml becomes kustomization.yaml	5
+239	444	rcorre	2018-04-17 18:05:38	2019-03-21 18:43:39	kubectl exec should take a deploy as an argument	3
+240	443	monopole	2018-04-16 21:01:54	2018-04-16 21:02:02	updated figs	5
+241	442	monopole	2018-04-16 20:44:32	2018-04-16 20:50:35	Update figs	5
+242	441	monopole	2018-04-13 20:37:06	2018-04-13 20:42:55	Some kustomization field renaming.	5
+243	440	monopole	2018-04-13 18:22:02	2018-04-17 16:31:59	Example kustomize.yaml	5
+244	439	monopole	2018-04-13 17:08:48	2018-04-13 18:00:01	Drop the init command	5
+245	438	monopole	2018-04-12 23:44:11	2018-04-13 03:43:59	manifest becomes kustomization	5
+246	437	monopole	2018-04-12 00:23:50	2018-04-12 02:51:55	Drop k8s metadata fields from kustomize.yaml struct	5
+247	436	monopole	2018-04-12 00:23:03	2018-05-18 21:29:15	AAUI don't want to see unusable fields in kustomize.yaml (3)	5
+248	435	mengqiy	2018-04-11 22:21:55	2018-04-13 00:15:59	Update vendor and related hash func	5
+249	434	droot	2018-04-11 22:20:03	2018-04-11 22:23:55	kustomize: automate github release publishing	5
+250	433	monopole	2018-04-11 21:00:17	2018-04-11 21:38:56	Remove init and manifest from demos	5
+251	432	monopole	2018-04-11 20:24:11	2018-05-18 21:04:56	Move everything to the new org	5
+252	431	monopole	2018-04-11 18:57:22	2018-04-13 03:43:59	AAUI don't want to think kustomize is a package manager (part 2).	5
+253	430	monopole	2018-04-11 18:56:45	2018-04-17 16:31:59	AAUI need to see a completely documented kustomize.yaml example on website (3)	5
+254	429	monopole	2018-04-11 18:53:57	2018-04-13 18:00:01	AAUI find the init command creates work, rather than removes it.	5
+255	428	droot	2018-04-11 18:13:12	2018-04-11 18:25:56	change kinflate to kustomize	5
+256	427	jordansissel	2018-04-11 16:42:01	2019-01-18 14:37:32	Cannot use Windows paths in create secret --from-file	3
+257	426	sacha-cs	2018-04-11 14:51:08	2018-09-25 22:43:15	kubectl describe (statefulset|clusterrole|clusterrolebinding|cronjobs) fails in v1.10.0	5
+258	425	przemek-sl	2018-04-11 14:27:03	2018-04-14 14:35:17	"""kubectl label all"" skips secrets"	5
+259	424	Liujingfang1	2018-04-10 22:29:23	2018-04-11 19:50:50	change kinflate to kustomize	5
+260	423	monopole	2018-04-10 21:29:23	2018-04-11 00:00:46	Test config map names	5
+261	422	monopole	2018-04-10 21:26:35	2018-04-11 00:00:46	Write a test for updates to Configmaps. (5)	5
+262	421	Liujingfang1	2018-04-10 20:49:03	2018-05-18 21:05:12	AAUI want to know the name of this thing	5
+263	420	Liujingfang1	2018-04-10 18:37:03	2018-04-10 19:07:11	change Kube-manifest.yaml to kustomize.yaml	5
+264	419	mengqiy	2018-04-10 18:18:44	2018-04-10 22:42:55	swtich to depend on the scheme in client-go	5
+265	418	karan	2018-04-10 17:40:52	2018-05-18 21:10:24	Kinflate: dec.DisallowUnknownFields undefined	5
+266	417	Liujingfang1	2018-04-10 16:15:40	2018-05-18 21:10:54	AAUI don't want to think kinflate is a package management tool.	5
+267	416	monopole	2018-04-09 18:54:36	2018-04-10 16:53:02	structure for manifest documentation	5
+268	415	jheiss	2018-04-09 13:53:16	2019-06-15 15:52:52	kubectl config set hangs on some invalid property names	2
+269	414	monopole	2018-04-06 22:55:27	2018-04-06 23:27:08	Command organization - build and edit	5
+270	413	monopole	2018-04-06 22:03:02	2018-04-06 22:20:10	README for demos	5
+271	412	monopole	2018-04-06 19:59:12	2018-04-06 20:07:30	add tree output to demo	5
+272	411	monopole	2018-04-06 18:04:50	2018-04-06 18:18:36	onePageHelloWorld	5
+273	410	monopole	2018-04-06 17:34:04	2018-04-06 17:37:12	newreadme	5
+274	409	mengqiy	2018-04-06 17:05:00	2018-04-06 17:45:09	update vendor apimachinery	5
+275	408	thockin	2018-04-06 15:52:14	2019-02-26 02:11:24	Use k8s GCR vanity URL	5
+276	406	Liujingfang1	2018-04-05 23:09:17	2018-04-06 22:00:09	Add logging for replacing and merging configmap and secrets	5
+277	405	Liujingfang1	2018-04-05 22:28:52	2018-04-09 22:25:10	Add springboot example demo	5
+278	404	monopole	2018-04-04 21:00:39	2018-04-04 21:53:10	Remove the -f option of inflate	5
+279	403	droot	2018-04-04 17:42:57	2018-04-04 18:12:09	kinflate: remove prune field from the manifest	5
+280	402	monopole	2018-04-04 17:17:52	2018-04-04 20:31:09	some wording tweaks	5
+281	401	3dbrows	2018-04-04 16:42:20	2018-04-14 16:03:15	kubectl create secret docker-registry omits apiVersion and kind	5
+282	400	djschny	2018-04-04 16:15:50	2019-02-23 00:15:39	SIGSEGV - panic when running busybox	2
+283	399	costinm	2018-04-04 15:27:01	2018-04-14 14:33:46	"Kubectl 1.10 ""create secret"" missing kind and apiversion"	5
+284	398	ahmetb	2018-04-04 01:06:44	2019-01-25 14:41:32	kubectl config set: please add some examples	1
+285	397	ahmetb	2018-04-04 00:50:37	2019-02-23 00:15:39	kubectl config set: parameter name split with space in --help	3
+286	395	droot	2018-04-03 23:51:47	2018-04-04 17:44:09	kinflate: add build automation	5
+287	394	Liujingfang1	2018-04-03 23:19:08	2018-04-04 22:21:10	change ConfigMap to ConfigMapGenerator	5
+288	393	Liujingfang1	2018-04-03 22:58:32	2018-04-03 23:32:07	Add different behavior for secretGenerator in overlay	5
+289	392	Liujingfang1	2018-04-03 19:17:29	2018-05-18 21:11:19	AAUI expect secret and configmap generators to have same behavior options	5
+290	391	Liujingfang1	2018-04-03 19:16:42	2018-05-18 21:11:38	"ASUI want understanding of the ""secret"" field in manifest."	5
+291	390	droot	2018-04-03 00:10:27	2018-04-03 02:42:05	kinflate: added version command	5
+292	389	monopole	2018-04-02 23:16:41	2018-04-03 19:37:52	add workflow figs	5
+293	388	monopole	2018-04-02 19:00:34	2018-04-02 20:50:14	Add glossary	5
+294	387	droot	2018-03-30 23:06:46	2018-03-30 23:21:04	integrated glog in command structure	5
+295	386	ahmetb	2018-03-30 21:32:59	2018-12-25 11:12:01	kubectl config view: should error out on positional argument	2
+296	385	ihoegen	2018-03-29 19:21:39	2018-04-14 16:02:55	Kubectl 1.10.0 is unable to create deployments on clusters running 1.8.7 	5
+297	384	carlosrmendes	2018-03-29 14:56:23	2018-04-05 05:40:32	"kubectl ""--dry-run"" with ""-o yaml"" does not show 'apiVersion' neither 'kind'"	5
+298	383	jberkhahn	2018-03-28 21:13:57	2018-04-03 18:36:08	Return rest config and regular config  from pluginutil Init method	5
+299	382	monopole	2018-03-28 20:11:29	2018-03-28 20:23:03	combine demos into a subdir	5
+300	381	monopole	2018-03-28 00:10:29	2018-03-28 00:13:42	renameDemos	5
+301	380	monopole	2018-03-27 23:21:56	2018-03-27 23:29:10	newshortdemo	5
+302	379	monopole	2018-03-27 20:20:59	2018-03-27 21:15:52	A new hello-world demo.	5
+303	378	Lion-Wei	2018-03-27 12:10:21	2018-08-25 08:57:38	kubectl reject annotation information without any warning	5
+304	377	mengqiy	2018-03-27 00:54:10	2018-03-28 19:26:05	detect unknown fields in Kube-manifest.yaml	5
+305	376	Lion-Wei	2018-03-26 04:05:51	2018-04-19 02:36:11	Extend kubectl describe for networkPolicy	5
+306	375	mengqiy	2018-03-23 22:21:50	2018-04-09 22:28:09	Conflict detection in kinflate	5
+307	374	Liujingfang1	2018-03-23 21:21:07	2018-05-18 21:12:08	Kinflate should allow configMap overlay.	5
+308	373	Liujingfang1	2018-03-23 21:17:40	2018-04-03 22:38:08	Add different behavior for configmaps in overlay	5
+309	372	mengqiy	2018-03-23 17:20:54	2018-03-23 18:07:04	update vendor apimachinery	5
+310	371	Nowaker	2018-03-23 14:09:41	2018-03-30 18:56:20	"Support multi-container pod for ""kubectl logs"" without ""-c"""	5
+311	370	mengqiy	2018-03-22 21:10:33	2018-03-23 15:41:02	support multiple patches for the same GVKN	5
+312	369	Liujingfang1	2018-03-22 20:34:25	2018-05-18 21:12:24	"in manifest, [packages](https://github.com/kubernetes/kubectl/blob/master/pkg/apis/manifest/v1alpha1/types.go#L88) field becomes ""bases"" (3)"	5
+313	368	droot	2018-03-22 18:30:28	2018-04-11 20:34:56	updated namereference config for missing references.	5
+314	367	Liujingfang1	2018-03-22 16:33:50	2018-03-26 23:14:02	change packages to bases in Manifest	5
+315	366	mengqiy	2018-03-22 00:22:45	2018-07-31 18:37:56	Integrate openapi	5
+316	365	grodrigues3	2018-03-21 22:37:26	2018-05-18 21:13:09	PoC for best solution for generated service names (3).	5
+317	364	grodrigues3	2018-03-21 22:36:52	2018-05-18 21:15:46	Explore the solution generated service names.  Come up (list of approaches) that we can run through.  Brainstorm as a group (3)	5
+318	363	apelisse	2018-03-20 23:29:49	2019-02-23 00:15:38	Path framework	5
+319	362	apelisse	2018-03-20 22:17:48	2018-03-20 22:40:01	"selectors: Remove ""Map"" and ""Slice"""	5
+320	361	ahmetb	2018-03-19 20:15:09	2018-06-20 13:22:42	kubectl create clusterrolebinding: must error if --namespace is specified	3
+321	360	apelisse	2018-03-19 17:16:57	2018-03-19 21:45:01	predicates: Rename Value into Interface	5
+322	359	apelisse	2018-03-19 16:21:08	2018-03-19 16:54:02	unstructpath: Move predicates to their own package	5
+323	358	a8uhnf	2018-03-19 04:55:44	2018-12-17 07:14:11	Fix label test in documentation appropriately	5
+324	357	m4r10k	2018-03-18 08:03:11	2018-05-04 17:08:53	role missing in kubectl get command line completion	5
+325	356	Liujingfang1	2018-03-16 22:06:35	2018-03-16 22:40:26	Update directories in test script	5
+326	355	Liujingfang1	2018-03-16 20:19:15	2018-03-16 20:26:25	Update main.sh to exit non-zero when there is a failure	5
+327	354	apelisse	2018-03-14 17:12:45	2018-03-16 20:53:25	unstructpath: Create json path type package.	5
+328	353	feiskyer	2018-03-14 05:42:15	2018-03-15 01:48:06	kubectl complete error: command not found: __debug	5
+329	352	mengqiy	2018-03-12 22:53:55	2018-03-12 23:54:10	fix bug when update name ref in multi layer setup	5
+330	351	Liujingfang1	2018-03-12 22:49:39	2018-03-13 17:19:11	Add testing script to invoke example testing	5
+331	350	mengqiy	2018-03-12 19:26:45	2018-03-12 22:08:11	cleanup Resouce slice related code	5
+332	349	mengqiy	2018-03-10 00:37:41	2018-03-10 00:51:13	Rename KObject to ResourceCollection	5
+333	348	jberkhahn	2018-03-09 00:02:47	2018-03-22 21:45:03	Use passed-in context in pluginutils config initializer	5
+334	347	mengqiy	2018-03-08 23:04:30	2018-03-12 23:56:30	Make update name reference and patching works when there are multiple layers (3)	5
+335	346	tamalsaha	2018-03-08 04:02:57	2018-08-11 06:24:22	[plugin] Plugins have not way to resolve relative paths	5
+336	345	tamalsaha	2018-03-08 03:53:39	2018-09-25 22:11:58	[plugin] Value must be assigned for boolean flags	5
+337	344	mengqiy	2018-03-08 01:57:26	2018-03-08 22:01:13	appending name hash only applies to current layer	5
+338	343	Liujingfang1	2018-03-07 17:05:54	2018-03-07 17:14:54	Remove package tree	5
+339	342	Liujingfang1	2018-03-06 22:36:09	2018-03-07 21:55:42	Remove package tree by refactoring kinflate sub commands by using Application Interface or FileSystem(3)	5
+340	341	Liujingfang1	2018-03-06 22:33:06	2018-03-07 00:49:53	Add util functions to read/write manifest file and update sub commands	5
+341	340	mengqiy	2018-03-06 01:56:59	2018-03-06 18:37:54	fall back to JSON merge patch for types w/o schema (CRD)	5
+342	339	Liujingfang1	2018-03-05 23:22:01	2018-03-07 20:04:17	Create an example-example (3)	5
+343	338	mengqiy	2018-03-05 23:14:29	2018-05-18 21:32:11	Work with Barni on airflow (3)	5
+344	337	tamalsaha	2018-03-05 02:54:39	2018-09-25 22:16:14	[plugin] kubectl plugin env variable is not incorrect	2
+345	336	nicolls1	2018-03-03 20:11:59	2018-04-14 14:47:22	kubectl create secret with docker-registry creates a secret that can't be used	5
+346	335	ewdurbin	2018-03-03 02:39:27	2019-02-23 00:15:37	Inaccurate error message when cluster EOFs	3
+347	334	Liujingfang1	2018-03-02 22:31:41	2018-03-05 21:32:51	Update inflate/diff and corresponding tests	5
+348	333	Liujingfang1	2018-03-02 20:56:58	2018-03-02 22:08:54	Change inflate to use Application interface	5
+349	332	joaocc	2018-03-01 16:01:52	2018-03-16 22:14:46	Error message swapping arguments	5
+350	331	mengqiy	2018-03-01 01:27:24	2018-03-01 22:13:30	update resource package	5
+351	330	ant31	2018-02-28 15:32:43	2018-05-18 21:21:12	[kinflate] Override resources if redefined on overlays 	5
+352	329	Liujingfang1	2018-02-27 23:49:08	2018-02-28 00:03:47	Add nameHashTransformer	5
+353	328	seans3	2018-02-27 23:31:42	2018-02-28 22:58:56	Simplified Loader.New() to always take a directory	5
+354	327	seans3	2018-02-27 20:43:57	2018-02-27 21:30:48	Update FakeLoader for simpler interface; FakeLoader uses real Loader	5
+355	326	droot	2018-02-27 18:23:52	2018-03-03 00:08:40	Implement Application's methods which gives us a good idea of shape of the solution from top-down (5)	5
+356	325	droot	2018-02-27 18:22:14	2018-02-27 18:22:40	Define `app` package and move all Application related code in one place (5)	5
+357	324	Liujingfang1	2018-02-27 17:37:41	2018-03-01 17:00:37	Modify Encode function	5
+358	323	seans3	2018-02-26 23:45:43	2018-02-27 00:45:46	Move fake loader into its own package; Update loader test	5
+359	322	mengqiy	2018-02-26 21:52:25	2018-03-02 20:40:52	implement Resources func for applicationImpl	5
+360	321	Liujingfang1	2018-02-26 21:30:40	2018-02-26 21:38:47	change function name from ResourceFromPath to NewFromPath	5
+361	320	Liujingfang1	2018-02-26 19:44:50	2018-02-26 21:25:39	Change function name from ResourcesFromPath to NewFromPath	5
+362	319	Liujingfang1	2018-02-26 17:43:44	2018-02-26 19:32:45	Add secret resource	5
+363	318	apelisse	2018-02-26 17:25:08	2018-02-26 18:30:46	kinflate/transformers: Keep private things private	5
+364	317	seans3	2018-02-24 00:50:29	2018-02-26 23:26:04	Refactor Loader interface	5
+365	316	droot	2018-02-23 23:56:00	2018-02-26 19:53:45	configmap resource implementation using loader	5
+366	315	seans3	2018-02-22 23:41:57	2018-02-23 17:23:48	Refactor Loader interface	5
+367	314	Liujingfang1	2018-02-22 23:29:38	2018-02-23 21:57:46	Add appresource implementation	5
+368	313	droot	2018-02-22 03:59:28	2018-02-23 19:19:45	added configmap resource implementation	5
+369	312	seans3	2018-02-21 23:05:09	2018-02-21 23:08:40	First pass at Application abstraction with unimplemented methods	5
+370	311	Liujingfang1	2018-02-21 22:49:38	2018-02-21 22:52:40	Use ManifestLoader to read and write the kubemanifest file	5
+371	310	mengqiy	2018-02-21 22:38:26	2018-02-22 16:34:40	update yaml import pkg	5
+372	309	droot	2018-02-21 19:40:22	2018-02-21 19:41:40	removed '-u' option from install command	5
+373	308	Liujingfang1	2018-02-21 18:49:45	2018-02-21 19:36:40	Move ManifestLoader under tree package	5
+374	307	mengqiy	2018-02-21 02:09:26	2018-02-21 02:28:14	initial implementation for file loader	5
+375	306	ahmetb	2018-02-20 22:46:44	2018-04-18 13:18:10	"""kubectl get"" downloads the entire swagger spec (GET /swagger-2.0.0.pb-v1) on every invocation"	5
+376	305	jethrogb	2018-02-20 22:29:57	2018-12-28 15:00:46	"get --watch specifying a resource uses ""watch list"" instead of ""watch"" API"	2
+377	304	Liujingfang1	2018-02-20 19:33:43	2018-02-21 19:37:29	Create internal error library different types.  For example, ManifestError, ResourceError (5)	5
+378	303	Liujingfang1	2018-02-20 18:46:11	2018-02-20 23:33:17	Create different internal error types	5
+379	302	richardmarshall	2018-02-18 21:37:57	2018-09-25 22:21:09	Support symlinks for kubectl plugins directory	5
+380	301	l-korbes	2018-02-16 23:58:54	2018-03-06 17:09:53	Resource Library	5
+381	300	monopole	2018-02-16 22:46:47	2018-05-18 21:28:50	kinflate lint	5
+382	299	mengqiy	2018-02-16 18:38:38	2018-02-16 19:42:39	better integration test	5
+383	298	StegSchreck	2018-02-16 09:26:04	2019-12-13 23:10:34	Make watch flag `-w` usable also for `kubectl get all`	5
+384	297	droot	2018-02-15 23:53:00	2018-02-17 00:15:38	kinflate: improved README and added getting-started	5
+385	296	droot	2018-02-15 23:20:05	2018-02-16 17:33:41	kinflate: removed non-existing resources from manifest file	5
+386	295	mengqiy	2018-02-15 21:53:04	2018-02-21 19:20:40	As a user, I want to know exactly what kinflate is going to do and how it will change my resources (8).	5
+387	294	seans3	2018-02-15 21:04:16	2018-02-15 21:43:39	New structure: ManifestError	5
+388	293	ant31	2018-02-15 15:30:25	2018-05-18 21:23:01	[kinflate] use namePrefix in every reference/direct link	5
+389	292	mengqiy	2018-02-15 00:18:19	2018-02-21 19:20:40	add kinflate diff command	5
+390	291	apelisse	2018-02-14 22:58:02	2018-05-18 21:33:53	Technical Debt: Missing file system parameter (5)	5
+391	290	apelisse	2018-02-14 22:56:23	2018-02-20 17:58:32	Tutorial for kinflate commands (3)	5
+392	289	seans3	2018-02-14 22:55:39	2018-02-14 23:09:51	Checkpoint toward better kinflate error messages.	5
+393	288	apelisse	2018-02-14 22:20:13	2018-02-22 19:19:46	"kinflate: Create abstraction for ""Application"" (above Kube-manifest)"	5
+394	287	grodrigues3	2018-02-14 19:17:03	2018-02-21 21:03:33	Figure out the story for examples - where do they live.  CLA bot for cncf?  etc	5
+395	286	apelisse	2018-02-14 19:11:50	2018-02-21 19:37:38	As a user I have a way of managing Secrets outside of my source control. (5)	5
+396	285	apelisse	2018-02-14 17:40:43	2018-02-17 00:08:40	kinflate: Generate secrets with commands	5
+397	284	monopole	2018-02-13 21:27:22	2018-02-13 23:12:50	Make test failures easier to see and understand.	5
+398	283	monopole	2018-02-13 18:48:11	2018-02-13 18:50:06	Add links to existing demo and tutorial pages.	5
+399	282	Liujingfang1	2018-02-13 18:27:29	2018-02-14 23:09:53	WIP: fix filesystem tech debt	5
+400	281	mengqiy	2018-02-13 01:00:10	2018-02-13 01:58:50	Noop transformer	5
+401	280	seans3	2018-02-13 00:58:21	2018-02-13 21:08:51	More specific error messages for missing/bad manifest file	5
+402	279	mengqiy	2018-02-13 00:08:43	2018-02-13 01:04:50	error out when a patch has not matching object	5
+403	278	seans3	2018-02-12 23:13:55	2018-09-25 20:07:04	Use Internal Error Library throughout Application to Display More Descriptive Error Messages (8)	5
+404	277	seans3	2018-02-12 23:11:05	2018-02-12 23:15:53	Kinflate: Better Error Messages	5
+405	276	CalvinHartwell	2018-02-12 19:07:54	2018-08-15 18:41:37	Bug: kubectl create secret --from-file does not accept tilde ~ character in path	5
+406	275	yank1	2018-02-11 06:28:06	2018-02-12 07:06:49	fix a typo init.go	5
+407	274	mengqiy	2018-02-10 02:22:02	2018-02-12 23:46:50	Kinflate use manifest tree builder	5
+408	273	monopole	2018-02-10 00:41:43	2018-02-10 07:26:51	add demo testing	5
+409	272	monopole	2018-02-09 21:56:05	2018-02-09 21:56:16	fix demo	5
+410	271	grodrigues3	2018-02-09 21:53:06	2018-02-23 04:15:59	Add examples to existing Kapps demonstrating customization of key dimensions strategy (3)	5
+411	270	mengqiy	2018-02-08 22:03:12	2018-02-09 18:35:53	manifest tree builder	5
+412	269	PCQ	2018-02-08 12:26:03	2018-07-30 04:41:52	No major and minor serverVersion-Information using Minikube v0.25.0 and K8s v1.9.0	5
+413	268	droot	2018-02-07 20:40:02	2018-02-07 20:54:44	kinflate: added set subcommand	5
+414	267	monopole	2018-02-07 16:52:00	2018-02-07 16:52:09	tweakdemo	5
+415	266	lmxia	2018-02-07 03:21:33	2018-02-08 17:52:43	fix typos in cmd/kinflate/shortDemo.md	5
+416	265	lmxia	2018-02-07 03:16:10	2018-02-14 17:41:41	fix typos in pkg/kinflate/util_test.go and pkg/framework/test/etcd.go	5
+417	264	monopole	2018-02-07 01:18:41	2018-02-07 01:18:52	demotweak	5
+418	263	mengqiy	2018-02-07 01:02:55	2018-02-07 01:15:44	fix wrong paths of name reference transformer config	5
+419	262	droot	2018-02-07 00:49:43	2018-02-07 18:20:45	kinflate: implemented 'add' subcommand	5
+420	261	monopole	2018-02-06 23:34:21	2018-02-06 23:35:40	add short and longer demo	5
+421	260	Liujingfang1	2018-02-06 23:06:28	2018-02-06 23:26:56	Change command setprefixname to setnameprefix	5
+422	259	seans3	2018-02-06 19:57:02	2018-02-06 23:40:45	Kinflate add secret tls command.	5
+423	258	apelisse	2018-02-06 19:50:24	2018-03-19 22:43:22	Unstruct package framework for json/yaml manipulation	5
+424	257	seans3	2018-02-06 18:34:10	2018-02-06 19:44:17	Kinflate add generic secret command.	5
+425	256	droot	2018-02-06 00:24:52	2018-02-06 04:12:08	Add configmap	5
+426	255	monopole	2018-02-05 23:44:36	2018-02-06 00:20:03	tweakREADME	5
+427	254	monopole	2018-02-05 22:04:05	2018-02-05 22:31:58	modifyREADME	5
+428	253	monopole	2018-02-05 21:27:13	2018-02-05 21:31:06	add setprefixname command	5
+429	252	seans3	2018-02-05 18:59:58	2018-02-08 18:29:52	WIP: Kinflate addConfigMap	5
+430	251	hangyan	2018-02-05 09:32:55	2018-02-05 17:37:12	Fix typo in function name and comment	5
+431	250	peterfication	2018-02-03 11:30:04	2019-06-28 20:18:26	kubectl proxy with protocol in stdout message	3
+432	249	mengqiy	2018-02-03 00:46:53	2018-02-05 17:28:12	fix a bug of nameprefix lost after applying patch	5
+433	248	monopole	2018-02-03 00:09:09	2018-05-18 21:23:26	inf loop if cycle in manifest search	5
+434	247	mengqiy	2018-02-02 21:35:31	2018-02-03 00:00:08	All Run functions should not depend on Cobra	5
+435	246	mengqiy	2018-02-02 20:59:38	2018-02-02 21:00:41	register addResource	5
+436	245	monopole	2018-02-02 20:46:24	2018-02-02 20:58:05	add missing command	5
+437	244	mengqiy	2018-02-02 17:44:44	2018-02-02 18:05:12	add a constructor for multitransformer	5
+438	243	mengqiy	2018-02-02 01:12:58	2018-02-02 17:00:13	restructure the code a bit	5
+439	242	droot	2018-02-02 00:09:33	2018-02-06 23:37:07	WIP kinflate add configmap/secret commands	5
+440	241	mengqiy	2018-02-01 22:03:50	2018-02-02 17:00:16	multitransformer	5
+441	240	apelisse	2018-02-01 18:01:52	2018-02-05 18:28:11	kinflate: Manifest type improvements	5
+442	239	apelisse	2018-01-31 19:47:24	2018-01-31 22:40:06	Apelisse droot seans3	5
+443	238	monopole	2018-01-31 17:54:00	2018-01-31 18:57:10	Init writes only a manifest to the current dir.	5
+444	237	monopole	2018-01-31 00:09:30	2018-01-31 00:39:04	More addresource code	5
+445	236	monopole	2018-01-30 22:47:34	2018-01-30 22:51:10	start addresource command	5
+446	235	apelisse	2018-01-30 22:14:39	2018-01-31 18:54:12	kinflate: Create AddConfigMap structure	5
+447	234	mengqiy	2018-01-30 21:09:33	2018-01-30 21:14:08	real kinflate init	5
+448	233	monopole	2018-01-30 19:16:37	2018-01-30 19:32:07	Tweak the fakes, add a test of fake.	5
+449	232	mengqiy	2018-01-30 17:53:28	2018-01-30 18:11:06	add mock fs and file for testing	5
+450	231	monopole	2018-01-29 23:43:16	2018-01-29 23:50:35	Add init command.	5
+451	230	mengqiy	2018-01-29 20:58:24	2018-01-29 21:03:32	delete dead code	5
+452	229	mengqiy	2018-01-26 23:04:11	2018-01-27 00:33:32	fix name ref issue	5
+453	228	dls314	2018-01-26 21:02:01	2018-01-29 19:20:08	Update plugin_client.go	5
+454	227	dls314	2018-01-26 20:23:51	2019-07-18 11:07:14	Consider preferring USERPROFILE as the home path more often on Windows	3
+455	226	rednatto	2018-01-25 09:08:31	2018-08-29 20:42:52	kubectl panic on pod delete	5
+456	225	mengqiy	2018-01-24 22:23:50	2018-01-26 21:37:32	Rebase kinflate on new utils	5
+457	224	anitakumar	2018-01-24 17:50:00	2018-04-14 14:44:55	error trying to create a Role	5
+458	223	apelisse	2018-01-24 17:21:43	2018-02-07 18:15:48	Remove pkg/framework/test that has moved to https://github.com/kubern…	5
+459	222	mengqiy	2018-01-24 02:10:08	2018-01-24 22:18:39	fix golink and refactor test	5
+460	221	MrHohn	2018-01-23 18:30:28	2018-09-16 10:47:31	Unable to change service from type=NodePort to type=ClusterIP with kubectl	5
+461	220	ant31	2018-01-23 15:41:29	2018-02-09 00:18:27	kinflate: Separate 'resources' from 'packages'	5
+462	219	mengqiy	2018-01-23 01:08:43	2018-01-24 22:57:31	util to update name reference	5
+463	218	mengqiy	2018-01-22 19:03:32	2018-01-24 01:04:31	additional labels and annotations util	5
+464	217	anitakumar	2018-01-22 17:31:31	2018-01-25 10:13:22	"Error: error validating """": error validating data: kind not set"	5
+465	216	sybeck2k	2018-01-22 11:18:34	2019-06-09 20:49:32	Kubectl through a proxy	2
+466	215	mengqiy	2018-01-19 18:57:54	2018-01-22 18:32:35	Nameprefix util	5
+467	214	mengqiy	2018-01-17 21:28:30	2018-01-19 18:12:28	update mutate func	5
+468	213	hoegaarden	2018-01-17 11:16:24	2018-01-17 19:29:27	Test framework: Update docs	5
+469	212	anitakumar	2018-01-16 22:45:12	2018-01-23 17:22:08	give the loadbalancer a name 	5
+470	211	apelisse	2018-01-16 17:17:29	2018-01-17 19:28:26	pre-commit: Check gofmt output for errors	5
+471	210	ssubramanian123	2018-01-16 17:05:48	2018-04-14 14:43:53	kubectl --serviceaccount option use 	5
+472	209	hoegaarden	2018-01-16 15:28:10	2018-01-17 19:18:28	Test framework: Configure the APIServer with the URL to Etcd	5
+473	208	hoegaarden	2018-01-15 17:17:48	2018-01-17 19:16:27	Fix formatting issues as suggested by gofmt	5
+474	207	totherme	2018-01-15 14:27:55	2018-01-17 19:17:28	Test framework: Simplify UX	5
+475	206	bhack	2018-01-13 12:53:57	2018-01-23 17:22:35	Kubectl xpra	5
+476	205	mengqiy	2018-01-10 17:39:44	2018-01-12 17:11:24	more support for configmap and secret	5
+477	204	mengqiy	2018-01-10 17:17:47	2018-01-10 17:24:11	add one more update helper function	5
+478	203	mengqiy	2018-01-09 23:54:15	2018-01-10 00:48:12	Add some update helpers for kinflate	5
+479	202	seans3	2018-01-09 22:48:47	2018-07-18 03:57:52	Initial install	5
+480	201	mengqiy	2018-01-09 00:55:58	2018-01-09 22:53:12	update simple example	5
+481	200	mengqiy	2018-01-08 21:53:16	2018-01-09 23:25:11	configmap and secret helper functions	5
+482	199	mengqiy	2018-01-08 20:43:21	2018-01-08 23:46:17	pod template visitor	5
+483	198	mengqiy	2018-01-08 20:39:41	2018-01-08 22:43:11	copy some configmap and secret related pkgs for kinflate	5
+484	197	php-coder	2018-01-08 19:23:03	2018-03-27 11:08:15	kubectl apply includes raw and useless data into the error message	5
+485	196	totherme	2018-01-08 14:12:49	2018-01-08 17:36:11	Hide test framework internals	5
+486	195	mengqiy	2018-01-06 00:43:46	2018-01-08 23:27:11	format comments for types.go	5
+487	194	hoegaarden	2018-01-05 16:44:32	2018-01-08 17:35:12	Simplify address handling	5
+488	193	hoegaarden	2018-01-05 16:41:14	2018-01-08 17:34:12	Simplify directory handling	5
+489	192	kumarganesh2814	2018-01-04 08:22:00	2018-07-05 01:49:42	"kubectl exec connection error: desc = ""transport: dial unix docker-containerd.sock: connect: connection refused"": unknown"	5
+490	191	mengqiy	2018-01-03 19:38:14	2018-01-05 18:34:12	update manifest types	5
+491	190	dyson	2017-12-27 11:17:05	2017-12-27 16:51:34	kubctl explain resourcequota.spec.hard incomplete 	5
+492	189	stewart-yu	2017-12-27 03:08:42	2018-01-15 21:51:14	Does we need print apigroup for  'ds'、'deployments'?	5
+493	188	mpashka	2017-12-22 22:29:18	2018-01-15 18:07:55	Kubectl doesn't respect --user parameter when execution create clusterrolebinding	5
+494	187	spiffxp	2017-12-20 18:33:35	2017-12-28 17:40:37	Update code-of-conduct.md	5
+495	186	mortenlj	2017-12-19 12:49:57	2019-05-03 19:35:52	Default output from kubectl when getting a CRD named Status is wrong	5
+496	185	EmpireJones	2017-12-19 03:15:57	2019-07-09 20:46:25	Watch flag should indicate when a resource is deleted	2
+497	184	totherme	2017-12-18 15:17:04	2017-12-18 17:13:35	Integration Framework: Simplify paths	5
+498	183	mengqiy	2017-12-15 21:54:19	2017-12-15 23:12:30	update vendor	5
+499	182	jberkhahn	2017-12-15 20:12:58	2018-01-24 21:38:39	Add framework to init config in a plugin	5
+500	181	mengqiy	2017-12-15 19:25:10	2017-12-15 20:32:30	check in kinflate	5
+501	180	hoegaarden	2017-12-15 16:22:25	2017-12-18 17:08:34	Examples	5
+502	179	pwittrock	2017-12-14 19:34:10	2018-05-07 02:49:04	ktl proposal	5
+503	178	totherme	2017-12-14 15:29:10	2017-12-15 04:40:30	Control pane process timeouts	5
+504	177	hoegaarden	2017-12-14 09:57:12	2017-12-15 00:18:30	Zero conf structs	5
+505	176	hoegaarden	2017-12-14 09:44:10	2017-12-15 00:03:30	162 apiserver sane default constructor	5
+506	175	Lion-Wei	2017-12-14 09:00:50	2018-05-04 17:22:29	kubectl get multi-resources can't show kind when using with `--sort-by` flag	5
+507	174	Lion-Wei	2017-12-13 08:08:14	2018-06-04 03:43:16	deprecate the print flag `--template`	5
+508	173	apelisse	2017-12-12 23:42:04	2018-05-23 02:59:59	Move openapi	5
+509	172	ahmetb	2017-12-12 20:30:58	2018-09-25 21:40:44	"""kubectl drain"" must print warnings about eviction errors"	5
+510	171	zjj2wry	2017-12-12 09:13:57	2018-05-11 05:01:35	Use discovery and dynamic client for cluster-info dump	5
+511	170	lenalebt	2017-12-12 08:19:12	2019-01-18 15:58:37	Cannot ssh into (hanging) init container	2
+512	169	mengqiy	2017-12-11 23:41:38	2018-04-13 03:45:17	Move several packages	5
+513	168	totherme	2017-12-11 14:02:31	2017-12-14 23:21:29	Finalize the interface of the Fixtures struct	5
+514	167	mindprince	2017-12-10 17:20:16	2018-01-15 21:51:14	`kubectl get all --all-namespaces` has duplicate output for `ds`, `deploy` and `rs`.	5
+515	166	totherme	2017-12-08 14:42:48	2017-12-08 18:28:14	Add a sane default constructor for the Etcd and EtcdConfig structs	5
+516	165	wackxu	2017-12-08 07:27:40	2018-06-24 07:37:31	add gitignore file	5
+517	164	apelisse	2017-12-07 21:28:17	2018-01-03 08:30:31	Understand and potentially remove `k8s.io/kubernetes/pkg/kubectl/testing`	5
+518	163	hoegaarden	2017-12-07 11:50:49	2017-12-14 23:21:29	In the testing framework, the Fixtures struct should have sane 0-value behaviour	5
+519	162	hoegaarden	2017-12-07 11:19:12	2017-12-15 00:03:30	In the testing framework, the APIServer struct should have sane 0-value behaviour	5
+520	161	hoegaarden	2017-12-07 11:18:58	2017-12-08 18:28:14	In the testing framework, the Etcd struct should have sane 0-value behaviour	5
+521	160	wackxu	2017-12-06 08:01:34	2018-05-07 18:59:07	[WIP] Move `k8s.io/kubernetes/pkg/kubectl/explain` to `k8s.io/kubectl/pkg/explain	5
+522	159	mengqiy	2017-12-05 22:47:46	2017-12-15 19:27:00	WIP: Check in initial kinflate	5
+523	158	AlexKhotian	2017-12-05 17:33:36	2017-12-13 20:23:11	Move `openapi` package from `k8s.io/kubernetes` to `k8s.io/kubectl`	5
+524	157	hoegaarden	2017-12-05 13:58:24	2017-12-07 19:03:08	No special treatment for test framework	5
+525	156	mengqiy	2017-12-04 17:40:24	2017-12-04 18:55:17	Apply should not assume that publishing openapi spec means support strategic merge patch	5
+526	155	hoegaarden	2017-12-04 13:54:58	2017-12-05 21:28:31	Proper fake for apiserver	5
+527	154	hoegaarden	2017-12-04 12:31:02	2017-12-05 21:23:47	Proper fake for etcd	5
+528	153	totherme	2017-11-30 11:26:47	2017-12-05 22:26:03	The Test Framework's test fakes shouldn't be so tightly coupled with the implementations they test	5
+529	152	totherme	2017-11-30 11:18:15	2017-12-07 19:03:08	The Test Framework should not require special treatment in pre-commit.sh	5
+530	149	totherme	2017-11-21 16:51:31	2017-11-29 23:29:25	Beginnings of a test framework	5
+531	148	ahmetb	2017-11-20 23:10:38	2018-01-02 22:09:46	kubectl create service: ignores extra positional arguments	5
+532	147	ahmetb	2017-11-20 22:10:14	2019-09-27 18:02:56	"""kubectl describe"" events query is too specific"	3
+533	146	ahmetb	2017-11-19 23:49:55	2018-05-22 09:42:16	"--show-labels shows up on ""kubectl create [...]"""	5
+534	145	monopole	2017-11-18 01:30:13	2017-11-21 01:26:07	Tweak pre-commit to ignore vendor directory.	5
+535	144	mengqiy	2017-11-17 23:52:26	2017-12-05 22:48:31	Check in kinflate	5
+536	143	pwittrock	2017-11-17 01:55:36	2017-11-18 19:36:19	Enable use-openapi-print-columns in kubectl	5
+537	142	wrossmann	2017-11-16 23:46:42	2019-08-23 12:21:48	`kubectl proxy --accept-hosts` appears to filter destination, not source.	2
+538	141	apelisse	2017-11-16 23:36:12	2018-05-30 18:00:44	OpenAPI: Use OpenAPI semantic rather than x-kubernetes custom directives	5
+539	140	naisanza	2017-11-16 21:24:00	2018-04-14 14:41:36	kubectl -n kube-system and kubectl --all-namespaces, differ in behavior	5
+540	139	zzq392342084	2017-11-16 11:34:56	2017-12-06 19:23:09	kubectl logs Error from server (Forbidden): Forbidden (user=system:anonymous, verb=get, resource=nodes, subresource=proxy)	5
+541	138	mengqiy	2017-11-16 05:53:10	2018-02-26 01:40:57	Use structured generator for kubectl autoscale	5
+542	137	apelisse	2017-11-15 22:48:45	2018-05-15 00:49:50	Move `k8s.io/kubernetes/pkg/kubectl/cmd/util/openapi` to `k8s.io/kubectl/pkg/openapi` 	5
+543	136	apelisse	2017-11-15 22:46:57	2018-05-15 00:49:50	Move `k8s.io/kubernetes/pkg/kubectl/explain` to `k8s.io/kubectl/pkg/explain`	5
+544	135	apelisse	2017-11-15 22:45:55	2018-05-27 18:49:04	Move `k8s.io/kubernetes/pkg/kubectl/apply` to `k8s.io/kubectl/pkg/apply`	5
+545	134	apelisse	2017-11-15 21:55:01	2018-09-25 20:08:12	Write `kubectl alpha apply`	5
+546	133	apelisse	2017-11-15 18:25:28	2018-05-12 02:40:53	Kubectl Independence: Move packages from `k8s.io/kubernetes/pkg/kubectl` to `k8s.io/kubectl/pkg`	5
+547	131	wgordon17	2017-11-14 14:47:35	2018-05-10 19:15:02	Please add fish completion	5
+548	130	apelisse	2017-11-13 22:44:41	2017-11-28 22:34:22	Simplify travis script, work against `vendor/`	5
+549	129	apelisse	2017-11-13 22:19:19	2017-11-28 22:51:24	Use deps	5
+550	128	apelisse	2017-11-13 21:55:07	2017-11-21 00:43:48	Clarify requirements in README.md	5
+551	127	mahdix	2017-11-09 14:20:44	2017-12-14 21:54:38	"Replace type ""switch"" statements with KindVisitor in ""rollback"""	5
+552	126	mahdix	2017-11-09 14:17:41	2017-11-17 13:08:08	"Update type switches in ""kind_visitor"""	5
+553	122	pwittrock	2017-11-06 19:44:42	2017-11-07 20:12:41	Setup submit queue and prow testing for kubectl PRs	5
+554	121	bkrannich	2017-11-06 10:02:46	2018-02-04 16:42:17	Autocomplete issues with --from-file and --from-literal	5
+555	120	calind	2017-11-02 10:36:02	2018-03-02 22:25:51	Cannot autocomplete kubectl bash aliases	5
+556	119	shiywang	2017-11-02 06:15:27	2017-11-03 19:07:53	kubectl convert should return error when out-version is an invalid value	5
+557	118	apelisse	2017-11-01 21:58:35	2018-07-30 04:41:51	[UMBRELLA] Kubectl independence: documentation	5
+558	117	apelisse	2017-11-01 21:56:33	2019-04-29 18:27:56	[UMBRELLA] Kubectl independence: code refactoring	5
+559	116	apelisse	2017-11-01 21:54:30	2018-08-13 00:05:21	[UMBRELLA] Kubectl independence: releasing	5
+560	115	apelisse	2017-11-01 21:52:41	2019-05-24 16:28:09	[UMBRELLA] Kubectl independence: testing	5
+561	114	apelisse	2017-11-01 21:27:21	2018-09-26 08:41:16	[UMBRELLA] Kubectl independence	0
+562	113	mihnjong	2017-11-01 01:22:28	2018-04-14 14:39:28	Need a command to list all available/existing types (or resources) in a cluster 	5
+563	112	spiffxp	2017-10-31 23:35:44	2017-11-06 21:57:55	Rename OWNERS assignees: to approvers:	5
+564	111	monopole	2017-10-28 20:48:35	2017-10-28 20:58:00	Tweak travis early exit	5
+565	110	monopole	2017-10-28 14:43:19	2017-10-28 20:48:50	test travis filter	5
+566	109	php-coder	2017-10-27 18:22:47	2017-11-07 20:21:29	kubectl create clusterrolebinding -o yaml shouldn't create a binding	5
+567	108	monopole	2017-10-26 23:25:59	2017-10-28 14:39:11	Skip CICD build on markdown or doc changes.	5
+568	107	hartfordfive	2017-10-26 10:26:09	2017-11-02 20:57:13	Panic on deleting statefulset on kubernetes 1.8.1-gke.0	5
+569	106	pwittrock	2017-10-25 23:27:47	2017-10-26 22:50:33	Create issue_backlog.md	1
+570	105	monopole	2017-10-25 17:32:46	2017-10-25 18:08:42	tweak precommit	5
+571	104	php-coder	2017-10-25 15:26:48	2018-07-28 01:05:06	kubectl exec: mark -p option as deprecated in the help output	5
+572	103	monopole	2017-10-24 23:18:25	2017-10-25 04:37:37	Add travis CICD coverage.	5
+573	102	mengqiy	2017-10-23 19:48:20	2017-10-25 02:05:19	add kexpand util	5
+574	101	frodenas	2017-10-23 12:55:24	2017-11-17 11:40:37	Several kubectl Pod Disruption Budget Generators issues	5
+575	100	pwittrock	2017-10-21 23:14:47	2019-01-07 18:50:46	Document pkg/kubectl/cmd/util/openapi	2
+576	99	pwittrock	2017-10-21 23:08:22	2019-09-26 20:42:13	Document pkg/kubectl/cmd/util/editor package	2
+577	98	pwittrock	2017-10-21 23:06:09	2018-05-15 00:49:51	Document pkg/kubectl/cmd/util/env	2
+578	97	pwittrock	2017-10-21 17:48:01	2018-09-25 19:18:06	Add conflict detection to pkg/kubectl/apply/strategy	1
+579	96	pwittrock	2017-10-21 17:27:34	2018-06-23 18:24:30	Document the kubectl ring factories	2
+580	95	pwittrock	2017-10-21 16:52:39	2018-05-15 02:51:50	Document k8s.io/kubernetes/pkg/kubectl/resource	1
+581	94	pwittrock	2017-10-21 16:34:53	2018-11-02 02:31:41	Create library for parsing commandline flags -> protocol buffer	2
+582	93	pwittrock	2017-10-21 00:05:40	2018-05-15 01:50:51	Meta/Umbrella: Improve `pkg/kubectl/resource`unit / integration test coverage and structure	2
+583	92	pwittrock	2017-10-20 18:55:10	2018-05-15 02:51:50	Remove dependency on k8s.io/kubernetes/pkg/apis/extensions from kubectl	2
+584	91	pwittrock	2017-10-20 18:43:36	2018-05-15 02:51:52	Remove dependency on k8s.io/kubernetes/pkg/apis/rbac from kubectl	2
+585	90	pwittrock	2017-10-20 18:40:44	2017-10-25 22:16:09	Remove dependency on k8s.io/kubernetes/pkg/apis/policy from kubectl	2
+586	89	mindprince	2017-10-20 18:36:55	2017-12-02 23:23:21	`kubectl logs -f` is not working correctly on 1.8	5
+587	88	pwittrock	2017-10-20 00:01:19	2018-05-15 02:51:51	Create test library that emulates a node	2
+588	87	pwittrock	2017-10-19 21:36:20	2018-07-10 05:56:29	Support integration test framework that brings up a new control plane	2
+589	85	pwittrock	2017-10-18 19:46:17	2017-10-18 19:46:26	Add items to Maintainers tasks	5
+590	84	pwittrock	2017-10-18 19:23:15	2018-09-25 19:10:01	SIG CLI Leads Tasks	1
+591	83	pwittrock	2017-10-18 17:10:40	2018-10-16 19:23:02	Remove Kubectl dependencies on kubernetes/pkg/api and kubernetes/pkg/apis	0
+592	82	pwittrock	2017-10-18 16:56:26	2017-10-18 19:22:13	Write guide for maintainers sustaining engineering tasks.	5
+593	81	pwittrock	2017-10-17 20:36:53	2017-10-21 04:31:11	Remove pkg/kubectl/resource deps on kubernetes/kubernetes	5
+594	79	pwittrock	2017-10-16 20:34:41	2018-03-15 21:42:45	Publish SIG-CLI 1.9 goals	5
+595	78	pwittrock	2017-10-16 17:05:27	2017-10-16 17:58:30	New apply path crashes when there is no group	1
+596	77	pwittrock	2017-10-09 16:59:29	2018-03-12 17:28:45	Update skew tests on test grid to be 1.8-1.9 instead of 1.7-1.8	1
+597	76	pwittrock	2017-10-09 16:57:55	2019-05-23 23:11:09	Move kubectl tests in common test jobs into their own jobs	2
+598	75	pwittrock	2017-10-09 15:54:50	2018-09-25 19:01:18	Setup tools for an oncall rotation for SIG cli	1
+599	73	pwittrock	2017-10-06 20:50:12	2017-11-16 20:51:07	"Replace type ""switch"" statements with KindVisitor"	2
+600	72	marun	2017-10-05 02:39:12	2017-10-05 22:25:08	IGNORE: Yet another test issue	0
+601	71	marun	2017-10-05 02:37:45	2017-10-05 22:25:13	IGNORE: Another test issue	1
+602	70	marun	2017-10-04 16:40:10	2017-10-05 22:25:21	IGNORE: Test Issue	1
+603	69	pwittrock	2017-10-03 20:47:13	2017-10-03 21:41:15	Refactor kubectl apply code to be maintainable	2
+604	68	AnthonyWC	2017-10-03 15:11:03	2017-10-03 18:27:42	kubectl config get-contexts show no cluster?	5
+605	67	iamcaleberic	2017-10-02 12:59:21	2017-10-04 15:47:01	Error when trying to run kubectl create command on yaml files	5
+606	66	apelisse	2017-09-29 20:44:38	2017-10-16 23:47:22	"Deprecate ""Discovery"" and replace with openapi"	5
+607	65	monopole	2017-09-28 19:16:20	2017-09-28 21:25:00	start kexpand	5
+608	64	mengqiy	2017-09-28 14:26:14	2017-09-28 15:05:29	add types for descriptor and manifest	5
+609	63	smarterclayton	2017-09-21 22:39:00	2018-01-09 17:30:43	ANSI escape sequences aren't terminated by kubectl logs	5
+610	62	aauren	2017-09-11 19:42:38	2018-03-19 20:18:13	Create Key Agent Integration for kubectl	5
+611	61	Winterflower	2017-09-11 09:46:27	2017-09-13 01:32:40	kubectl edit <resource> fails with Edit cancelled, no changes made even when file has modifications	5
+612	60	aleksandra-malinowska	2017-09-07 15:53:34	2017-09-12 12:16:32	kubectl annotate fails for annotations with prefix	5
+613	59	JorritSalverda	2017-09-01 09:54:57	2018-09-25 20:51:28	Return list of operation ids from 'kubectl apply' and add 'kubectl await' to wait for their results	5
+614	58	apelisse	2017-09-01 00:03:26	2018-09-25 20:32:40	Verify that kubectl can parse openapi	5
+615	57	tnozicka	2017-08-29 13:04:15	2017-10-16 23:50:27	kubectl delete returns incorrect exit status	5
+616	56	cbluth	2017-08-28 18:21:36	2017-10-03 03:49:43	kubectl cycle pods	5
+617	55	mengqiy	2017-08-25 07:13:33	2017-11-22 19:59:49	kubectl apply should use openapi 	1
+618	54	pwittrock	2017-08-24 23:30:11	2018-01-03 22:05:58	Test issue move out of milestone	5
+619	53	pwittrock	2017-08-24 23:24:44	2018-03-10 13:37:33	Test issue in milestone	3
+620	52	gtirloni	2017-08-16 14:01:26	2017-08-18 13:56:21	`kubectl run --expose` continues after error (missing parameter)	5
+621	51	xilabao	2017-08-14 02:48:24	2017-09-28 18:05:41	kubectl set resource/selector/subject -o yaml doesn't return the expected format	5
+622	50	pwittrock	2017-08-13 19:06:26	2017-10-19 16:02:37	Remove kubectl dependencies on unversioned kubernetes API packages	1
+623	49	apelisse	2017-08-11 19:54:00	2017-09-03 01:18:48	Allow client-side validation against OpenAPI rather than Swagger	0
+624	48	jaraco	2017-08-09 18:40:56	2017-11-23 18:39:05	Kubectl fails to resolve names except through DNS	1
+625	47	DarqueWarrior	2017-08-05 21:39:43	2019-09-24 16:53:03	Rejecting valid Environment Variable Names	1
+626	46	foldingbeauty	2017-08-03 09:34:32	2017-08-03 09:59:14	A password with special characters is not escaped right when create a docker-registry secret.	5
+627	45	abstrctn	2017-07-24 19:42:27	2017-10-19 16:00:52	kubectl run --dry-run raises error	5
+628	44	alexandercampbell	2017-07-14 16:24:34	2017-07-19 16:44:59	Consolidate the Deployment Generators	5
+629	43	fiksn	2017-07-02 13:55:49	2017-08-09 21:04:24	kubectl --sort-by not working in 1.7.0	5
+630	42	AXington	2017-06-28 14:45:15	2017-08-07 00:32:43	Namespace flag causes completion error.	5
+631	41	pwittrock	2017-06-23 23:24:36	2017-08-09 21:41:04	Kubectl caches partially populated api discovery	0
+632	40	mnussbaum	2017-06-22 21:03:08	2017-06-28 17:14:55	Cannot fetch multi-container pod logs by selector	5
+633	39	cameronbrunner	2017-06-21 21:43:59	2017-08-09 21:43:38	Scaling a deployment always sets 'schedulerName' to 'default-scheduler' (kubectl 1.5.7, master 1.6.4)	5
+634	38	aguilbau	2017-06-21 07:58:41	2017-06-22 01:10:05	inconsistencies when using flag '-o json'	5
+635	37	ryanwalls	2017-06-20 13:40:13	2017-06-22 16:01:29	Current bash-completion instructions do not work on Mac OS 10.11.6 and bash 3.2	5
+636	36	pwittrock	2017-06-19 21:25:30	2017-06-19 23:54:10	Kubectl upgrade tests failing 1.6 -> 1.7	5
+637	35	sandoracs	2017-06-17 10:59:17	2018-01-29 17:17:48	cmd.Flags().Set() accepts invalid configurations in create_service_test.go	5
+638	34	hasanatkazmi	2017-06-17 00:40:51	2017-08-09 21:44:35	`kubectl top nodes/pods` doesn't show Storage usage	5
+639	33	k82cn	2017-06-15 05:18:04	2017-06-21 09:18:56	kubectl did not print readable message of PVC's capacity.	5
+640	31	pmorie	2017-06-13 14:39:44	2019-12-20 01:33:34	Kubectl should warn when resources aren't found and discovery failed	2
+641	30	timothysc	2017-06-13 14:37:46	2018-03-30 11:26:53	"BUG: Info log on every kubectl command ""duplicate proto type registered"""	5
+642	29	brendandburns	2017-06-13 04:18:36	2017-06-14 17:23:18	Optionally use azure active directory for kubectl auth.	5
+643	28	derekwaynecarr	2017-06-09 21:00:20	2017-06-12 07:44:07	kubectl drain errors if a pod has already been deleted	5
+644	27	tomfotherby	2017-06-09 15:05:01	2017-06-09 23:29:48	kubectl patch initContainers image doesn't work	5
+645	26	pmorie	2017-06-08 20:23:32	2017-06-13 21:58:27	kubectl get should support PodPreset	5
+646	25	tonglil	2017-06-07 21:16:47	2017-06-19 15:45:20	Unable to kubectl get -o jsonpath annotation value	5
+647	24	minherz	2017-06-06 20:31:09	2017-06-15 21:08:34	kubectl does not set container name according to deployment manifest	5
+648	23	alkar	2017-06-06 12:54:38	2017-06-14 18:37:40	serviceAccountName default value	5
+649	22	droot	2017-06-01 22:07:30	2017-06-07 14:37:58	kubectl Get command should use open-api extension to display a resource	5
+650	21	jjfiguep	2017-06-01 10:56:25	2017-06-01 11:58:05	Error pulling images from external registry when the user changes	5
+651	20	xiangpengzhao	2017-05-31 09:20:24	2017-06-23 10:27:08	Mark deprecated commands in 'kubectl help'	5
+652	19	ddcprg	2017-05-30 15:46:49	2017-07-12 16:42:32	kubectl run --env option restricts the format of the variable values	5
+653	18	fabianofranz	2017-05-29 21:00:28	2017-05-30 19:11:35	Cached discovery issue on windows	5
+654	17	danwinship	2017-05-26 12:03:32	2017-10-30 22:38:36	NetworkPolicy describer isn't useful	5
+655	16	veris-neerajdhiman	2017-05-23 14:17:38	2017-05-31 02:31:31	CrashLoopBackOff while creating Pod	5
+656	15	veris-neerajdhiman	2017-05-23 11:47:58	2017-05-31 02:32:38	Issues in Pull local image irrespective of ` imagePullPolicy: Never` tag	5
+657	14	sanderploegsma	2017-05-19 08:50:57	2017-06-24 14:06:05	`kubectl scale` completion does not include statefulset	5
+658	13	pwittrock	2017-05-18 17:07:49	2017-05-18 17:39:37	Add issue template for kubectl repo	5
+659	12	pwittrock	2017-05-17 23:40:54	2019-12-30 22:50:59	Add kubectl create for missing workloads	5
+660	10	gyliu513	2017-05-10 15:52:38	2017-05-10 15:54:50	"Adding ""PodPreset"" to ""kubectl get help"""	5
+661	9	gyliu513	2017-05-10 15:52:34	2018-09-25 18:58:46	"Adding ""PodPreset"" to ""kubectl get help"""	1
+662	8	kendallarm	2017-04-27 12:29:52	2017-04-27 12:30:18	l --help	5
+663	7	Vrtak-CZ	2017-04-26 13:27:43	2019-08-23 11:16:16	kubectl delete all -l foo=bar - does not delete ingress	4
+664	6	liggitt	2017-04-25 20:41:54	2017-05-16 21:47:49	kubectl proxy --reject-methods flag is non-functional	5
+665	5	dictvm	2017-04-21 12:36:54	2018-05-08 22:24:08	kubectl cp doesn't feature tab completion	5
+666	4	owenmorgan	2017-04-20 09:21:17	2017-04-21 06:38:14	Cant set context	5
+667	3	lihan	2017-04-20 01:23:25	2019-01-02 05:53:57	kubectl get po columns aren't aligned when using watch mode	3
+668	2	jeremyjjbrown	2017-04-12 15:29:30	2017-05-31 02:37:12	Kubectl errors when it needs to be updated instead of notifying.	5
+669	1	pwittrock	2017-03-30 20:27:45	2017-03-30 20:53:29	Initial repo boilerplate	5

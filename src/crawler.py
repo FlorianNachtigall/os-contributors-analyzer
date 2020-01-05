@@ -1,7 +1,6 @@
 from github import Github
 from collections import Counter
 import pandas as pd
-import numpy as np
 import json
 import re
 
@@ -9,6 +8,7 @@ with open('github-token', 'r') as token_file:
     token = token_file.read().rstrip("\n")
 
 g = Github(token)
+company_file_suffix = "companies.json"
 pull_file_suffix = "pulls.csv"
 issue_file_suffix = "issues.csv"
 user_file_suffix = "users.csv"
@@ -22,7 +22,7 @@ def crawl(org = "kubernetes", repo = "kubernetes"):
     users = get_pull_authors(org, repo)
 
     merge_pulls_with_users(pulls, users, org, repo)
-    get_companies(org, repo)
+    determine_companies(org, repo)
 
 def crawl_pulls(org, repo):
     repo_object = g.get_repo(org + "/" + repo)
@@ -44,19 +44,24 @@ def crawl_issues(org, repo):
     repo_object = g.get_repo(org + "/" + repo)
     issues = []
     for issue in repo_object.get_issues(state="closed"):
-        pull_dict = {
+        issue_dict = {
             "number": issue.number,
             "user_login": issue.user.login,
             "created_at": issue.created_at,
             "closed_at": issue.closed_at,
-            "title": issue.title
+            "title": issue.title,
+            "priority": _determine_priority(issue.labels)
             }
-        issues.append(pull_dict)
-    issues_df = pd.DataFrame(issues, columns=["number", "user_login", "created_at", "closed_at", "title"])
+        issues.append(issue_dict)
+    issues_df = pd.DataFrame(issues, columns=["number", "user_login", "created_at", "closed_at", "title", "priority"])
     issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t')
 
+def get_issues_with_processing_time(org, repo):
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_processing_time", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "closed_at", "processing_time", "title"])
+
 def get_issues(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title"])
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
+    # return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title"])
 
 def get_pulls(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
@@ -88,7 +93,16 @@ def merge_pulls_with_users(pulls, users, org, repo):
     print(merge.iloc[1:100])
     merge.to_csv(org + "_" + repo + "_" + detailed_pull_file_suffix, sep='\t')
 
-def get_companies(org, repo):
+def get_repos_for_org(org):
+    repos = []
+    for repo in g.get_organization("cloudfoundry").get_repos(type="public"):
+        repos.append(repo.name)
+    return repos
+
+def get_issues_for_org(org):
+    return g.get_organization(org).get_issues(filter="all", state="closed")
+
+def determine_companies(org, repo):
     companies = {
         "Google": {
             "regex_identifier": "google",
@@ -123,8 +137,12 @@ def get_companies(org, repo):
         companies[k]["merged_pulls"] = []
         companies[k]["closed_pulls"] = []
 
-    with open('companies.json', 'w') as f:
+    with open(org + "_" + repo + "_" + company_file_suffix, 'w') as f:
         json.dump(companies, f, sort_keys=True, indent=4)
+
+def get_companies(org, repo):
+    with open(org + "_" + repo + "_" + company_file_suffix, 'r') as f:
+        return json.load(f)
 
 def compare_users_with_devstats_data(devstats_filename):
     with open(devstats_filename, 'r') as f:
@@ -139,15 +157,6 @@ def compare_users_with_devstats_data(devstats_filename):
         print("# of users: " + str(len(users)))
         print("# of common users: " + str(len(intersection)))
         print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
-
-def _extract_mail_domain(mail_address):
-    if mail_address is None:
-        return
-    mail_domain = re.search("@[\w.]+", mail_address)
-    if mail_domain is None:
-        return
-    else:
-        return mail_domain.group()
 
 def _get_user_logins(pulls):
     user_logins = pulls["user_login"].values
@@ -166,3 +175,22 @@ def _get_top_user_logins(pulls, number_of_pulls):
             top_user_logins.append(user)
     print(len(top_user_logins))
     return top_user_logins
+
+def _determine_priority(labels):
+    priority_mapping = {
+        "critical-urgent": 0,
+        "important-soon": 1,
+        "important-longterm": 2,
+        "backlog": 3,
+        "awaiting-more-evidence": 4,
+        "not-prioritized": 5,
+        "P0": 0,
+        "P1": 1,
+        "P2": 2,
+        "P3": 3
+    }
+    for label in labels:
+        prio = re.search("priority\/(.+)", label.name)
+        if prio is not None:
+            return priority_mapping[prio.group(1)]
+    return 5 # not-prioritized

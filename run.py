@@ -1,5 +1,7 @@
 from github import Github
 import src.analyzer as a
+import src.crawler as c
+import src.preprocesser as p
 
 ####################################
 
@@ -15,7 +17,8 @@ import src.analyzer as a
 
 ####################################
 
-print(a.calculate_pr_acceptance_rate_by_companies("kubernetes", "kubernetes"))
+# print(a.calculate_issue_processing_time("kubernetes", "kubernetes"))
+p.calculate_issue_processing_time("kubernetes", "kubernetes")
 
 ####################################
 

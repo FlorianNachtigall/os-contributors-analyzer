@@ -5,31 +5,18 @@ import re
 import math
 import json
 import src.crawler as c
+import src.preprocesser as p
 
 with open('github-token', 'r') as token_file:
     token = token_file.read().rstrip("\n")
 
-with open('companies.json', 'r') as f:
-    companies = json.load(f)
-
 g = Github(token)
 contributors = {}
-pull_authors = c.get_pull_authors("kubernetes" , "kubernetes")
-# pull_authors.set_index("user_login")
-
-def get_repos_for_org(org):
-    repos = []
-    for repo in g.get_organization("cloudfoundry").get_repos(type="public"):
-        repos.append(repo.name)
-    return repos
-
-def get_issues_for_org(org):
-    return g.get_organization(org).get_issues(filter="all", state="closed")
 
 def calculate_issue_processing_time(org, repo):
     # note that PRs are included here as they are a special type of an issue
-
     time_format = "%Y-%m-%d %H:%M:%S"
+    companies = c.get_companies(org, repo)
     for employer in companies.keys():
         companies[employer]["processing_time"] = datetime.timedelta(0)
         companies[employer]["issue_count"] = 0
@@ -38,8 +25,7 @@ def calculate_issue_processing_time(org, repo):
 
     print("Start iterating over issues...")
     for index, issue in issues.iterrows():
-        user = issue["user_login"]
-        employer = _get_employer(user, org)
+        employer = p.get_employer(issue.user_login, org, repo)
         still_open = type(issue.closed_at) is float and math.isnan(issue.closed_at)
         if employer is None or still_open:
             continue
@@ -67,7 +53,7 @@ def calculate_issue_processing_time_for_org(org):
     volunteer_issue_count = 0
 
     i = 0
-    issues = get_issues_for_org(org)
+    issues = c.get_issues_for_org(org)
     print("Start iterating over issues...")
     for issue in issues:
         print(issue.title)
@@ -138,7 +124,7 @@ def calculate_pr_acceptance_rate(org, repo = None):
 
 def calculate_pr_acceptance_rate_by_companies(org, repo = None):
 
-    companies = _calculate_pr_composition_by_companies(repo, org)
+    companies = _calculate_pr_composition_by_companies(org, repo)
     pr_acceptance_rate = {}
     for company in companies.keys():
         closed_pulls_count = len(companies[company]["closed_pulls"])
@@ -171,12 +157,13 @@ def _calculate_pr_composition_for_repo(repo_object, org):
                 volunteer_closed_pulls.append(pull)
     return (len(volunteer_merged_pulls), len(volunteer_closed_pulls), len(employee_merged_pulls), len(employee_closed_pulls))
 
-def _calculate_pr_composition_by_companies(repo, org):
+def _calculate_pr_composition_by_companies(org, repo):
     # only consider 'closed' PRs for our analysis
     pulls = c.get_pulls(org, repo)
+    companies = c.get_companies(org, repo)
     for index, pull in pulls.iterrows():
         user = pull["user_login"]
-        employer = _get_employer(user, org)
+        employer = p.get_employer(user, org, repo)
         if employer is None:
             continue
         merged_at = pull["merged_at"]
@@ -188,15 +175,6 @@ def _calculate_pr_composition_by_companies(repo, org):
             companies[employer]["closed_pulls"].append(pull["number"])
      
     return companies
-
-def _extract_mail_domain(mail_address):
-    if mail_address is None:
-        return
-    mail_domain = re.search("@[\w.]+", mail_address)
-    if mail_domain is None:
-        return
-    else:
-        return mail_domain.group()
         
 def _is_employee(contributor, org):
     if contributor not in contributors:
@@ -213,28 +191,10 @@ def _determine_is_employee(user_login_name, org):
     for user_org in user.get_orgs():
         user_orgs.append(user_org.login)
     user_company = user.company
-    user_mail = _extract_mail_domain(user.email)
+    user_mail = p.extract_mail_domain(user.email)
 
     # len(S1.intersection(S2)) > 0
     if user_company in companies or user_mail in mail_addresses or any(x in user_orgs for x in orgs):
         contributors[user_login_name] = True
     else: 
         contributors[user_login_name] = False
-
-def _get_employer(contributor, org):
-    if contributor not in contributors:
-        _determine_employer(contributor)
-    return contributors.get(contributor)
-
-def _determine_employer(user_login_name):
-    user = pull_authors.loc[pull_authors["user_login"] == user_login_name]
-    if user.empty:
-        return
-    # user["user_mail"].item() and user["user_company"].item() are 'nan' if not specified
-    user_orgs = user["user_orgs"]
-    user_company = user["user_company"].item()
-    user_mail = user["user_mail"].item()
-
-    for company in companies.keys():
-        if user_company in companies[company]["companies"] or user_mail in companies[company]["mail_addresses"]:
-            contributors[user_login_name] = company
