@@ -26,7 +26,36 @@ def get_repos_for_org(org):
 def get_issues_for_org(org):
     return g.get_organization(org).get_issues(filter="all", state="closed")
 
-def calculate_issue_processing_time(org):
+def calculate_issue_processing_time(org, repo):
+    # note that PRs are included here as they are a special type of an issue
+
+    time_format = "%Y-%m-%d %H:%M:%S"
+    for employer in companies.keys():
+        companies[employer]["processing_time"] = datetime.timedelta(0)
+        companies[employer]["issue_count"] = 0
+
+    issues = c.get_issues(org, repo)
+
+    print("Start iterating over issues...")
+    for index, issue in issues.iterrows():
+        user = issue["user_login"]
+        employer = _get_employer(user, org)
+        still_open = type(issue.closed_at) is float and math.isnan(issue.closed_at)
+        if employer is None or still_open:
+            continue
+
+        print(issue.title)
+        companies[employer]["processing_time"] = companies[employer]["processing_time"] + (datetime.datetime.strptime(issue.closed_at, time_format) - datetime.datetime.strptime(issue.created_at, time_format))
+        companies[employer]["issue_count"] += 1
+
+    for employer in companies.keys():
+        companies[employer]["avg_processing_time"] = companies[employer]["processing_time"].total_seconds() / companies[employer]["issue_count"] if companies[employer]["issue_count"] else 0
+        print(str(employer) + " - avg_processing_time: " + str(companies[employer]["avg_processing_time"]))
+        print(str(employer) + " - issue_count: " + str(companies[employer]["issue_count"]))
+
+    return companies
+
+def calculate_issue_processing_time_for_org(org):
     # note that PRs are included here as they are a special type of an issue
     # WARNING: apparently only works if one is part of that specific org
     
@@ -142,37 +171,12 @@ def _calculate_pr_composition_for_repo(repo_object, org):
                 volunteer_closed_pulls.append(pull)
     return (len(volunteer_merged_pulls), len(volunteer_closed_pulls), len(employee_merged_pulls), len(employee_closed_pulls))
 
-def _calculate_pr_composition_for_repo_df(repo, org):
-    volunteer_closed_pulls = []
-    volunteer_merged_pulls = []
-    employee_closed_pulls = []
-    employee_merged_pulls = []
-    
-    # only consider 'closed' PRs for our analysis
-    pulls = c.get_pulls(org, repo)
-    for index, pull in pulls.iterrows():
-        user = pull["user_login"]
-        employer = _is_employee(user, org)
-        merged_at = pull["merged_at"]
-        is_merged = not (type(merged_at) is float and math.isnan(merged_at))
-        if employer == "Google":
-            if is_merged:
-                employee_merged_pulls.append(pull["number"])
-            else:
-                employee_closed_pulls.append(pull["number"])
-        elif employer == "RedHat":
-            if is_merged:
-                volunteer_merged_pulls.append(pull["number"])
-            else:
-                volunteer_closed_pulls.append(pull["number"])
-    return (len(volunteer_merged_pulls), len(volunteer_closed_pulls), len(employee_merged_pulls), len(employee_closed_pulls))
-
 def _calculate_pr_composition_by_companies(repo, org):
     # only consider 'closed' PRs for our analysis
     pulls = c.get_pulls(org, repo)
     for index, pull in pulls.iterrows():
         user = pull["user_login"]
-        employer = _is_employee(user, org)
+        employer = _get_employer(user, org)
         if employer is None:
             continue
         merged_at = pull["merged_at"]

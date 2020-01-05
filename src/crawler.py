@@ -10,6 +10,7 @@ with open('github-token', 'r') as token_file:
 
 g = Github(token)
 pull_file_suffix = "pulls.csv"
+issue_file_suffix = "issues.csv"
 user_file_suffix = "users.csv"
 detailed_pull_file_suffix = "detailed_pulls.csv"
 
@@ -38,6 +39,24 @@ def crawl_pulls(org, repo):
         pulls.append(pull_dict)
     pulls_df = pd.DataFrame(pulls, columns=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
     pulls_df.to_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t')
+
+def crawl_issues(org, repo):
+    repo_object = g.get_repo(org + "/" + repo)
+    issues = []
+    for issue in repo_object.get_issues(state="closed"):
+        pull_dict = {
+            "number": issue.number,
+            "user_login": issue.user.login,
+            "created_at": issue.created_at,
+            "closed_at": issue.closed_at,
+            "title": issue.title
+            }
+        issues.append(pull_dict)
+    issues_df = pd.DataFrame(issues, columns=["number", "user_login", "created_at", "closed_at", "title"])
+    issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t')
+
+def get_issues(org, repo):
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title"])
 
 def get_pulls(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
