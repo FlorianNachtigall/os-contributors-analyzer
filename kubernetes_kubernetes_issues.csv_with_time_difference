@@ -1,0 +1,369 @@
+	number	user_login	company	created_at	closed_at_commented_at	time_difference	title
+0	1	jbeda	VMware	2014-06-06 23:52:50	2014-06-06 23:58:24	334.0	Unit test coverage in Kubelet is lousy. (~30%)
+1	2	jbeda	VMware	2014-06-06 23:54:06	2014-06-07 06:43:24	24558.0	Better error messages if go isn't installed, or if gcloud is old.
+2	9	jbeda	VMware	2014-06-07 04:27:54	2014-06-07 09:25:19	17845.0	currentState should reflect if task has started or not.
+3	17	brendandburns	Microsoft	2014-06-08 04:59:00	2014-06-08 05:04:22	322.0	Populate 'Kind' fields for all JSON requests.  This will facilitate better client side UX.
+4	19	jbeda	VMware	2014-06-08 05:36:00	2014-06-08 06:04:40	1720.0	Use Docker to host most server components
+5	8	jbeda	VMware	2014-06-07 04:27:17	2014-06-08 15:05:39	124702.0	e2e-test.sh should wait for container start
+6	26	brendandburns	Microsoft	2014-06-09 04:06:38	2014-06-09 04:23:16	998.0	Extend the CLI output to allow JSON, YAML and Human Readable output
+7	30	brendandburns	Microsoft	2014-06-09 06:00:55	2014-06-09 06:01:13	18.0	Task -> Pod #4, the final chapter
+8	43	drewcsillag		2014-06-10 18:15:01	2014-06-10 19:03:25	2904.0	Add location of where to get the gcloud tools.
+9	45	whiteinge		2014-06-10 19:36:06	2014-06-10 19:54:22	1096.0	Switch from the deprecated bootstrap.saltstack.org to the .com redirect
+10	50	lavalamp	Google	2014-06-10 21:53:40	2014-06-10 22:04:32	652.0	Run locally
+11	49	juliusv		2014-06-10 21:51:25	2014-06-10 22:07:18	953.0	Make cloudcfg method switch idiomatic.
+12	52	adnanh		2014-06-10 23:43:57	2014-06-11 01:55:28	7891.0	Typo in command
+13	44	drewcsillag		2014-06-10 18:41:37	2014-06-11 01:56:03	26066.0	Fix typos in Design Doc
+14	55	jkassemi		2014-06-11 05:07:11	2014-06-11 05:08:01	50.0	Typo correction
+15	64	mmdriley		2014-06-11 21:47:36	2014-06-11 23:12:40	5104.0	Secure API endpoint from MITM attacks
+16	68	danielnorberg		2014-06-11 23:21:11	2014-06-11 23:26:08	297.0	e2e-test: expose minion 8080 port
+17	69	brendandburns	Microsoft	2014-06-12 00:25:48	2014-06-12 01:01:36	2148.0	Fix the first fit scheduler to randomize.
+18	72	lavalamp	Google	2014-06-12 02:05:52	2014-06-12 05:28:58	12186.0	Localkube
+19	73	danielnorberg		2014-06-12 14:26:23	2014-06-12 18:38:12	15109.0	kube-up: fix gcloud version check
+20	6	jbeda	VMware	2014-06-06 23:57:38	2014-06-12 18:42:16	499478.0	First fit scheduler needs to add round-robin
+21	79	lavalamp	Google	2014-06-12 19:46:10	2014-06-12 20:02:41	991.0	Parse settings client-side (addresses #67)
+22	81	brendandburns	Microsoft	2014-06-12 20:20:54	2014-06-12 20:23:52	178.0	Fix localkube due to a bad merge.
+23	82	danielnorberg		2014-06-12 20:35:36	2014-06-12 20:37:06	90.0	cloudcfg: fix TestDoRequest
+24	85	proppy	Google	2014-06-12 21:12:34	2014-06-12 21:14:49	135.0	pkg/cloudcfg: fix tests
+25	84	proppy	Google	2014-06-12 21:10:23	2014-06-12 21:17:48	445.0	gofmt -s pkg/ cmd/
+26	83	proppy	Google	2014-06-12 20:50:28	2014-06-12 21:29:49	2361.0	add travis integration
+27	67	jbeda	VMware	2014-06-11 23:18:24	2014-06-13 02:59:44	99680.0	Cloudcfg should parse/convert request body
+28	86	brendandburns	Microsoft	2014-06-12 21:30:33	2014-06-13 03:58:20	23267.0	Remove dot import syntax from registry package.
+29	32	ukai	Google	2014-06-09 07:19:36	2014-06-13 18:55:13	387337.0	readability: package comment
+30	98	brendandburns	Microsoft	2014-06-13 19:12:31	2014-06-13 19:17:32	301.0	Only manage containers with '--' in the name.  Addresses #4
+31	4	jbeda	VMware	2014-06-06 23:56:02	2014-06-13 21:47:32	597090.0	kubelet should know which containers it is managing
+32	105	lavalamp	Google	2014-06-13 23:31:50	2014-06-14 00:38:48	4018.0	Add a new e2e test; fix some bugs/usability problems
+33	108	jbeda	VMware	2014-06-14 15:58:07	2014-06-14 16:00:05	118.0	Create a single kubernetes binary for all cmds
+34	103	lavalamp	Google	2014-06-13 23:01:34	2014-06-14 16:32:08	63034.0	replication controllers leave orphans
+35	113	lavalamp	Google	2014-06-15 00:30:33	2014-06-15 03:24:19	10426.0	Literal configuration of multiple objects (was Service up/down scripts)
+36	33	ukai	Google	2014-06-09 07:23:28	2014-06-16 03:40:16	591408.0	readability: error string
+37	116	brendanburns		2014-06-16 03:52:04	2014-06-16 03:52:35	31.0	Added a -verbose flag, and made a message verbose only.
+38	117	brendanburns		2014-06-16 04:42:36	2014-06-16 04:43:38	62.0	Add udp support, and unit tests to match.  Closes #96
+39	118	lavalamp	Google	2014-06-16 05:09:36	2014-06-16 05:11:31	115.0	Alternative local launch script.
+40	122	DazWilkin		2014-06-16 15:06:21	2014-06-16 16:33:02	5201.0	"""Running a container (simple version)"" -- spin up, then ???, stop/delete"
+41	125	brendandburns	Microsoft	2014-06-16 18:01:02	2014-06-16 18:02:34	92.0	Remove dot import syntax from cloudcfg.
+42	34	ukai	Google	2014-06-09 07:26:03	2014-06-16 18:24:12	644289.0	readability: don't use import dot.
+43	66	jbeda	VMware	2014-06-11 23:14:22	2014-06-17 01:01:10	438408.0	Add extended health checking of pods/containers
+44	128	ghost		2014-06-17 01:46:10	2014-06-17 01:47:47	97.0	All remote resources should be fetched over HTTPS
+45	130	lavalamp	Google	2014-06-17 02:34:44	2014-06-17 03:42:03	4039.0	Move labels and tests to new package
+46	135	brendandburns	Microsoft	2014-06-17 17:51:26	2014-06-17 18:12:34	1268.0	Add load balancing support to services.
+47	136	bgrant0607	Google	2014-06-17 18:16:20	2014-06-17 18:17:33	73.0	Use ADD rather than VOLUME in order to work with remote containers.
+48	147	bgrant0607	Google	2014-06-18 04:17:12	2014-06-18 17:32:13	47701.0	QoS tiers
+49	134	jbeda	VMware	2014-06-17 17:42:26	2014-06-18 17:35:03	85957.0	Kubelet should accept list of pods/manifests everywhere
+50	155	brendandburns	Microsoft	2014-06-18 17:55:38	2014-06-18 19:55:51	7213.0	Add a version check for go.
+51	144	lavalamp	Google	2014-06-18 01:05:37	2014-06-18 20:12:59	68842.0	Refactor controller manager.
+52	150	brendandburns	Microsoft	2014-06-18 05:30:22	2014-06-18 20:16:45	53183.0	Add in service registry tests and a Fake Cloud impl.
+53	127	bgrant0607	Google	2014-06-16 22:54:57	2014-06-18 20:20:15	163518.0	Configurable restart behavior
+54	160	monnand		2014-06-18 20:17:23	2014-06-18 21:29:27	4324.0	Integration with cAdvisor
+55	161	brendandburns	Microsoft	2014-06-18 20:28:04	2014-06-18 21:30:36	3752.0	Add population of the host IP address when on GCE.
+56	162	brendandburns	Microsoft	2014-06-18 22:19:14	2014-06-19 00:00:38	6084.0	Add a PodCache that is responsible for caching pod information.
+57	164	lavalamp	Google	2014-06-19 00:25:41	2014-06-19 00:26:04	23.0	"Standardize terminology on ""selector"""
+58	124	jbeda	VMware	2014-06-16 16:33:14	2014-06-19 03:14:01	211247.0	Tools/Master should show true external IP
+59	165	brendandburns	Microsoft	2014-06-19 03:27:04	2014-06-19 04:32:28	3924.0	On delete, also attempt to update controller state
+60	166	brendandburns	Microsoft	2014-06-19 05:09:46	2014-06-19 05:23:42	836.0	Part #1 of synchronous requests: Add channels and a mechanism for waiting
+61	97	brendandburns	Microsoft	2014-06-13 18:50:01	2014-06-19 06:30:28	474027.0	Support multiple different types of volumes
+62	13	proppy	Google	2014-06-07 11:41:26	2014-06-19 08:37:43	1025777.0	client: add service and requests test
+63	174	monnand		2014-06-19 20:49:18	2014-06-19 20:51:55	157.0	Letting kubelet retrieve container stats from cAdvisor
+64	178	vmarmol	Google	2014-06-20 00:01:27	2014-06-20 00:30:59	1772.0	Adding support for external mounts
+65	181	brendandburns	Microsoft	2014-06-20 03:23:45	2014-06-20 03:25:02	77.0	Fix the container manifest to so that Command is an array, not a string.
+66	182	brendandburns	Microsoft	2014-06-20 06:04:19	2014-06-20 16:07:34	36195.0	Update IP assignment to be per-pod, not per-container
+67	188	bgrant0607	Google	2014-06-20 16:33:37	2014-06-20 16:45:09	692.0	Decide whether/how to extend the networking model
+68	180	lavalamp	Google	2014-06-20 01:38:59	2014-06-20 17:48:36	58177.0	Make minions first class citizens
+69	196	lavalamp	Google	2014-06-21 00:54:25	2014-06-23 16:55:24	230459.0	Make api able to marshal its types correctly
+70	207	brendandburns	Microsoft	2014-06-23 17:49:42	2014-06-23 17:51:50	128.0	e2e test fails silently if jq isn't installed.
+71	208	thockin	Google	2014-06-23 18:46:01	2014-06-23 19:04:22	1101.0	Minor: allow hack/build-go.sh to take args for faster iteration.
+72	209	lavalamp	Google	2014-06-23 19:02:02	2014-06-23 20:16:12	4450.0	Fix boilerplate everywhere + add hook to keep it fixed
+73	212	lavalamp	Google	2014-06-23 22:07:42	2014-06-23 22:10:58	196.0	manifest_url needs to take a single ContainerManifest.
+74	139	bgrant0607	Google	2014-06-17 21:05:23	2014-06-23 23:48:33	528190.0	Capture application termination messages/output
+75	213	lavalamp	Google	2014-06-24 01:36:52	2014-06-24 02:47:37	4245.0	Better fix of #212
+76	205	lavalamp	Google	2014-06-23 01:29:59	2014-06-24 02:51:30	91291.0	Small client refactor; interpret 202 responses
+77	214	thockin	Google	2014-06-24 03:09:25	2014-06-24 04:02:50	3205.0	Remove noisy non-error lines from logs
+78	199	lavalamp	Google	2014-06-21 19:43:08	2014-06-24 05:07:17	206649.0	Container identifiers should be globally unique
+79	216	thockin	Google	2014-06-24 04:48:51	2014-06-24 05:13:15	1464.0	Minor: log cleanups
+80	195	jbeda	VMware	2014-06-20 22:15:42	2014-06-24 05:15:01	284359.0	Rename cloudcfg to kubecfg
+81	175	jbeda	VMware	2014-06-19 21:48:46	2014-06-24 05:17:34	372528.0	Support `--net=host` through kubelet
+82	15	jbeda	VMware	2014-06-07 14:46:00	2014-06-24 05:32:32	1435592.0	Port forwarding should be through iptables
+83	217	brendandburns	Microsoft	2014-06-24 05:19:56	2014-06-24 05:36:33	997.0	Create a proxy server using cloudcfg.  Useful for demos
+84	219	thockin	Google	2014-06-24 16:54:26	2014-06-24 17:00:45	379.0	Escape manifest IDs when hunting the network container.
+85	220	lavalamp	Google	2014-06-24 17:50:38	2014-06-24 17:54:21	223.0	Provide a formal upgrade policy
+86	223	lavalamp	Google	2014-06-24 18:00:56	2014-06-24 18:03:48	172.0	Discuss supporting host networking
+87	221	thockin	Google	2014-06-24 17:58:33	2014-06-24 18:04:42	369.0	Use glog for logging
+88	218	thockin	Google	2014-06-24 16:25:51	2014-06-24 18:17:04	6673.0	Logging cleanup in Kubelet
+89	227	thockin	Google	2014-06-24 20:19:05	2014-06-24 20:27:11	486.0	Rename Kubelet.Client -> EtcdClient
+90	232	lavalamp	Google	2014-06-24 22:05:59	2014-06-24 22:18:59	780.0	Make minion printing prettier; standardize on MinionList.Items
+91	193	jbeda	VMware	2014-06-20 22:04:09	2014-06-25 04:35:11	369062.0	Failed minions should be detected
+92	244	brendandburns	Microsoft	2014-06-25 05:28:35	2014-06-25 05:31:49	194.0	Add a minion registry that is backed by a cloud provider.
+93	222	lavalamp	Google	2014-06-24 18:00:00	2014-06-25 15:12:13	76333.0	Multi-network interface systems
+94	246	smarterclayton	RedHat	2014-06-25 16:33:21	2014-06-25 17:46:49	4408.0	Make it easy to run Kubernetes on top of the Kubelet (aka self-hosting)
+95	251	dgageot	Google	2014-06-26 00:15:30	2014-06-26 00:20:49	319.0	htpasswd removed from OSX Yosemite
+96	253	smarterclayton	RedHat	2014-06-26 02:29:30	2014-06-26 03:16:06	2796.0	[WIP] - Standardize identifier behavior across apiserver
+97	245	lavalamp	Google	2014-06-25 16:29:20	2014-06-26 04:12:07	42167.0	Keep compatibility with manifest spec
+98	233	brendandburns	Microsoft	2014-06-24 22:42:48	2014-06-26 17:26:06	153798.0	switch to built in golang FileServer
+99	256	ironcladlou	RedHat	2014-06-26 19:48:56	2014-06-26 19:54:09	313.0	Launch proxy as part of local-up-cluster.sh
+100	238	brendandburns	Microsoft	2014-06-25 00:51:48	2014-06-26 19:59:06	155238.0	Initial add of the update demo for Google I/O
+101	148	bgrant0607	Google	2014-06-18 04:21:56	2014-06-26 21:44:57	753781.0	Idempotent creation
+102	257	brendandburns	Microsoft	2014-06-26 21:38:17	2014-06-26 21:45:59	462.0	Implement sync behavior for controllers.
+103	258	lavalamp	Google	2014-06-26 22:03:51	2014-06-26 22:06:48	177.0	Use net.JoinHostPort
+104	261	meirf		2014-06-26 23:52:05	2014-06-27 00:00:51	526.0	Test rejection of bad JSON.
+105	263	brendandburns	Microsoft	2014-06-27 02:01:41	2014-06-27 02:10:04	503.0	There is a race in container update.
+106	264	brendandburns	Microsoft	2014-06-27 02:22:40	2014-06-27 02:37:14	874.0	Set id width at 8 and pad with zeros.
+107	265	brendandburns	Microsoft	2014-06-27 03:26:47	2014-06-27 03:41:45	898.0	Use etcd compare and swap to update the list of pods, to remove a race.
+108	267	smarterclayton	RedHat	2014-06-27 15:00:05	2014-06-27 16:52:57	6772.0	Allow minions to be securely registered/deregistered
+109	158	jbeda	VMware	2014-06-18 18:57:30	2014-06-27 17:38:52	772882.0	Document local startup scripts
+110	269	lavalamp	Google	2014-06-27 21:10:14	2014-06-27 22:18:04	4070.0	Generic atomic update code
+111	273	brendandburns	Microsoft	2014-06-27 23:07:57	2014-06-27 23:11:53	236.0	Make the docker endpoint a flag.
+112	260	bgrant0607	Google	2014-06-26 23:35:17	2014-06-27 23:24:25	85748.0	PetSet (was nominal services)
+113	279	brendandburns	Microsoft	2014-06-28 04:47:38	2014-06-28 04:48:23	45.0	Add some extra validation and checking to the local cluster setup.
+114	283	lavalamp	Google	2014-06-28 18:49:00	2014-06-28 20:15:40	5200.0	Move stringSet to util.StringSet
+115	280	thockin	Google	2014-06-28 04:56:05	2014-06-28 21:32:52	59807.0	WIP: First cut at input validation for Kubelet
+116	286	lavalamp	Google	2014-06-28 22:42:57	2014-06-28 23:01:20	1103.0	Separate scheduler from registry
+117	287	rafael		2014-06-29 01:32:10	2014-06-29 01:37:50	340.0	Update commands to reflect latest changes.
+118	288	lavalamp	Google	2014-06-29 01:56:48	2014-06-29 01:59:04	136.0	Perform parallel `docker pull` calls
+119	289	thockin	Google	2014-06-29 02:38:05	2014-06-29 02:51:30	805.0	Add a NewStringSet() function
+120	285	thockin	Google	2014-06-28 21:27:54	2014-06-29 04:12:29	24275.0	Kubelet needs a way to send results
+121	278	thockin	Google	2014-06-28 04:22:58	2014-06-29 04:17:40	86082.0	"Fields named ""Id"" should be ""ID"""
+122	290	thockin	Google	2014-06-29 05:18:07	2014-06-29 05:30:34	747.0	Reduce logging noise
+123	291	lavalamp	Google	2014-06-29 22:50:23	2014-06-30 02:51:19	14456.0	Remove interface{} fields from api types
+124	302	thockin	Google	2014-06-30 14:59:17	2014-06-30 15:32:15	1978.0	Race in Kubelet SyncAndSetupEtcdWatch()
+125	292	thockin	Google	2014-06-30 04:16:12	2014-06-30 16:21:52	43540.0	Add a doc on collaborative development
+126	294	thockin	Google	2014-06-30 05:52:03	2014-06-30 16:29:19	38236.0	Specifying ID twice is sort of tedious
+127	296	thockin	Google	2014-06-30 05:57:12	2014-06-30 16:31:13	38041.0	Kubelet should track pod provenance across restarts
+128	277	brendandburns	Microsoft	2014-06-28 00:44:15	2014-06-30 16:31:13	229618.0	Add sync behavior to the pod registry.  Expand tests.
+129	299	thockin	Google	2014-06-30 06:06:57	2014-06-30 16:34:00	37623.0	Stop-gap for metadata
+130	301	thockin	Google	2014-06-30 06:12:06	2014-06-30 16:35:20	37394.0	Kubelet should be async per-pod
+131	293	brendandburns	Microsoft	2014-06-30 05:08:52	2014-06-30 16:46:13	41841.0	Activate cloud minion registry.
+132	306	monnand		2014-06-30 18:06:47	2014-06-30 18:18:00	673.0	Solved data races in pkg/registry
+133	308	thockin	Google	2014-06-30 21:11:06	2014-06-30 21:19:18	492.0	Break the dep from util -> api
+134	311	thockin	Google	2014-06-30 22:19:58	2014-06-30 22:24:16	258.0	Add validation primitives to util
+135	312	thockin	Google	2014-06-30 22:22:37	2014-06-30 22:25:02	145.0	Document api types wrt validation
+136	309	monnand		2014-06-30 21:51:46	2014-06-30 22:34:08	2542.0	fix data races in controller
+137	304	monnand		2014-06-30 17:44:39	2014-06-30 23:38:26	21227.0	Race condition in kubelet
+138	318	lavalamp	Google	2014-07-01 02:51:38	2014-07-01 03:12:07	1229.0	Fix interface{} in api/types
+139	314	thockin	Google	2014-06-30 23:17:13	2014-07-01 03:21:31	14658.0	Fix examples to set manifest ID and version
+140	307	lavalamp	Google	2014-06-30 19:04:48	2014-07-01 03:24:44	29996.0	All PUTs now atomic
+141	274	proppy	Google	2014-06-27 23:18:38	2014-07-01 03:55:17	275799.0	scheduler should leverage resource usage for pod placement
+142	272	brendandburns	Microsoft	2014-06-27 22:52:23	2014-07-01 04:36:51	279868.0	Verify we can run docker before turning up kubelet in local-up-cluster.sh
+143	297	thockin	Google	2014-06-30 05:59:11	2014-07-01 04:43:34	81863.0	Kubelet sync loop should be lower impact
+144	284	thockin	Google	2014-06-28 21:26:28	2014-07-01 05:44:04	202656.0	Kubelet state visualization / debugging UI
+145	320	brendandburns	Microsoft	2014-07-01 16:38:57	2014-07-01 17:08:37	1780.0	Make each pod synchronization in the kubelet an independent thread.
+146	321	smarterclayton	RedHat	2014-07-01 17:17:10	2014-07-01 17:32:55	945.0	Use ID instead of Id (go style) everywhere
+147	322	brendandburns	Microsoft	2014-07-01 17:44:22	2014-07-01 17:45:15	53.0	Disable gofmt for non go1.2 or go1.3
+148	323	proppy	Google	2014-07-01 17:46:01	2014-07-01 17:47:36	95.0	travis: add go 1.3 target
+149	324	vmarmol	Google	2014-07-01 17:49:33	2014-07-01 17:50:07	34.0	Run cAdvisor on all minions.
+150	194	jbeda	VMware	2014-06-20 22:14:54	2014-07-01 18:14:26	935972.0	cloudcfg should get MASTER from an env variable
+151	326	thockin	Google	2014-07-01 20:03:48	2014-07-01 20:17:50	842.0	First piece ofn actual validation
+152	325	lavalamp	Google	2014-07-01 19:50:40	2014-07-01 20:32:02	2482.0	Don't double-close the channel when etcd returns an error.
+153	300	thockin	Google	2014-06-30 06:08:02	2014-07-01 20:39:47	138705.0	Kubelet file path in /etc should be consistent across hosts
+154	329	thockin	Google	2014-07-01 21:44:46	2014-07-01 22:42:21	3455.0	Add validation of Volumes
+155	334	smarterclayton	RedHat	2014-07-01 23:18:03	2014-07-01 23:21:57	234.0	Describe identifiers in Kubernetes
+156	330	thockin	Google	2014-07-01 22:15:05	2014-07-01 23:43:08	5283.0	Add basic validation of Containers
+157	333	thockin	Google	2014-07-01 22:58:56	2014-07-02 05:15:04	22568.0	Add validation for Container.Env
+158	336	dgageot	Google	2014-07-02 06:28:43	2014-07-02 16:17:27	35324.0	Remove reference to htpasswd in README
+159	337	proppy	Google	2014-07-02 06:37:20	2014-07-02 16:32:28	35708.0	api/doc: add manifest schema
+160	339	thockin	Google	2014-07-02 17:30:58	2014-07-02 17:31:38	40.0	Fix wrong json name for Key field
+161	340	thockin	Google	2014-07-02 18:21:51	2014-07-02 18:28:37	406.0	nit: s/Id/ID/ for go style
+162	328	monnand		2014-07-01 21:10:43	2014-07-02 20:22:23	83500.0	Get root container stats from cAdvisor
+163	310	monnand		2014-06-30 21:54:36	2014-07-02 20:58:35	169439.0	turn on race detector by default
+164	342	thockin	Google	2014-07-02 21:58:08	2014-07-02 22:01:12	184.0	Simplify supported manifest versions
+165	343	thockin	Google	2014-07-02 22:34:31	2014-07-02 23:18:25	2634.0	Use structured errors during validation
+166	345	smarterclayton	RedHat	2014-07-02 23:22:11	2014-07-02 23:40:58	1127.0	Ensure pod and manifest have a UUID in apiserver
+167	348	monnand		2014-07-03 00:33:50	2014-07-03 00:37:00	190.0	fix data races and turn on race detector by default.
+168	346	brendandburns	Microsoft	2014-07-02 23:33:26	2014-07-03 02:10:00	9394.0	Update the docker build pipeline.
+169	350	brendandburns	Microsoft	2014-07-03 05:46:49	2014-07-03 06:09:48	1379.0	Fix an error in the async-path that led to dropping pods.
+170	353	smarterclayton	RedHat	2014-07-03 22:52:33	2014-07-04 03:44:11	17498.0	Pod waitForRunning could be moved to a higher level interface
+171	355	brendandburns	Microsoft	2014-07-04 04:24:12	2014-07-04 06:25:22	7270.0	Make sync false by default.  Works around timeout/retry issues.
+172	341	bgrant0607	Google	2014-07-02 20:29:08	2014-07-04 20:08:52	171584.0	Generalize label selectors
+173	360	meirf		2014-07-06 15:54:40	2014-07-07 03:25:11	41431.0	Issue 341: generalize label selectors
+174	359	smarterclayton	RedHat	2014-07-05 20:35:23	2014-07-07 13:31:16	147353.0	Allow hack/test-go.sh to support flags
+175	364	brendandburns	Microsoft	2014-07-07 16:39:34	2014-07-07 17:14:16	2082.0	Make poll period and timeout configurable.
+176	367	thockin	Google	2014-07-07 20:24:52	2014-07-07 20:32:51	479.0	More general scheduling constraints
+177	366	brendandburns	Microsoft	2014-07-07 18:45:17	2014-07-07 21:09:55	8678.0	Add some more logging to better understand integration test timeouts.
+178	358	thockin	Google	2014-07-05 02:47:29	2014-07-08 04:50:11	266562.0	Add validation of VolumeMounts
+179	368	vmarmol	Google	2014-07-07 21:19:22	2014-07-08 04:53:56	27274.0	Default should be a Debian image with memory cgroup enabled
+180	372	yugui		2014-07-08 07:21:03	2014-07-08 17:00:23	34760.0	Fixes Go lint errors.
+181	157	bgrant0607	Google	2014-06-18 18:24:51	2014-07-08 17:42:27	1725456.0	GC old dead containers and unused images
+182	168	bgrant0607	Google	2014-06-19 16:44:24	2014-07-08 19:47:30	1652586.0	Container and pod resource limits
+183	187	jbeda	VMware	2014-06-20 16:01:06	2014-07-08 20:15:14	1570448.0	Support Vagrant deployment for local testing
+184	365	brendandburns	Microsoft	2014-07-07 18:36:00	2014-07-08 20:16:42	92442.0	add http health checks.
+185	349	thockin	Google	2014-07-03 01:10:04	2014-07-08 21:48:51	506327.0	WIP: tighten identifier spec 
+186	378	monnand		2014-07-09 02:11:23	2014-07-09 04:45:53	9270.0	Use godep to manage dependencies
+187	375	thockin	Google	2014-07-08 20:45:56	2014-07-09 04:48:43	28967.0	Simplify DNS validation checks
+188	35	ukai	Google	2014-06-09 07:36:46	2014-07-09 05:01:46	2582700.0	readability: doc comment
+189	371	thockin	Google	2014-07-08 06:33:10	2014-07-09 14:57:59	116689.0	Accumulate errors during validation
+190	379	brendandburns	Microsoft	2014-07-09 05:51:03	2014-07-09 15:37:17	35174.0	Add support for host up binding to the API (and kubelet)
+191	381	yugui		2014-07-09 06:05:03	2014-07-09 16:00:00	35697.0	Allows adding custom api scopes to service accounts available in minions.
+192	382	raphael		2014-07-09 15:11:58	2014-07-09 16:57:44	6346.0	Resolve #370
+193	383	ironcladlou	RedHat	2014-07-09 18:45:49	2014-07-09 18:47:37	108.0	"Namespace ""local"" volume mounts by ContainerManifest ID on disk"
+194	146	bgrant0607	Google	2014-06-18 02:59:10	2014-07-09 22:18:53	1883983.0	DNS
+195	386	bgrant0607	Google	2014-07-09 22:32:02	2014-07-09 22:42:25	623.0	Container downward/upward API umbrella issue
+196	389	brendandburns	Microsoft	2014-07-10 05:13:45	2014-07-10 05:18:14	269.0	Add PodIP to the info returned for a pod.
+197	374	yugui		2014-07-08 07:43:26	2014-07-10 06:15:03	167497.0	Periodically shows message while waiting for completion of REST operations
+198	390	yugui		2014-07-10 07:16:48	2014-07-10 15:12:16	28528.0	Automatic port number assignment
+199	391	yugui		2014-07-10 07:28:28	2014-07-10 15:18:25	28197.0	[Enhancement] Support privileged container
+200	393	yugui		2014-07-10 13:05:49	2014-07-10 16:19:36	11627.0	Fixes Go lint errors.
+201	395	thockin	Google	2014-07-10 18:10:42	2014-07-10 18:44:58	2056.0	IntOrString for use in JSON/YAML
+202	396	brendandburns	Microsoft	2014-07-10 19:27:06	2014-07-10 19:27:12	6.0	Add Hostname to the docker run command.
+203	397	brendandburns	Microsoft	2014-07-10 19:45:26	2014-07-10 19:45:34	8.0	Add initial validation of Service objects
+204	405	thockin	Google	2014-07-11 00:34:40	2014-07-11 00:39:43	303.0	Should we run golint on commits, like gofmt?
+205	404	thockin	Google	2014-07-11 00:33:17	2014-07-11 01:27:19	3242.0	Fix go lint errors in util
+206	408	nyaxt	Google	2014-07-11 12:00:41	2014-07-11 12:06:30	349.0	fix go lint errors in util
+207	407	yugui		2014-07-11 10:29:34	2014-07-11 13:41:29	11515.0	Fixes Go lint errors.
+208	410	nyaxt	Google	2014-07-11 13:02:41	2014-07-11 16:33:46	12665.0	Add comments to pkg/scheduler/ to pass golint
+209	412	ggtools		2014-07-11 15:02:47	2014-07-11 16:35:00	5533.0	Fixed SCRIPT_DIR computation when CDPATH is set.
+210	394	brendandburns	Microsoft	2014-07-10 17:28:58	2014-07-11 16:38:33	83375.0	Try to grab live data if the cache has errors.
+211	347	brendandburns	Microsoft	2014-07-02 23:54:18	2014-07-11 16:38:49	751471.0	Add host to the container manifest port spec
+212	388	brendandburns	Microsoft	2014-07-09 23:54:20	2014-07-11 17:16:54	148954.0	Address some comments from thockin@
+213	414	thockin	Google	2014-07-11 18:23:38	2014-07-11 18:26:04	146.0	Fix go idiom feedback
+214	416	smarterclayton	RedHat	2014-07-11 18:41:47	2014-07-11 19:00:15	1108.0	-cover causes races in tests in Go 1.2
+215	298	thockin	Google	2014-06-30 06:00:05	2014-07-11 23:06:00	1011955.0	Set container hostname
+216	417	brendandburns	Microsoft	2014-07-11 22:49:11	2014-07-11 23:50:05	3654.0	Update support for events.
+217	411	nyaxt	Google	2014-07-11 13:47:28	2014-07-12 04:41:56	53668.0	Fixes go lint errors on pkg/registry/controller_registry.go
+218	423	claire921	Google	2014-07-12 05:16:57	2014-07-12 05:30:26	809.0	pkg/proxy: filtering before comparing
+219	422	claire921	Google	2014-07-12 05:09:33	2014-07-12 05:32:02	1349.0	pkg/proxy: use net.SplitHostPort instead of strings.Split
+220	421	claire921	Google	2014-07-12 04:53:12	2014-07-12 05:32:27	2355.0	pkg/proxy: remove unnecessary io.EOF checking
+221	420	claire921	Google	2014-07-12 04:36:41	2014-07-12 05:37:18	3637.0	pkg/proxy: remove unnecessary go routine
+222	430	claire921	Google	2014-07-12 06:10:37	2014-07-12 17:50:55	42018.0	pkg/master: correct error string for GetPodInfo
+223	428	claire921	Google	2014-07-12 06:00:11	2014-07-12 17:52:30	42739.0	pkg/selector: set the cap for slice in SelectorFromSet
+224	427	nyaxt	Google	2014-07-12 05:45:15	2014-07-12 17:54:07	43732.0	Add comments on registry/etcd_registry.go to address some of golint errors.
+225	434	claire921	Google	2014-07-12 17:31:54	2014-07-12 18:03:25	1891.0	Kubelet
+226	436	claire921	Google	2014-07-12 18:03:28	2014-07-12 18:19:57	989.0	pkg/kubelet: explicitly return nil as error and nil as a result on error
+227	435	claire921	Google	2014-07-12 17:45:38	2014-07-12 18:35:31	2993.0	pkg/kubelet: clean up server http error handling
+228	425	proppy	Google	2014-07-12 05:38:12	2014-07-12 18:41:17	46985.0	infer containerPort in pod manifest from image EXPOSE metadata
+229	424	proppy	Google	2014-07-12 05:34:50	2014-07-12 18:45:19	47429.0	support for docker links env variables format
+230	429	nyaxt	Google	2014-07-12 06:08:56	2014-07-12 18:47:19	45503.0	Make {random,firstfit} scheduler thread safe.
+231	426	claire921	Google	2014-07-12 05:43:36	2014-07-12 19:11:58	48502.0	pkg/proxy/config: clean up file.Run()
+232	431	claire921	Google	2014-07-12 06:30:14	2014-07-12 21:22:57	53563.0	pkg/controller: cleanup replication_controller.go
+233	438	brendandburns	Microsoft	2014-07-13 04:46:48	2014-07-13 05:45:38	3530.0	Fix build script for os x.
+234	439	brendandburns	Microsoft	2014-07-13 04:49:52	2014-07-13 05:46:30	3398.0	Update travis to build on OS X also.
+235	442	smarterclayton	RedHat	2014-07-13 19:43:58	2014-07-13 20:50:58	4020.0	Allow cluster resources to be subdivided
+236	419	brendandburns	Microsoft	2014-07-11 23:46:16	2014-07-13 21:59:28	166392.0	Add a /healthz handler to the kubelet server
+237	443	smarterclayton	RedHat	2014-07-13 20:00:23	2014-07-13 22:18:16	8273.0	Allow actors against the apiserver to be authenticated and actions to be authorized
+238	440	brendandburns	Microsoft	2014-07-13 05:44:19	2014-07-13 22:19:58	59739.0	Add Docker link style env vars to link containers to services.
+239	387	bgrant0607	Google	2014-07-09 23:11:40	2014-07-13 22:24:30	342770.0	Filter lists by label selector
+240	385	bgrant0607	Google	2014-07-09 22:18:07	2014-07-13 22:25:19	346032.0	Make it possible to get the pod IP address via the API
+241	270	lavalamp	Google	2014-06-27 21:26:35	2014-07-13 22:29:37	1386182.0	separate scheduling from pod registry
+242	248	lavalamp	Google	2014-06-25 20:42:16	2014-07-13 22:31:00	1561724.0	Service validation
+243	295	thockin	Google	2014-06-30 05:53:55	2014-07-13 22:31:44	1183069.0	Need a statement of compat intentions
+244	356	smarterclayton	RedHat	2014-07-04 05:43:48	2014-07-13 23:57:17	843209.0	Use config sources for Kubelet, switch to podFullName
+245	433	brendandburns	Microsoft	2014-07-12 07:16:16	2014-07-14 17:42:12	210356.0	Update services to use the internal IP and port, now that its available.
+246	354	brendandburns	Microsoft	2014-07-04 03:40:42	2014-07-14 19:36:47	921365.0	We need to refactor the scheduler.
+247	376	monnand		2014-07-08 21:42:54	2014-07-14 20:17:14	513260.0	Using godep instead of hack/build-go.sh?
+248	380	yugui		2014-07-09 05:51:10	2014-07-14 20:34:56	485026.0	Validation error propagation issue?
+249	445	yifan-gu		2014-07-14 20:22:47	2014-07-14 21:23:41	3654.0	Changed the keepChannel to buffered channel.
+250	447	juliaferraioli		2014-07-14 21:20:16	2014-07-14 22:10:15	2999.0	Add firewall instructions to the update demo
+251	448	monnand		2014-07-14 22:08:15	2014-07-14 22:10:35	140.0	Update to latest cAdvisor version and add a client package for cAdvisor
+252	451	yifan-gu		2014-07-15 01:52:09	2014-07-15 01:54:54	165.0	refactor 
+253	449	yifan-gu		2014-07-14 22:19:24	2014-07-15 02:20:57	14493.0	Window time in SyncAndSetupEtcdWatch
+254	453	brendandburns	Microsoft	2014-07-15 03:58:10	2014-07-15 03:58:32	22.0	Add support for memory limits in the kubelet.
+255	454	brendandburns	Microsoft	2014-07-15 04:13:32	2014-07-15 04:30:11	999.0	Add a template printer to kubecfg.
+256	455	brendandburns	Microsoft	2014-07-15 04:33:53	2014-07-15 04:45:58	725.0	Move guestbook.md to README.md for default display by github.
+257	461	nyaxt	Google	2014-07-15 11:49:20	2014-07-15 13:35:55	6395.0	Define EtcdErrorCode as constant and reuse EtcdError instances
+258	458	yifan-gu		2014-07-15 07:33:13	2014-07-15 13:36:39	21806.0	Changed op.notify<-true to close(op.notify).
+259	464	yugui		2014-07-15 13:57:54	2014-07-15 15:41:14	6200.0	Fixes Go lint errors
+260	460	nyaxt	Google	2014-07-15 10:49:08	2014-07-15 16:31:56	20568.0	Don't keep rand.Rand inside Master
+261	465	smarterclayton	RedHat	2014-07-15 14:33:49	2014-07-15 17:16:11	9742.0	Extract proxy/config common functions for reuse
+262	466	smarterclayton	RedHat	2014-07-15 15:37:22	2014-07-15 17:38:23	7261.0	Move Docker specific function out of the Kubelet
+263	467	vmarmol	Google	2014-07-15 17:18:25	2014-07-15 17:39:05	1240.0	Use latest cAdvisor image.
+264	469	smarterclayton	RedHat	2014-07-15 17:29:21	2014-07-15 17:40:39	678.0	Make container lookup in the Kubelet cleaner
+265	471	monnand		2014-07-15 18:03:59	2014-07-15 18:29:16	1517.0	Least load scheduler
+266	456	brendandburns	Microsoft	2014-07-15 05:40:08	2014-07-15 18:45:25	47117.0	Move health checking logic out to a utility. Add a minion registry that health checks.
+267	472	lavalamp	Google	2014-07-15 18:53:51	2014-07-15 18:56:49	178.0	First take at architecture diagram.
+268	474	yifan-gu		2014-07-15 22:10:37	2014-07-15 22:12:06	89.0	Changed op.notify<-true to close(op.notify).
+269	475	lavalamp	Google	2014-07-15 22:41:08	2014-07-15 23:00:28	1160.0	Move logger to own package; clean up apiserver to use serve mux.
+270	476	brendandburns	Microsoft	2014-07-15 22:43:19	2014-07-15 23:08:50	1531.0	Initial split of internal and external api types.
+271	477	yugui		2014-07-15 23:09:57	2014-07-15 23:22:59	782.0	Reimplement kube-up and kube-down in go
+272	478	monnand		2014-07-15 23:18:13	2014-07-15 23:24:17	364.0	[WIP] Least load scheduler: a simple version
+273	479	brendandburns	Microsoft	2014-07-15 23:50:05	2014-07-15 23:52:33	148.0	Add support for CPU limiting to the kubelet.
+274	480	monnand		2014-07-16 01:07:56	2014-07-16 01:25:36	1060.0	Update kubelet package to use most recent cAdvisor's code
+275	482	monnand		2014-07-16 03:41:17	2014-07-16 04:10:47	1770.0	Add code in client package to use kubelet's API to retrieve data from cAdvisor
+276	481	bgrant0607	Google	2014-07-16 01:59:33	2014-07-16 04:25:16	8743.0	Documentation additions and refactoring.
+277	483	brendandburns	Microsoft	2014-07-16 05:19:34	2014-07-16 05:39:07	1173.0	Add a caching minion registry.
+278	488	byxorna		2014-07-16 14:49:10	2014-07-16 15:30:38	2488.0	use correct syntax for alternative value of KUBE_MINIONS
+279	487	yugui		2014-07-16 13:07:04	2014-07-16 16:43:54	13010.0	Fixes Go lint errors and a style fix
+280	492	smarterclayton	RedHat	2014-07-16 19:16:31	2014-07-16 20:06:35	3004.0	Add content about replicationController to document use patterns
+281	493	lavalamp	Google	2014-07-16 20:55:41	2014-07-16 21:20:00	1459.0	Add websocket dep & watch api support
+282	496	ryfow		2014-07-16 22:59:55	2014-07-16 23:41:54	2519.0	Slow down proxy config file errors
+283	497	bgrant0607	Google	2014-07-16 23:40:36	2014-07-16 23:43:25	169.0	Answer 2 FAQs about motivations for pods.
+284	491	monnand		2014-07-16 18:08:04	2014-07-16 23:59:47	21103.0	Retrieve machine spec from cAdvisor
+285	495	ryfow		2014-07-16 21:25:50	2014-07-17 00:23:14	10644.0	Retry failed release downloads
+286	486	yugui		2014-07-16 06:53:01	2014-07-17 04:40:16	78435.0	Make RESTful operations return 404 Not Found when the target resource does not exist.
+287	452	Sarsate		2014-07-15 02:08:59	2014-07-17 05:33:30	185071.0	Initial framework for external volumes. 
+288	502	smarterclayton	RedHat	2014-07-17 17:42:41	2014-07-17 17:43:25	44.0	Rename kubelet_server*.go to server*.go
+289	506	monnand		2014-07-17 23:30:22	2014-07-17 23:30:42	20.0	[WIP] data structures for resources
+290	507	kelseyhightower	Google	2014-07-18 03:32:31	2014-07-18 03:37:35	304.0	The kubernetes proxy is causing the systemd-journal to peg CPU
+291	508	brendandburns	Microsoft	2014-07-18 03:55:23	2014-07-18 05:20:05	5082.0	integrate minion health checking and caching.
+292	509	xiang90		2014-07-18 06:28:51	2014-07-18 14:41:49	29578.0	kubelet: cleanup
+293	513	kelseyhightower	Google	2014-07-18 15:25:02	2014-07-18 16:19:34	3272.0	The kubernetes proxy utilizes 90% CPU
+294	514	brendandburns	Microsoft	2014-07-18 16:24:32	2014-07-18 16:25:10	38.0	Insert a couple of sleeps to slow things down.
+295	516	smarterclayton	RedHat	2014-07-18 16:36:40	2014-07-18 16:41:08	268.0	Operation server was not returning in error cases
+296	512	smarterclayton	RedHat	2014-07-18 14:58:48	2014-07-18 16:42:44	6236.0	PodInfo should indicate when a pod is not found
+297	519	kelseyhightower	Google	2014-07-18 19:03:26	2014-07-18 20:01:10	3464.0	Endpoints are being added to etcd without the PodIP
+298	522	Sarsate		2014-07-18 20:23:20	2014-07-18 20:25:44	144.0	Added HasAll utility method for string set.
+299	524	brendandburns	Microsoft	2014-07-18 20:42:15	2014-07-18 20:56:18	843.0	Make the service reconciller use the API, not a PodRegistry
+300	525	Sarsate		2014-07-18 20:56:34	2014-07-18 20:58:59	145.0	Renames HasAll to IsSuperset; HasAll uses slice.
+301	520	jonboulle		2014-07-18 19:04:22	2014-07-19 00:15:32	18670.0	assorted formatting and typo fixes
+302	527	Sarsate		2014-07-19 00:15:50	2014-07-19 00:22:58	428.0	Adds a flag to specify root working directory.
+303	503	smarterclayton	RedHat	2014-07-17 18:46:26	2014-07-19 05:20:55	124469.0	Higher level image and deployment concepts in Kubernetes
+304	529	lavalamp	Google	2014-07-19 01:53:44	2014-07-19 05:37:52	13448.0	Add APIObject for generic inclusion of API objects
+305	505	lavalamp	Google	2014-07-17 23:15:53	2014-07-19 06:18:17	111744.0	Add client watch capability
+306	531	thockin	Google	2014-07-19 20:17:57	2014-07-20 04:56:45	31128.0	Break out small functions in cmd/kubelet
+307	532	jonboulle		2014-07-20 04:57:13	2014-07-20 05:07:22	609.0	Fix a few other doc typos
+308	536	kelseyhightower	Google	2014-07-20 14:50:25	2014-07-20 15:25:17	2092.0	normalize -etcd_servers flag across all commands
+309	539	vmarmol	Google	2014-07-20 16:58:18	2014-07-20 16:59:42	84.0	Add a pause image for the net container.
+310	538	kelseyhightower	Google	2014-07-20 16:14:00	2014-07-20 17:05:59	3119.0	remove unnecessary expectNoError helper function
+311	537	kelseyhightower	Google	2014-07-20 15:43:25	2014-07-20 17:59:53	8188.0	clean up code comments for the kubecfg command
+312	540	vmarmol	Google	2014-07-20 17:53:56	2014-07-20 18:04:53	657.0	"If no tag was specified, pull ""latest"" explicitly."
+313	541	kelseyhightower	Google	2014-07-20 18:29:09	2014-07-20 18:31:53	164.0	add tests for the httplog package
+314	542	kelseyhightower	Google	2014-07-20 19:29:35	2014-07-20 19:43:56	861.0	add tests for the healthz package
+315	535	lavalamp	Google	2014-07-20 06:29:12	2014-07-20 20:47:17	51485.0	Etcd watcher
+316	534	brendandburns	Microsoft	2014-07-20 05:56:37	2014-07-21 01:58:57	72140.0	CLI is poorly documented
+317	547	kelseyhightower	Google	2014-07-21 02:23:33	2014-07-21 02:37:16	823.0	Add test cases for Docker image name parsing and cleanup
+318	546	kelseyhightower	Google	2014-07-21 01:31:26	2014-07-21 03:49:38	8292.0	Remove unnecessary expectNoError helper function
+319	545	kelseyhightower	Google	2014-07-21 00:37:29	2014-07-21 06:02:57	19528.0	Improve test coverage for the health package and remove mocks
+320	548	kelseyhightower	Google	2014-07-21 05:37:08	2014-07-21 07:08:51	5503.0	Use table testing for makePort tests
+321	544	smarterclayton	RedHat	2014-07-20 23:30:58	2014-07-21 13:43:54	51176.0	Support Restart policy in the kubelet (pre-design)
+322	543	rafael		2014-07-20 19:32:44	2014-07-21 15:30:54	71890.0	Add wiki page for local cluster setup.
+323	550	derekwaynecarr	RedHat	2014-07-21 17:38:26	2014-07-21 21:30:27	13921.0	Vagrant env
+324	554	monnand		2014-07-22 00:30:47	2014-07-22 00:32:45	118.0	Pass-by-ref v.s. Pass-by-value
+325	556	rafael		2014-07-22 02:31:53	2014-07-22 02:40:11	498.0	Validations when creating resources via the API
+326	557	lavalamp	Google	2014-07-22 06:15:10	2014-07-22 06:16:08	58.0	Prepare for external scheduler
+327	549	lavalamp	Google	2014-07-21 05:57:32	2014-07-22 06:28:43	88271.0	Make replication controllers use new watch interface
+328	559	ryfow		2014-07-22 14:57:08	2014-07-22 16:47:17	6609.0	cadvisor validation failure 
+329	565	brendandburns	Microsoft	2014-07-22 21:42:31	2014-07-22 21:44:07	96.0	Fork API types.
+330	566	lavalamp	Google	2014-07-22 22:01:01	2014-07-22 22:01:36	35.0	kube-proxy doesn't respond to updates
+331	567	brendandburns	Microsoft	2014-07-22 22:07:09	2014-07-22 22:09:10	121.0	Use Decode/Encode in etcd_tools
+332	568	smarterclayton	RedHat	2014-07-23 00:17:59	2014-07-23 00:28:31	632.0	Some examples don't pass Manifest validation
+333	569	smarterclayton	RedHat	2014-07-23 00:24:44	2014-07-23 00:29:42	298.0	Kubelet etcd watch skipping indices
+334	570	smarterclayton	RedHat	2014-07-23 00:26:41	2014-07-23 01:21:11	3270.0	kubecfg doesn't allow updates because of path checks
+335	561	lavalamp	Google	2014-07-22 18:11:19	2014-07-23 02:35:45	30266.0	HTTP L7 load balancer / reverse proxy
+336	571	lavalamp	Google	2014-07-23 01:57:15	2014-07-23 03:41:16	6241.0	Decode/Encode everywhere
+337	572	brendandburns	Microsoft	2014-07-23 05:47:05	2014-07-23 05:52:41	336.0	Change a != to a < to fix kubecfg.
+338	576	brendandburns	Microsoft	2014-07-23 06:46:02	2014-07-23 06:54:13	491.0	Actually fix kubecfg.
+339	575	brendandburns	Microsoft	2014-07-23 06:40:39	2014-07-23 13:43:39	25380.0	cAdvisor fails to run @ head
+340	578	kelseyhightower	Google	2014-07-23 14:25:05	2014-07-23 14:30:45	340.0	Update the broken pod.json example in the README
+341	580	smarterclayton	RedHat	2014-07-23 14:44:46	2014-07-23 14:58:33	827.0	Requesting the root api /api/v1beta1/ hangs forever
+342	584	kelseyhightower	Google	2014-07-23 16:04:37	2014-07-23 16:19:12	875.0	kubelet: Use os.Hostname() to get the system hostname
+343	583	vmarmol	Google	2014-07-23 15:40:12	2014-07-23 16:26:05	2753.0	Update the cAdvisor manifest for the new volume type.
+344	581	smarterclayton	RedHat	2014-07-23 15:18:31	2014-07-23 16:41:17	4966.0	Restore behavior of trimming / from kubecfg url
+345	585	ryfow		2014-07-23 16:52:35	2014-07-23 17:37:10	2675.0	service ids need validation
+346	590	smarterclayton	RedHat	2014-07-23 18:36:38	2014-07-23 18:54:59	1101.0	Add unit tests for example syntax
+347	588	vmarmol	Google	2014-07-23 18:18:57	2014-07-23 20:00:46	6109.0	Sync pods asynchronously in the Kubelet.
+348	589	monnand		2014-07-23 18:21:00	2014-07-23 21:04:07	9787.0	update github.com/fsouza/go-dockerclient
+349	592	lavalamp	Google	2014-07-23 23:14:01	2014-07-23 23:16:38	157.0	Proposal for scheduler API
+350	594	ryfow		2014-07-23 23:32:50	2014-07-23 23:39:45	415.0	Consider letting docker listen on a tcp port
+351	586	derekwaynecarr	RedHat	2014-07-23 17:20:30	2014-07-23 23:52:57	23547.0	Enable shell scripts to work with kubernetes clusters independent of hosting
+352	599	mfojtik	RedHat	2014-07-24 15:09:17	2014-07-24 16:54:40	6323.0	Couldn't read file: /tmp/proxy_config : open /tmp/proxy_config
+353	109	jbeda	VMware	2014-06-14 21:22:25	2014-07-24 18:53:32	3447067.0	Integration test flaky in Travis
+354	595	smarterclayton	RedHat	2014-07-24 01:49:12	2014-07-24 20:36:10	67618.0	Future proof API urls from name conflicts
+355	605	Sarsate		2014-07-24 20:55:00	2014-07-24 20:59:20	260.0	SetUp now returns an error.
+356	606	jonboulle		2014-07-24 21:09:37	2014-07-24 21:12:57	200.0	assorted formatting and typo fixes
+357	607	smarterclayton	RedHat	2014-07-24 21:26:00	2014-07-24 22:27:40	3700.0	Write the json content type for API responses
+358	602	lavalamp	Google	2014-07-24 19:00:29	2014-07-24 23:07:02	14793.0	apiserver allows pods that kubelet rejects
+359	603	lavalamp	Google	2014-07-24 20:08:47	2014-07-24 23:48:29	13182.0	"e2e suite: ""basic"" almost never works."
+360	413	brendandburns	Microsoft	2014-07-11 18:06:56	2014-07-24 23:50:12	1143796.0	Master should health check the kublet.
+361	611	lavalamp	Google	2014-07-25 01:16:26	2014-07-25 01:36:40	1214.0	kube-up.sh - GCE - Finds no minions
+362	615	lavalamp	Google	2014-07-25 01:51:49	2014-07-25 01:52:13	24.0	Fix release.sh
+363	601	lavalamp	Google	2014-07-24 18:45:06	2014-07-25 02:11:16	26770.0	"GCE gives minion names with trailing ""/""?"
+364	610	lavalamp	Google	2014-07-25 01:05:32	2014-07-25 02:50:38	6306.0	Make kubecfg work for minions.
+365	609	lavalamp	Google	2014-07-25 00:50:53	2014-07-25 02:51:11	7218.0	Fix kube-push.sh
+366	618	brendandburns	Microsoft	2014-07-25 04:56:35	2014-07-25 05:00:49	254.0	Make replication controller synchronizations independent.
+367	616	brendandburns	Microsoft	2014-07-25 04:49:09	2014-07-25 05:01:33	744.0	Augment the update example to turn black if the server is not responding...

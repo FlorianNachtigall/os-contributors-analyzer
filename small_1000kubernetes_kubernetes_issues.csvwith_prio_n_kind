@@ -1,0 +1,1001 @@
+	number	user_login	created_at	closed_at	title	priority	kind
+0	86870	RainbowMango	2020-01-06 13:20:38	2020-01-06 16:17:37	Fix local cluster do not work with non-intree external cloud provider issue	3	bug
+1	86868	WeihanLi	2020-01-06 09:26:30	2020-01-06 09:47:35	localization problem with kubernetes	5	bug
+2	86853	blkwtch	2020-01-05 21:01:54	2020-01-05 22:26:13	kube-apiserver is not starting	5	bug
+3	86850	haosdent	2020-01-05 18:57:56	2020-01-06 04:57:42	Break volumerestrictions Filter plugins dependency on predicates package	5	cleanup
+4	86846	manukoli1986	2020-01-05 16:55:40	2020-01-05 20:44:16	Getting ClusterIPOutofRange Error occurred since v1.17 upgraded. 	5	bug
+5	86845	mattjmcnaughton	2020-01-05 14:35:52	2020-01-06 19:12:30	Remove `rkt` from container runtime options	5	cleanup
+6	86842	draveness	2020-01-05 10:17:25	2020-01-05 12:49:27	feat(scheduling): remove algorithprovider defaults package	1	cleanup
+7	86840	tedyu	2020-01-05 04:03:41	2020-01-06 00:56:09	Use longer alphanums for random number generation	3	cleanup
+8	86838	Colstuwjx	2020-01-05 01:50:04	2020-01-05 03:25:53	e2e failing tests for pull-kubernetes-e2e-gce etc	5	failing-test
+9	86835	cwdsuzhou	2020-01-04 16:54:19	2020-01-04 23:45:16	Patch status of volumeAttachment(StorageV1) does not work   	5	bug
+10	86834	neolit123	2020-01-04 16:33:48	2020-01-04 18:01:28	"close the kubernetes/kubernetes GitHub project called ""kubeadm"""	5	
+11	86831	tanjunchen	2020-01-04 14:35:41	2020-01-05 11:25:41	remove unused code and use framework	5	cleanup
+12	86830	aojea	2020-01-04 09:57:55	2020-01-05 07:33:41	clarify apiserver bind-address flag usage	5	documentation
+13	86829	Colstuwjx	2020-01-04 03:26:37	2020-01-04 15:49:42	fix: correct the mentioned endpointslice manage label name.	1	documentation
+14	86824	jpbetz	2020-01-03 22:50:11	2020-01-06 22:58:17	1.17 Fix: Revert reflector changes of PR #83520 to fix #86483 #86791	0	bug
+15	86823	jpbetz	2020-01-03 22:46:58	2020-01-03 22:48:12	Revert reflector changes in 1.17 from PR #83520 to fix #86483	5	bug
+16	86822	ahg-g	2020-01-03 21:46:47	2020-01-05 20:37:42	Cleanup deprecated scheduler functions/files	5	cleanup
+17	86821	tedyu	2020-01-03 21:41:38	2020-01-04 15:05:05	Initialize map for singleton cache	3	cleanup
+18	86820	Huang-Wei	2020-01-03 19:58:32	2020-01-04 00:59:42	Cleanup SetPredicatesOrderingDuringTest due to deprecation of predicates	5	cleanup
+19	86819	Huang-Wei	2020-01-03 19:44:57	2020-01-03 22:55:42	Cleanup unused parameter of NewGenericScheduler	5	cleanup
+20	86815	krzysied	2020-01-03 16:31:41	2020-01-03 17:49:42	Kubemark - adding private cluster check	5	bug
+21	86814	tedyu	2020-01-03 16:30:25	2020-01-04 15:02:31	Initialize map for singleton cache	5	feature
+22	86813	krzysied	2020-01-03 16:23:15	2020-01-03 17:49:42	Non-private kubemark cluster creation fails	5	bug
+23	86804	Aresforchina	2020-01-03 09:05:01	2020-01-03 15:06:15	fix golint of pkg/kubelet/stats:replace stats.StatsProvider with stats.Provider	5	cleanup
+24	86800	tamalsaha	2020-01-03 06:02:41	2020-01-04 05:03:00	Allow description in metadata of CRD structural schema	5	feature
+25	86796	tanjunchen	2020-01-03 03:00:09	2020-01-04 05:41:41	remove unused code test/e2e/framework/google_compute.go	5	cleanup
+26	86794	jpbetz	2020-01-02 23:21:31	2020-01-02 23:46:14	[WIP] Fuzz test unstructured conversion for all native types	2	cleanup
+27	86791	jpbetz	2020-01-02 20:00:19	2020-01-03 22:56:58	Revert reflector changes of PR #83520 to fix #86483	5	bug
+28	86790	wojtek-t	2020-01-02 19:17:09	2020-01-03 03:16:27	Don't paginate in listwatch	1	cleanup
+29	86785	cwdsuzhou	2020-01-02 15:37:14	2020-01-03 06:26:03	update comments of some funs in scheduling_queue	5	documentation
+30	86781	SataQiu	2020-01-02 12:53:03	2020-01-06 21:34:45	Fix staticcheck failures of test/integration/client test/integration/disruption	5	cleanup
+31	86780	rkojedzinszky	2020-01-02 12:37:54	2020-01-02 14:43:51	Erroneous check for service clusterIPs	5	bug
+32	86776	devopsgoat	2020-01-02 11:36:24	2020-01-06 11:33:09	"""container init exited prematurely"" after OOMKilled"	5	bug
+33	86772	tontinme	2020-01-02 09:35:30	2020-01-02 22:05:06	label type error when kubectl apply	5	bug
+34	86771	apoorva-05	2020-01-02 07:39:27	2020-01-05 03:31:07	k8s 1.16 custom object resource version changes on status patch	5	
+35	86768	tanjunchen	2020-01-02 07:00:12	2020-01-03 03:16:17	if no cycle dependency , use framework in test/e2e_node/	3	cleanup
+36	86766	harishgupta	2020-01-02 05:02:51	2020-01-02 06:10:39	core_dns stuck in ContainerCreating status	5	
+37	86762	DeanYang121	2020-01-02 02:39:40	2020-01-03 11:33:16	coredns   [ERROR] plugin/errors: 2 read udp 10.244.235.249:55567->10.96.0.10:53: i/o timeout	5	bug
+38	86760	kanthasamyraja	2020-01-01 19:08:57	2020-01-03 15:10:48	kubeadm init - kubelet failing to start	5	
+39	86759	neolit123	2020-01-01 18:05:16	2020-01-03 03:16:06	CHANGELOG-1.17: add note about service CIDR bug	2	documentation
+40	86757	ialidzhikov	2020-01-01 14:00:02	2020-01-02 23:59:41	Minor nit in error message about feature gate stage	3	cleanup
+41	86754	mnaser	2020-01-01 01:11:50	2020-01-02 00:08:51	Nodes unable to reach ClusterIP services	5	
+42	86750	RainbowMango	2019-12-31 12:09:22	2019-12-31 20:25:41	Postpone flag warning log to just before it be used	3	cleanup
+43	86745	Aresforchina	2019-12-31 09:20:18	2020-01-01 04:31:40	Fix staticcheck failures of test/integration/replicationcontroller	3	cleanup
+44	86744	huchengze	2019-12-31 09:14:52	2019-12-31 10:57:58	Build kubernetes for mips64le	5	feature
+45	86743	clarklee92	2019-12-31 08:28:53	2020-01-06 21:34:32	e2e: move funs of framework/viperconfig to e2e	5	cleanup
+46	86742	haosdent	2019-12-31 07:42:51	2020-01-04 20:21:41	Break volumebinding Filter plugins dependency on predicates package	5	cleanup
+47	86741	John402-cloud	2019-12-31 06:43:18	2019-12-31 14:37:58	can‘t download any binary release package 	5	
+48	86737	oomichi	2019-12-31 00:19:50	2019-12-31 07:15:40	Output test description in TestPreemption	5	cleanup,flake
+49	86736	oomichi	2019-12-30 23:40:15	2019-12-31 00:57:40	Add error handling for Register() call	5	cleanup
+50	86733	oomichi	2019-12-30 19:49:02	2019-12-31 02:53:40	Add debugging message to know the pod status	5	cleanup,flake
+51	86732	oomichi	2019-12-30 19:18:40	2019-12-31 13:15:40	Move WaitForFailure() to the test	5	cleanup
+52	86731	oomichi	2019-12-30 18:45:35	2019-12-31 04:39:47	Remove Delete/CreateSyncInNamespace()	5	cleanup
+53	86730	ahg-g	2019-12-30 18:02:37	2020-01-04 22:39:41	Break DS controller dependency on scheduler predicates and predicate errors	1	cleanup
+54	86729	ahg-g	2019-12-30 18:00:44	2020-01-04 22:39:41	Break DS controller dependency on scheduler predicates [Migration Phase 2]	5	feature
+55	86725	notpad	2019-12-30 15:10:06	2019-12-31 17:37:41	Move resource-based priority functions to their Score plugins	1	feature
+56	86723	RainbowMango	2019-12-30 12:43:10	2019-12-31 15:23:41	Metrics stability framework cleanup	3	cleanup
+57	86719	feiskyer	2019-12-30 05:04:57	2019-12-31 09:00:18	Add backoff retries and client config for Azure cloud provider	1	feature
+58	86716	SataQiu	2019-12-30 04:29:46	2019-12-31 04:39:40	Fix staticcheck failures of test/integration/scale test/integration/serviceaccount test/integration/serving test/integration/volume	5	cleanup
+59	86713	liggitt	2019-12-30 03:30:05	2019-12-30 13:13:41	Fix unit test to run in non-gce environments	1	failing-test
+60	86705	neolit123	2019-12-29 23:02:57	2020-01-01 07:35:41	kubeadm: tolerate whitespace when validating user CA PEMs	3	bug
+61	86704	ialidzhikov	2019-12-29 21:38:48	2020-01-04 09:11:41	publishing: Update to go@1.13.4 for kubernetes-1.16	1	cleanup
+62	86701	yuyulei	2019-12-29 09:30:18	2020-01-05 09:09:39	Fix statefulset ut case	5	failing-test
+63	86699	tanjunchen	2019-12-29 07:01:23	2019-12-30 01:15:29	hack:add alias kubeadmutil for k8s.io/kubernetes/cmd/kubeadm/app/util	5	cleanup
+64	86698	naseemkullah	2019-12-29 04:58:09	2019-12-29 07:35:32	please delete	5	feature
+65	86696	tedyu	2019-12-29 03:57:42	2020-01-02 22:36:41	Close the writer proxying data to backend	5	cleanup
+66	86695	coboluxx	2019-12-29 01:58:35	2019-12-29 04:32:33	Sanitize certificate input during import or before comparison	5	bug
+67	86693	sallyom	2019-12-28 15:57:23	2020-01-02 16:47:41	silence usage when required flag is not passed	5	cleanup
+68	86688	tanjunchen	2019-12-28 11:39:02	2019-12-28 21:45:39	alias kubeadmutil for k8s.io/kubernetes/cmd/kubeadm/app/util	3	cleanup
+69	86687	RainbowMango	2019-12-28 10:03:02	2019-12-30 13:13:41	TestAddressManagerNoRequestedIP failing with make test	5	failing-test
+70	86686	yangl900	2019-12-28 08:33:25	2019-12-28 12:17:40	Azure cloud provider retries 400 for long time	5	bug
+71	86685	yangl900	2019-12-28 08:16:46	2019-12-28 12:17:40	Azure cloud provider should not retry on bad request	1	bug
+72	86684	Huang-Wei	2019-12-28 07:25:07	2019-12-29 07:47:39	Move podtopologyspread priority logic to its Score plugin	5	cleanup
+73	86683	yyklll	2019-12-28 07:15:48	2019-12-28 14:32:14	ambiguous import while installing kubetest on the newest master branch	5	bug
+74	86682	Huang-Wei	2019-12-28 06:56:14	2019-12-28 07:17:58	Move PodTopologySpread priority logic to its Score plugin [Migration Phase 2]	1	feature
+75	86681	Huang-Wei	2019-12-28 04:24:41	2019-12-28 16:23:39	Fix a typo in interpodaffinity score plugin	5	cleanup
+76	86680	guo897654050	2019-12-28 03:45:20	2019-12-30 08:28:05	add feature-gates='NonPreemptingPriority=true'  have no effect	5	
+77	86677	tedyu	2019-12-27 23:47:03	2019-12-30 03:41:58	Move corrupted checkpoint file	5	bug
+78	86673	ahg-g	2019-12-27 18:49:07	2020-01-03 06:25:54	Define algorithm providers in terms of plugins	5	cleanup,feature
+79	86669	mm4tt	2019-12-27 14:27:07	2019-12-31 08:57:18	kube-scheduler.log has a lot of PersitentVolumeClaim binding errors in load test	5	bug
+80	86665	SataQiu	2019-12-27 10:34:19	2020-01-03 06:25:41	kube-proxy: add some interface type assertions	3	cleanup
+81	86664	tanjunchen	2019-12-27 09:28:33	2019-12-28 21:45:39	"alias kubeadmutil for ""k8s.io/kubernetes/cmd/kubeadm/app/util"""	3	cleanup
+82	86662	draveness	2019-12-27 08:56:24	2019-12-28 06:23:39	feat(scheduling): implement azure, cinder, ebs and gce as filter plugin	1	feature
+83	86661	yuxiaobo96	2019-12-27 08:55:57	2019-12-31 09:00:05	e2e:remove func of framework/replicaset to e2e/upgrades/apps/replicas…	5	cleanup
+84	86660	qianlei90	2019-12-27 08:12:16	2020-01-03 07:39:41	remove unnecessary code in client-go test	1	cleanup
+85	86659	Huang-Wei	2019-12-27 08:06:36	2019-12-27 15:53:39	Move pod topology spread predicate logic to its filter plugin	5	cleanup
+86	86658	Huang-Wei	2019-12-27 08:04:27	2019-12-27 15:53:39	Move Pod Topology Spread predicate logic to its Filter plugin [Migration Phase 2]	1	feature
+87	86657	yuxiaobo96	2019-12-27 06:44:38	2019-12-31 08:59:52	e2e:remove unused func in /test/e2e/framework/autoscaling/autoscaling…	5	cleanup
+88	86655	k-toyoda-pi	2019-12-27 05:10:19	2019-12-30 05:59:40	Add alias of api/errors in endpointslice.go	3	cleanup
+89	86654	kashishjt	2019-12-27 03:57:38	2019-12-31 16:53:04	kubectl error after creating cluster using kops on aws	5	
+90	86650	RainbowMango	2019-12-27 02:30:06	2019-12-27 22:05:39	Cleanup testapi after it has been removed	3	cleanup
+91	86646	tedyu	2019-12-26 18:32:30	2020-01-06 21:34:19	Require client / server protocols	3	cleanup
+92	86642	yttan	2019-12-26 12:53:42	2019-12-26 18:41:46	Is there any plan for secret/configmap status?	5	feature
+93	86641	angao	2019-12-26 10:39:08	2019-12-26 20:30:53	remove redundant code	5	cleanup
+94	86640	tanjunchen	2019-12-26 09:45:08	2019-12-28 03:47:53	move funcs from test/e2e/framework/job to test/e2e/apps	5	cleanup
+95	86639	tanjunchen	2019-12-26 08:33:27	2019-12-27 00:43:51	move func EnableAndDisableInternalLB from test/e2e/framework/service …	5	cleanup
+96	86638	danielqsj	2019-12-26 08:16:43	2019-12-27 12:05:39	Move ServiceAntiAffinityPriority to score plugin	1	feature
+97	86635	draveness	2019-12-26 06:48:27	2019-12-27 06:27:52	feat(scheduling): move csi volume predicates to csi filter plugin	5	feature
+98	86634	tanjunchen	2019-12-26 06:32:39	2019-12-28 18:29:40	remove unused code in test/e2e/apps/deployment	5	cleanup
+99	86633	jfbai	2019-12-26 05:56:12	2019-12-28 16:29:04	Automated cherry pick of #86234: Move added info and status stack trace to the end of line.	5	
+100	86632	jfbai	2019-12-26 05:54:26	2019-12-28 16:28:56	Automated cherry pick of #86234: Move added info and status stack trace to the end of line.	5	
+101	86631	jfbai	2019-12-26 05:52:47	2019-12-28 16:29:19	Automated cherry pick of #86234: Move added info and status stack trace to the end of line.	5	
+102	86625	zouyee	2019-12-26 02:42:46	2019-12-27 17:27:40	Move CheckNodeUnschedulable predicate to its filter plugin	5	cleanup
+103	86623	zouyee	2019-12-26 02:12:15	2019-12-26 18:23:39	Move VolumeZone predicate to its Filter plugin	5	cleanup
+104	86622	ahg-g	2019-12-26 01:54:35	2019-12-27 17:27:40	Move CheckNodeUnschedulable predicate to its filter plugin [Migration Phase 2] 	1	feature
+105	86621	yuzhiquan	2019-12-26 01:50:44	2019-12-30 10:41:40	refactor (pod log) container valiate	3	bug,feature
+106	86618	tedyu	2019-12-25 21:42:24	2019-12-30 15:53:41	Come out of loop when omitempty is true	3	cleanup
+107	86617	ranjit552	2019-12-25 21:11:05	2019-12-26 18:47:40	'-f' flag in kubectl apply is not working 	5	bug
+108	86615	mwmix	2019-12-25 18:05:17	2019-12-26 20:13:39	Updating minor grammar error.	3	cleanup
+109	86614	ahg-g	2019-12-25 17:52:14	2019-12-26 13:21:38	Deprecate scheduler predicate and priority factory registration and associated types	5	cleanup
+110	86613	ahg-g	2019-12-25 14:42:59	2019-12-28 06:23:39	Move volume limits predicates to their Filter plugins [Migration Phase 2]	1	feature
+111	86612	andyzhangx	2019-12-25 14:03:05	2019-12-26 21:43:52	fix: azure disk could not mounted on Standard_DC4s/DC2s instances	1	bug
+112	86611	andyzhangx	2019-12-25 14:02:25	2019-12-26 21:43:52	Cannot mount azure disk on Standard_DC4s/DC2s instances	1	bug
+113	86609	Pensu	2019-12-25 11:00:04	2019-12-30 22:29:40	Fixing regex for kubernetes version in kubeadm	1	bug
+114	86608	samkrish123	2019-12-25 09:37:57	2019-12-25 18:03:37	 Could not connect to apt.kubernetes.io:80 (35.201.71.162). - connect (113: No route	5	
+115	86607	Aresforchina	2019-12-25 09:14:23	2020-01-06 03:43:00	fix golint errors in pkg/apis/node/v1alpha1	5	
+116	86602	Aresforchina	2019-12-25 07:54:43	2020-01-06 03:41:57	fix golint errors in pkg/kublet/sysctl and pkg/kubelet/stats	5	cleanup
+117	86601	angao	2019-12-25 07:53:54	2019-12-25 23:27:39	move NoDiskConflict predicate to its filter plugin	5	cleanup
+118	86599	denkensk	2019-12-25 03:21:20	2019-12-25 11:51:30	move nodepreferavoidpods to score plugin	1	feature
+119	86598	zhlhahaha	2019-12-25 02:46:46	2019-12-31 23:43:40	"Remove todos for verification of “allowed to post CSR” and ""allowed to auto approve CSR"" for bootstraptoken group"	3	cleanup
+120	86595	draveness	2019-12-25 00:31:46	2019-12-25 08:01:45	feat: implement node affinity priority as score plugin	1	feature
+121	86594	bojanpog	2019-12-24 19:00:36	2019-12-24 21:34:41	/apis/admission.certmanager.k8s.io/v1beta1?timeout=32s 503 Service Unavailable	5	
+122	86593	ahg-g	2019-12-24 18:00:38	2019-12-25 02:39:30	Cleanup scheduler's in-tree plugins registry naming	5	cleanup
+123	86592	Alexander-Carpenter	2019-12-24 17:23:01	2019-12-24 20:36:40	Changed to use range size instead of integer	5	cleanup
+124	86591	ahg-g	2019-12-24 17:02:16	2019-12-26 02:25:38	Added scheduler algorithm provider registrey.	5	feature
+125	86589	notpad	2019-12-24 14:12:16	2019-12-25 05:45:30	Move RequestedToCapacityRatio to plugins/noderesources	1	feature
+126	86588	hase1128	2019-12-24 12:31:48	2019-12-24 23:17:30	Clean up kube-apiserver reference document	3	documentation
+127	86586	xiaoanyunfei	2019-12-24 11:26:59	2020-01-03 03:15:56	Deprecate scheduling_duration_seconds Summary metric	5	cleanup,deprecation
+128	86585	SataQiu	2019-12-24 11:25:39	2019-12-24 19:43:30	"""Move Taint and toleration priority to its Score plugin"""	5	cleanup
+129	86584	xiaoanyunfei	2019-12-24 11:22:03	2020-01-03 11:41:41	deprecate scheduling_algorithm_predicate_evaluation_seconds and sched…	5	cleanup,deprecation
+130	86583	libnux	2019-12-24 09:54:45	2019-12-28 03:47:39	Change log level to 3 when --random-fully is not supported	3	cleanup
+131	86581	libnux	2019-12-24 09:17:32	2019-12-24 09:35:42	Change log level to 3 to avoid too much logging when --random-fully not supported	5	
+132	86580	zouyee	2019-12-24 09:09:18	2019-12-25 15:39:39	Move ResourceLimitsPriority to its Score plugin	5	cleanup
+133	86579	yinwenqin	2019-12-24 08:32:08	2019-12-24 14:51:05	apiserver Feature Gates enable VolumeSubpathEnvExpansion but no effect	5	bug
+134	86577	draveness	2019-12-24 07:48:54	2019-12-24 16:41:30	fix: remove totalNumNodes from priority metadata	5	cleanup
+135	86573	zhlhahaha	2019-12-24 02:12:43	2019-12-26 05:49:39	add extra group and usage check for bootstraptoken	3	cleanup
+136	86571	ahg-g	2019-12-24 01:44:17	2019-12-26 01:07:47	Move ResourceLimitsPriority to its Score plugin [Migration Phase 2]	1	feature
+137	86570	YuikoTakada	2019-12-24 01:35:43	2019-12-26 11:57:39	Remove unused function NewMetricExporter from e2e test	3	cleanup
+138	86568	YuikoTakada	2019-12-24 01:27:06	2019-12-25 08:01:31	Delete unused function from e2e test autoscaling_utils.go	3	cleanup
+139	86567	thdrnsdk	2019-12-24 01:22:39	2019-12-24 07:35:42	change print log for unity when during kubeadm init	3	cleanup
+140	86565	hbceylan	2019-12-23 22:06:30	2019-12-24 07:35:30	fix kubectl run help image name	5	documentation
+141	86559	kwiesmueller	2019-12-23 17:16:58	2019-12-24 18:33:56	Sending server-side-apply patch as protobuf	4	feature
+142	86555	feiskyer	2019-12-23 14:49:05	2019-12-25 09:21:44	Return typed errors for Azure client interfaces	1	feature
+143	86554	notpad	2019-12-23 14:12:19	2019-12-24 14:10:46	Move RequestedToCapacityRatio to plugins/noderesources	1	feature
+144	86553	ajayktkp	2019-12-23 12:49:26	2019-12-29 00:27:39	validation.go: don't clamp the CIDR size calculations	3	cleanup
+145	86552	ijumps	2019-12-23 12:37:48	2019-12-23 14:37:21	apiserver LoopbackClient Server cert expired after 1 year	5	bug
+146	86549	ashutoshgngwr	2019-12-23 11:00:23	2019-12-24 14:56:27	Inconsistent/faulty response with `kubectl auth can-i cordon nodes`	5	bug
+147	86548	draveness	2019-12-23 10:15:52	2019-12-23 16:29:34	feat: implement image locality as score plugin	1	feature
+148	86546	yy8848	2019-12-23 10:06:26	2020-01-03 13:45:27	Delete data safely from emptyDir volume in multi-tenancy environment	5	feature
+149	86542	zouyee	2019-12-23 09:27:12	2019-12-24 11:23:30	introduce checker for  the result of nodeInfo.Node()	5	cleanup
+150	86541	tanjunchen	2019-12-23 09:15:30	2019-12-27 02:00:04	move funcs in replicaset to autoscaling_utils	5	cleanup
+151	86538	kvaster	2019-12-23 08:59:25	2019-12-23 22:46:54	kubeadm is starting kubelet before complete config is writte to disk	5	bug,design
+152	86536	superbrothers	2019-12-23 05:36:36	2019-12-24 14:59:49	`kubectl convert` was not removed in v1.17	5	bug
+153	86535	liggitt	2019-12-23 03:36:01	2019-12-25 07:29:44	"[v1.17.1] Automated cherry pick of #86534: Revert ""remove ipallocator in favor of k/utils net"	0	bug
+154	86534	liggitt	2019-12-23 03:34:58	2019-12-23 21:25:30	Restore IPAllocator ipv4 range handling	0	bug
+155	86533	RainbowMango	2019-12-23 03:26:24	2019-12-27 06:27:39	Optimize error messages when updating openapi spec	3	cleanup
+156	86530	zouyee	2019-12-23 02:45:17	2019-12-24 06:05:30	Move volumebinding predicate to its filter plugin	5	cleanup
+157	86527	aojea	2019-12-22 23:52:51	2020-01-06 15:36:01	portAllocator sync local data before allocate ports	5	bug
+158	86523	EastMoneyColin	2019-12-22 12:54:03	2019-12-22 13:09:18	pod.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm Mismatch explain doc	5	bug
+159	86521	jfbai	2019-12-22 09:38:39	2019-12-30 17:09:40	Count dropped requests except system previledged group requests.	1	bug
+160	86519	SataQiu	2019-12-22 08:53:04	2019-12-23 01:15:33	kubeadm: re-enable kubelet version check test in preflight	2	bug,cleanup,failing-test
+161	86515	feiskyer	2019-12-22 04:43:07	2019-12-23 08:29:34	Change Azure global rate limit to per client	1	feature
+162	86514	tedyu	2019-12-22 04:16:17	2020-01-06 02:39:41	Perform dead storage removal linearly	3	cleanup
+163	86512	tedyu	2019-12-22 01:01:48	2020-01-06 13:21:36	Remove ineffective calls in toUnstructured	3	cleanup
+164	86511	aojea	2019-12-21 17:04:08	2019-12-30 03:39:40	Add ipv6 examples for network policy API	3	api-change,documentation
+165	86510	wawa0210	2019-12-21 16:57:36	2019-12-22 02:09:08	bump github.com/json-iterator/go v1.1.9	5	cleanup
+166	86508	kvaster	2019-12-21 11:42:34	2019-12-24 09:05:30	On OpenRC ServiceIsActive should not report true if no such service exists	3	bug
+167	86505	aojea	2019-12-21 10:33:35	2020-01-03 22:13:52	WIP probes use container IP for unspecified addresses	5	cleanup
+168	86504	aojea	2019-12-21 10:27:16	2020-01-03 22:13:17	Pod Probes doesn't work if host = 0.0.0.0	5	bug
+169	86502	levimm	2019-12-21 07:16:50	2019-12-22 13:59:34	fix azure cloud provider bug when lb specified in other resource group	1	bug
+170	86498	Huang-Wei	2019-12-20 23:25:12	2019-12-21 16:41:34	Cleanup failedPredicateMap from generic_scheduler.go	5	cleanup
+171	86497	altreze	2019-12-20 23:18:44	2019-12-23 21:25:30	Service is not within the service CIDR please recreate	0	bug
+172	86496	ahg-g	2019-12-20 22:01:48	2019-12-23 17:53:34	Support AlwaysCheckAllPredicates in the scheduler framework.	1	bug
+173	86493	aojea	2019-12-20 21:08:44	2020-01-04 03:13:41	kubeadm: use bind-address instead of address to configure the http probes	2	cleanup
+174	86492	Huang-Wei	2019-12-20 20:22:30	2019-12-20 23:25:28	Cleanup FailureReason in scheduler - part 1	5	cleanup
+175	86490	aojea	2019-12-20 19:08:48	2019-12-21 02:28:27	"apiserver: add localhost to alternateDNS certificate field if BindAddress is ""::"""	5	cleanup
+176	86488	TrueGreens	2019-12-20 18:36:02	2019-12-20 20:33:12	node affinity Gt/Lt not working with floats	5	bug
+177	86486	saf-itpro	2019-12-20 16:04:25	2019-12-20 18:27:44	Validation error during deployment using YAML config file	5	
+178	86480	aojea	2019-12-20 12:18:33	2019-12-20 15:46:07	BindAddress takes precedence over BindNetwork	5	bug,flake
+179	86479	aojea	2019-12-20 11:55:28	2020-01-05 07:33:41	apiserver, controller-manager and scheduler listen on all interfaces (ipv4 and ipv6) when binding to 0.0.0.0	5	documentation
+180	86475	cwdsuzhou	2019-12-20 09:20:04	2019-12-31 02:05:34	Scheduler： len(failedPredicates) always 0	5	bug
+181	86473	kireledan	2019-12-20 07:46:56	2019-12-21 02:28:18	hack/local-up-cluster: modify cloud provider launch to work with aws	1	bug
+182	86470	stcheng	2019-12-20 06:01:51	2019-12-22 05:03:34	Add unit tests for pkg azure/auth	1	flake
+183	86469	cblecker	2019-12-20 05:57:21	2019-12-20 05:57:56	Testing :)	5	
+184	86466	yuxiaobo96	2019-12-20 04:51:41	2019-12-25 09:21:31	e2e: move funs of framework/deployment/fixtures.go to e2e/apps/deploy…	5	cleanup
+185	86464	liggitt	2019-12-20 04:15:31	2019-12-20 05:31:33	"Revert ""Merge pull request #86376 from xieyanker/kubemark_deployment"""	0	bug,failing-test
+186	86463	ozbillwang	2019-12-20 03:08:34	2019-12-20 03:53:20	apply can't work, but delete/apply work	5	bug
+187	86462	antoninbas	2019-12-20 03:04:15	2019-12-20 03:50:38	"""kubectl get -A all"" hangs when using kubectl version 1.17.0"	5	bug
+188	86461	13567436138	2019-12-20 01:58:42	2019-12-20 02:39:06	my kubernetes version is 1.16.2 I cannot use ephemeralcontainers	5	
+189	86460	ahg-g	2019-12-20 01:46:41	2019-12-21 02:28:09	Move Pod Affinity predicate logic to its Filter plugin [Migration Phase 2]	1	feature
+190	86459	ahg-g	2019-12-20 01:45:35	2019-12-21 02:28:10	move inter pod affinity predicate logic to its Filter plugin	5	cleanup
+191	86457	weinong	2019-12-20 00:17:03	2019-12-25 07:51:40	Automated cherry pick of #86412: It fixes a bug where AAD token obtained by kubectl is	1	bug
+192	86456	weinong	2019-12-20 00:14:02	2019-12-25 07:53:40	Automated cherry pick of #86412: It fixes a bug where AAD token obtained by kubectl is	1	bug
+193	86455	weinong	2019-12-20 00:12:46	2019-12-25 10:19:47	Automated cherry pick of #86412: It fixes a bug where AAD token obtained by kubectl is	1	bug
+194	86454	tedyu	2019-12-19 23:18:03	2019-12-20 00:20:31	Drop PersistentVolumes GCEPD involving deletion of namespace	5	cleanup
+195	86453	pjh	2019-12-19 22:59:41	2019-12-20 12:03:33	Update Windows subnet mask calculation for compatibility with future VNIC changes	1	cleanup
+196	86452	lelenanam	2019-12-19 21:48:21	2019-12-29 18:15:39	Fix ensureStaticIP if name for existed address was changed	5	bug
+197	86447	ahg-g	2019-12-19 16:49:16	2019-12-27 12:05:39	Move ServiceAntiAffinityPriority to its Score plugin [Migration Phase 2] 	1	feature
+198	86446	ahg-g	2019-12-19 16:45:46	2019-12-19 23:37:22	Move NodeLabel priority logic to its Score and Filter plugin	5	cleanup
+199	86445	ahg-g	2019-12-19 16:04:38	2019-12-31 17:37:41	Move resource-based priority functions to their Score plugins [Migration Phase 2]	1	feature
+200	86444	ahg-g	2019-12-19 15:47:42	2019-12-26 18:23:39	Move VolumeZone predicate to its Filter plugin [Migration Phase 2]	1	feature
+201	86443	ahg-g	2019-12-19 15:46:37	2019-12-25 23:27:39	Move NoDiskConflict predicate to its Filter plugin [Migration Phase 2]	1	feature
+202	86442	ahg-g	2019-12-19 15:40:31	2019-12-25 12:34:23	Move volumebinding predicate to its filter plugin [Migration Phase 2] 	1	feature
+203	86440	ahg-g	2019-12-19 14:47:42	2019-12-29 07:47:39	Move Pod Spread priority logic to its Score plugin [Migration Phase 2]	1	feature
+204	86439	ahg-g	2019-12-19 14:43:06	2019-12-24 19:43:30	Move Taint and toleration priority to its Score plugin [Migration Phase 2]	1	feature
+205	86438	klueska	2019-12-19 14:39:38	2020-01-06 19:12:17	Add klueska as an approver in test/e2e_node/OWNERS	5	cleanup
+206	86437	ahg-g	2019-12-19 14:37:57	2019-12-19 23:37:22	Move NodeLabelPriority to its Score and Filter plugin [Migration Phase 2]	1	feature
+207	86433	monotek	2019-12-19 13:40:37	2019-12-23 09:41:34	update fluentd to 1.8.0 / fixed gemfile / fixed shellcheck	5	flake
+208	86429	jkaniuk	2019-12-19 11:57:00	2019-12-31 13:25:24	[Failing Test] node-containerd-throughput failing	5	failing-test
+209	86427	jkaniuk	2019-12-19 11:24:28	2019-12-20 09:22:02	[Failing Test] gce-master-scale-correctness - sig-storage tests	5	failing-test
+210	86426	jkaniuk	2019-12-19 10:14:59	2019-12-31 10:05:03	Presubmit failed but did not stop the merge	5	bug
+211	86425	jkaniuk	2019-12-19 10:01:30	2019-12-19 18:12:23	"Revert pull request #85879 ""hollow-node use remote CRI"""	0	bug
+212	86424	a1198457636	2019-12-19 09:45:39	2019-12-19 20:19:43	https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/prometheus is this link gone?	5	
+213	86423	mm4tt	2019-12-19 09:27:30	2019-12-19 18:12:23	All CI kubemark tests are failing	5	failing-test
+214	86421	xieyanker	2019-12-19 08:02:24	2019-12-25 06:32:49	Network cannot be disconnected after kube-proxy switching to ipvs mode	5	bug
+215	86416	sshukun	2019-12-19 06:06:10	2019-12-21 02:28:00	Fix golint failure not contained in .golint_failures	5	cleanup
+216	86415	mikedanese	2019-12-19 06:00:42	2019-12-19 18:12:13	rename _count to _total in a few metrics	5	cleanup
+217	86414	tedyu	2019-12-19 05:33:30	2019-12-25 10:19:39	[v1.17.1] cherry pick of #86395 : Allocate map when out points to nil map	1	bug
+218	86412	weinong	2019-12-19 04:23:32	2019-12-19 20:40:55	fix incompatible AAD token	1	bug
+219	86411	liggitt	2019-12-19 04:17:07	2019-12-19 13:52:10	Isolate kubectl test-cmd plugin tests	2	cleanup
+220	86410	weinong	2019-12-19 04:04:13	2019-12-19 20:40:54	AAD token obtained by kubectl has spn prefix which is incompatible with AAD on-behalf-of flow	5	bug
+221	86407	ahg-g	2019-12-19 02:39:39	2019-12-25 11:51:30	Move NodePreferAvoidPods priority logic to its Score plugin [Migration Phase 2]	1	feature
+222	86405	ahg-g	2019-12-19 02:25:44	2019-12-25 08:01:45	Move NodeAffinity priority logic to its Score plugin [Migration Phase 2]	1	feature
+223	86404	ahg-g	2019-12-19 02:16:24	2019-12-23 16:29:33	Move ImageLocality priority logic to its Score plugin [Migration Phase 2]	1	feature
+224	86403	brentpearson	2019-12-19 01:58:13	2019-12-19 19:52:15	kube-apiserver container log file seems to have no size limit	5	
+225	86402	chenjiandongx	2019-12-19 01:56:52	2019-12-20 01:22:45	Fix: kubectl top --sort-by option bug	5	
+226	86399	ahg-g	2019-12-19 01:19:55	2019-12-19 21:39:57	InterPodAffinity Priority as Score plugin	5	cleanup
+227	86398	ahg-g	2019-12-19 01:18:53	2019-12-19 21:39:57	Move Pod Affinity priority logic to its Score plugin [Migration Phase 2]	1	feature
+228	86397	gnufied	2019-12-18 23:00:00	2019-12-20 17:09:33	Expect NodeUnpublish calls when NodePublish is called	1	failing-test
+229	86396	gnufied	2019-12-18 21:42:27	2019-12-19 08:38:39	Wait for resizing condition	1	bug
+230	86395	tedyu	2019-12-18 21:33:04	2019-12-19 08:38:30	Allocate map when out parameter points to nil map	0	bug
+231	86394	howardjohn	2019-12-18 21:11:57	2019-12-19 08:38:30	Codec.Decode panic with client-go v0.17.0	5	bug
+232	86392	andrewsykim	2019-12-18 20:42:25	2019-12-19 08:38:20	remove personal kind.yaml that was added accidentally	5	cleanup
+233	86390	samudralavamshi54	2019-12-18 16:56:14	2020-01-06 15:31:36	[Failing Test] gce-master-scale-correctness (ci-kubernetes-e2e-gce-scale-correctness)	0	failing-test
+234	86389	alvaroaleman	2019-12-18 16:21:41	2019-12-21 10:59:34	"Sample apiserver: Avoid etcd listening on DNS result for ""localhost"""	5	bug
+235	86386	spiffxp	2019-12-18 15:03:07	2019-12-18 16:23:58	"Revert ""promote e2e tests for taint-tolerations in predicates"""	0	failing-test
+236	86385	andyzhangx	2019-12-18 14:45:52	2019-12-21 06:11:34	chore: port azure disk csi code to azure cloud provider	1	bug,cleanup
+237	86384	sshukun	2019-12-18 14:17:21	2019-12-19 03:21:19	Fix golint issues in pkg/kubelet/checkpointmanager/testing/example_checkpoint_formats/v1	5	cleanup
+238	86383	deads2k	2019-12-18 13:44:35	2020-01-03 20:43:42	prevent blocking wait in cert reloading	1	cleanup
+239	86382	wojtek-t	2019-12-18 11:53:10	2019-12-21 02:27:47	Remove DefaultConvert functions	5	api-change
+240	86381	zbw0046	2019-12-18 11:19:32	2019-12-19 10:41:59	add deltaType to the parameters for workqueue CRUD	4	feature
+241	86380	andyzhangx	2019-12-18 10:49:18	2019-12-25 10:19:30	Automated cherry pick of #86351: fix: azure data disk should use same key as os disk by	1	bug
+242	86379	aojea	2019-12-18 09:15:00	2019-12-18 16:23:58	Failing Test: SchedulerPredicates [Serial] validates that taints-tolerations is respected if matching [Disruptive] [Conformance]	5	failing-test
+243	86376	xieyanker	2019-12-18 07:57:40	2019-12-19 05:49:57	change kubemark from ReplicationController to Deployment	5	api-change,cleanup
+244	86369	Huang-Wei	2019-12-17 23:41:05	2019-12-21 02:27:33	Remove alwaysCheckAllPredicates from NewGenericScheduler	5	api-change,cleanup,deprecation
+245	86365	tedyu	2019-12-17 19:48:09	2019-12-25 07:51:32	cherry pick of #86140 : Do not swallow timeout in manageReplicas	1	bug
+246	86364	tedyu	2019-12-17 19:22:46	2019-12-25 09:13:48	cherry pick of #86140 : Do not swallow timeout in manageReplicas	1	bug
+247	86363	deads2k	2019-12-17 18:35:51	2019-12-25 09:11:43	Add single-item list/watch to delegated authentication reader role	0	bug
+248	86362	deads2k	2019-12-17 18:33:36	2019-12-25 09:13:39	Add single-item list/watch to delegated authentication reader role	0	bug
+249	86361	seans3	2019-12-17 18:25:31	2019-12-19 13:51:57	kubectl apply refactor	2	cleanup
+250	86354	p0lyn0mial	2019-12-17 13:32:45	2019-12-19 18:11:58	improves watch and report e2e 	5	cleanup
+251	86353	ahg-g	2019-12-17 13:32:10	2019-12-21 16:41:34	Use framework.Status instead of PredicateFailureError to report extenders filter status [Migration Phase 2] 	1	feature
+252	86351	andyzhangx	2019-12-17 13:16:19	2019-12-18 08:58:21	fix: azure data disk should use same key as os disk by default	1	bug
+253	86350	andyzhangx	2019-12-17 13:12:49	2019-12-18 08:58:21	Azure data disk should use same encryption key as os disk	1	bug
+254	86348	soltysh	2019-12-17 12:50:44	2019-12-18 03:48:22	Split cronjob tests, so they don't interfere	1	flake
+255	86346	SataQiu	2019-12-17 11:42:52	2019-12-22 07:55:33	Bump k8s.io/utils version	5	cleanup
+256	86344	klueska	2019-12-17 10:03:09	2020-01-06 17:54:17	Add klueska as an approver in pkg/kubelet/cm/OWNERS	5	cleanup
+257	86343	snowplayfire	2019-12-17 09:03:32	2019-12-17 09:05:44	add some metrics for scheduler	5	
+258	86342	woohhan	2019-12-17 08:40:08	2019-12-17 08:48:28	Need VolumeSnapshot Status	5	feature
+259	86341	vutuong	2019-12-17 08:10:43	2019-12-19 05:02:13	Provide a mechanism to support container migration in K8S	5	feature
+260	86339	zhlhahaha	2019-12-17 06:46:08	2019-12-19 01:26:40	add rolebinding check for bootstrap-signer	5	flake
+261	86338	gossion	2019-12-17 05:57:02	2019-12-20 15:35:33	Add a config option to azure cloud provider for the pre-configured loadbalancers	1	feature
+262	86335	gossion	2019-12-17 05:31:16	2019-12-20 15:35:33	Add a config option to azure cloud provider for the pre-configured loadbalancer	5	feature
+263	86332	HistoryGift	2019-12-17 03:39:58	2019-12-17 05:22:42	resource extend	5	
+264	86331	tedyu	2019-12-17 02:31:19	2019-12-25 07:29:31	[v1.17.1] cherry pick of #86277: Check FileInfo against nil during walk of container dir path	0	bug
+265	86330	zqingqing1	2019-12-16 23:42:40	2020-01-03 18:57:15	using LIST when newVMCache() to avoid of throttling issue	1	bug
+266	86329	mml	2019-12-16 22:50:07	2019-12-18 03:48:13	Set core_pattern to an absolute path.	1	bug
+267	86328	mml	2019-12-16 22:44:57	2019-12-18 03:48:13	Misconfigured core dump pattern can lead to log spam on GCI	1	bug
+268	86327	liggitt	2019-12-16 22:08:08	2019-12-16 23:29:39	Mark top flakes	0	flake
+269	86325	Huang-Wei	2019-12-16 21:02:12	2019-12-19 01:05:26	[DO NOT MERGE] debugging flaky preemption e2e	5	flake
+270	86324	liggitt	2019-12-16 20:54:54	2019-12-25 09:11:31	Automated cherry pick of #86320: Add UID precondition to kubelet pod status patch updates	0	bug
+271	86323	liggitt	2019-12-16 20:53:58	2019-12-25 07:53:31	Automated cherry pick of #86320: Add UID precondition to kubelet pod status patch updates	0	bug
+272	86322	liggitt	2019-12-16 20:51:27	2019-12-25 08:51:31	[v1.17.1] Automated cherry pick of #86320: Add UID precondition to kubelet pod status patch updates	0	bug
+273	86321	liggitt	2019-12-16 20:50:04	2019-12-21 13:43:33	Make e2e scale updates unconditional	1	bug,flake
+274	86320	liggitt	2019-12-16 19:40:07	2019-12-16 22:01:39	Add UID precondition to kubelet pod status patch updates	5	bug,flake
+275	86319	Huang-Wei	2019-12-16 19:30:14	2019-12-17 12:20:33	Fix up the sub-test style	5	cleanup
+276	86317	liggitt	2019-12-16 17:43:31	2020-01-06 21:24:18	[Flaky test] [sig-storage] CSI mock volume	0	flake
+277	86316	pierewoj	2019-12-16 17:38:22	2019-12-18 03:47:58	Use private master IP in GCE kubemark tests	5	feature
+278	86315	liggitt	2019-12-16 17:21:57	2019-12-19 08:38:10	Add debugging for delete grace period e2e flake	0	flake
+279	86314	liggitt	2019-12-16 17:09:38	2019-12-19 15:33:10	WIP - Add GCEPD flake debugging	5	flake
+280	86313	liggitt	2019-12-16 17:07:27	2019-12-16 18:47:38	Mark GCEPD test flaky	0	flake
+281	86311	liggitt	2019-12-16 14:30:52	2019-12-25 09:13:30	Automated cherry pick of #82498: Avoid encoding from competing goroutines #82733: Check the length of recorder.invocations #82807: Fix reinvokation test flake by isolating webhooks and markers	2	flake
+282	86309	jkaniuk	2019-12-16 13:35:12	2019-12-16 16:35:38	Disable excessive logging in scheduler plugins	5	bug
+283	86308	fgsl	2019-12-16 12:47:44	2019-12-20 10:39:00	 Add initial brazilian portuguese translations #80650 Open	5	documentation
+284	86303	langyenan	2019-12-16 09:39:36	2019-12-17 05:39:51	fix misspelling in comment	5	cleanup
+285	86302	mm4tt	2019-12-16 08:52:03	2019-12-17 20:01:12	Scheduler throughput regression	0	failing-test
+286	86301	feiskyer	2019-12-16 08:32:19	2019-12-22 05:03:34	[Cloud Provider] Add unit tests for pkg azure/auth	5	bug
+287	86298	aojea	2019-12-16 07:38:53	2019-12-18 18:37:58	networkPolicy ipv6 unit tests validation	5	cleanup
+288	86294	enj	2019-12-16 04:53:27	2019-12-21 00:21:34	kms: use negative cachesize value to disable caching	2	api-change
+289	86291	leileiwan	2019-12-16 03:59:31	2019-12-18 03:48:57	fix(structFromUnstructured) Unstructured converted to struct with ano…	5	bug
+290	86290	ahg-g	2019-12-16 03:50:20	2019-12-18 07:42:10	Deprecate PredicateMetadata [Migration Phase 2]	1	feature
+291	86289	ahg-g	2019-12-16 03:44:16	2019-12-18 07:42:11	Deprecate PredicateMetadata	5	cleanup
+292	86285	leileiwan	2019-12-16 02:37:07	2019-12-18 03:48:43	Unstructured converted to struct with anonymous field error when json is inline mode	5	bug
+293	86284	ahg-g	2019-12-15 22:36:49	2019-12-17 20:01:12	Register nodeports and noderesources prefilters 	1	feature
+294	86283	haosdent	2019-12-15 11:46:54	2019-12-27 05:17:40	e2e: move funs of framework/pv to e2e/storage	5	cleanup
+295	86279	nilo19	2019-12-15 05:58:23	2019-12-15 08:27:37	cherry pick of #85885: Provider/Azure: Add cache for VMSS.	1	bug
+296	86277	tedyu	2019-12-15 02:53:02	2019-12-17 12:20:23	Check FileInfo against nil during walk of container dir path	0	bug
+297	86276	yangl900	2019-12-14 23:57:41	2019-12-16 07:43:38	Fix internal loadbalancer configuration failure when subnet name too long	1	bug
+298	86275	yangl900	2019-12-14 23:41:49	2019-12-16 07:43:38	Internal load balancer configuration failure when subnet name too long	5	bug
+299	86273	badaldavda	2019-12-14 20:06:11	2019-12-17 13:52:50	Container Ports for pods vanishing	5	bug
+300	86270	dims	2019-12-14 16:11:25	2019-12-15 03:27:38	Automated cherry pick of #86258: Fix build break - Hyperkube image needs kubelet/kubectl	1	bug
+301	86269	odinuge	2019-12-14 11:45:30	2019-12-14 18:41:37	Update go version in go.mod to 1.13	3	cleanup
+302	86268	rubenhak	2019-12-14 05:02:58	2019-12-14 17:04:28	Accessing non-sensitive data of Secrets	4	feature
+303	86266	zqingqing1	2019-12-13 22:29:34	2019-12-17 12:20:13	Make cloud provider caching TTL configurable	1	feature
+304	86265	mikedanese	2019-12-13 22:05:41	2019-12-17 20:00:54	auth: add metrics to token cache	1	feature
+305	86264	ahg-g	2019-12-13 21:35:45	2019-12-17 05:39:40	Move service affinity predicate logic to its plugin.	5	cleanup
+306	86263	ahg-g	2019-12-13 21:31:56	2019-12-17 05:39:40	Move ServiceAffinity predicate logic to its plugin [Migration Phase 2] 	1	feature
+307	86262	tianhe-oi	2019-12-13 19:03:47	2019-12-16 23:28:42	Pending pvc in `WaitForFirstConsumer` if pod scheduled by custom scheduler	5	bug
+308	86261	troy0820	2019-12-13 18:48:09	2019-12-17 05:39:31	[auth]Change example in can-i to apps instead of extensions	5	bug
+309	86258	dims	2019-12-13 17:33:22	2019-12-13 20:56:00	Fix build break - Hyperkube image needs kubelet/kubectl	1	bug
+310	86256	liggitt	2019-12-13 16:32:19	2019-12-13 20:55:51	Remove use of testapi package	5	cleanup
+311	86254	ahg-g	2019-12-13 15:23:57	2019-12-13 20:55:37	Compatibility tests for default provider and mandatory filters	5	feature
+312	86252	soltysh	2019-12-13 14:26:18	2019-12-14 01:23:00	Use legacyscheme's types rather than testapi ones in serialization test	3	bug
+313	86250	jsafrane	2019-12-13 13:57:06	2019-12-17 05:39:22	AWS: Don't report deletion of attached volume as warning	5	cleanup
+314	86249	ahg-g	2019-12-13 13:26:49	2019-12-15 08:27:38	PodFitsResources Predicate Metadata as prefilter	5	feature
+315	86248	ahg-g	2019-12-13 13:25:28	2019-12-15 08:27:38	Move pod fits resources predicate metadata into pre-filter plugin [Migration Phase 2] 	1	feature
+316	86247	yiyang5055	2019-12-13 13:21:30	2019-12-29 19:06:37	add E2eScheduling to SchedulingLatency with label	5	feature
+317	86243	Amoteamame	2019-12-13 08:06:45	2019-12-14 18:31:27	curl: (7) Failed connect to 10.244.1.7:80; Connection timed out	5	
+318	86242	jfbai	2019-12-13 07:22:20	2019-12-14 00:39:40	Avoid listing pods	5	bug
+319	86241	CriaHu	2019-12-13 06:37:50	2019-12-23 02:20:28	fix broken links: https://github.com/kubernetes-sigs/kustomize/tree/v…	0	cleanup
+320	86240	draveness	2019-12-13 06:27:55	2019-12-14 11:25:37	doc: remove Draven from test package reviewers	3	cleanup
+321	86238	SataQiu	2019-12-13 06:20:31	2019-12-15 19:07:38	Fix staticcheck failures of test/e2e/manifest	5	cleanup
+322	86237	hwdef	2019-12-13 06:04:10	2019-12-15 12:01:27	test/e2e: move funcs from test/e2e/framework/ginkgowrapper 	5	cleanup
+323	86234	jfbai	2019-12-13 02:57:21	2019-12-18 08:58:11	Move added info and status stack trace to the end of line.	5	cleanup
+324	86233	multi-io	2019-12-13 02:21:32	2019-12-13 20:56:00	make quick-release-images fails on v1.17.0	5	bug
+325	86232	liggitt	2019-12-13 02:02:31	2019-12-13 06:04:55	Clean up conformance tar test data	3	cleanup
+326	86230	hex108	2019-12-13 01:44:01	2020-01-01 01:03:41	Scheduler handles pod annotation updates during scheduling more gracefully	5	cleanup
+327	86229	ahg-g	2019-12-13 00:07:21	2019-12-13 08:26:55	Remove daemonset controller's dependency on scheduler metadata	5	cleanup
+328	86228	ahg-g	2019-12-12 23:57:25	2019-12-13 02:33:33	Deprecate scheduler's FailureReason	5	cleanup
+329	86227	ahg-g	2019-12-12 23:21:03	2019-12-14 00:20:00	Move host ports predicate metadata into pre-filter plugins [Migration Phase 2]	1	feature
+330	86224	ahg-g	2019-12-12 20:47:26	2019-12-14 00:20:00	Wrap host ports metadata in a prefilter	5	feature
+331	86221	Random-Liu	2019-12-12 19:52:14	2019-12-17 05:39:13	[Windows] Upload containerd logs to stackdriver	1	feature
+332	86220	mariusgrigoriu	2019-12-12 18:30:43	2019-12-12 21:22:16	PSP MustRunAs minimum without pod spec mutation	5	feature
+333	86219	rajansandeep	2019-12-12 18:15:13	2019-12-12 18:45:49	Push the CoreDNS 1.6.6 image in gcr.io	5	feature
+334	86218	ahg-g	2019-12-12 15:51:27	2019-12-12 19:06:33	Add an interface to return scheduler framework instance	5	feature
+335	86217	pierewoj	2019-12-12 15:39:37	2019-12-13 11:48:08	GCE 1.14, 1.15 pod startup latency regression	5	bug
+336	86216	neolit123	2019-12-12 15:34:18	2019-12-13 12:56:55	kubeadm: add basic validation around kubelet.conf parsing	2	bug
+337	86213	RainbowMango	2019-12-12 12:16:21	2019-12-13 17:15:11	Guarantee ClearState will fully clear a collector	3	cleanup
+338	86212	mfojtik	2019-12-12 11:52:19	2019-12-12 14:48:33	code-generator: expose pluralExceptions via flag	1	feature
+339	86208	sftim	2019-12-12 09:27:52	2019-12-12 09:28:05	statefulset	5	
+340	86205	Huang-Wei	2019-12-12 08:30:00	2019-12-14 05:19:37	Move EvenPodsSpread metadata computation logic as a PreFilter Plugin	5	feature
+341	86204	hwdef	2019-12-12 08:06:19	2019-12-12 09:14:33	add @hwdef as a reviewer of hack	1	cleanup
+342	86203	YangLu1031	2019-12-12 07:26:36	2019-12-12 22:19:58	Merge pull request #85228: Wait for kubelet & kube-proxy to be ready on Windows node within 10s	5	cleanup
+343	86202	YangLu1031	2019-12-12 07:19:59	2019-12-12 22:20:44	Merge pull request #85228: Wait for kubelet & kube-proxy to be ready on Windows node within 10s	5	cleanup
+344	86199	hwdef	2019-12-12 06:04:53	2019-12-17 05:39:04	test/e2e: move funcs from test/e2e/pod to other folders	5	cleanup
+345	86198	hex108	2019-12-12 05:19:39	2020-01-01 01:03:41	Scheduler should handle pod annotation updates during scheduling more gracefully	5	cleanup,feature
+346	86197	tedyu	2019-12-12 04:17:53	2019-12-13 20:04:23	e2e-gce-device-plugin-gpu fails for branch-1.16	5	failing-test
+347	86193	tanjunchen	2019-12-12 03:29:18	2019-12-13 18:39:09	move funcs from test/e2e/framework to test/e2e/apps	5	cleanup
+348	86192	Aresforchina	2019-12-12 03:27:43	2019-12-12 04:00:40	fix-typo in vendor	5	bug
+349	86190	SataQiu	2019-12-12 03:11:52	2019-12-14 00:19:50	Promote SataQiu to an approver of test and test/e2e/framework	5	cleanup
+350	86185	sftim	2019-12-12 01:18:56	2019-12-30 03:39:40	Document NetworkPolicy compatibility with IPv6	3	feature
+351	86180	Random-Liu	2019-12-11 21:51:12	2019-12-12 02:04:33	Make sure critical pod in the preemption test is always cleaned up.	1	bug
+352	86179	spiffxp	2019-12-11 21:46:13	2019-12-18 03:48:22	[Flaky Test] [sig-apps] CronJob should delete successful/failed finished jobs with limit of one job	0	flake
+353	86178	misterikkit	2019-12-11 21:31:46	2019-12-12 03:40:47	fix log format string	1	cleanup
+354	86177	deads2k	2019-12-11 21:10:41	2019-12-13 15:57:09	make test framework easier to re-use	1	cleanup
+355	86175	ahg-g	2019-12-11 20:15:10	2019-12-13 02:33:20	Wrap InterPodAffinity predicate metadata as a Prefilter	1	feature
+356	86171	shadycuz	2019-12-11 17:15:08	2019-12-12 10:06:45	container_memory_working_set_bytes includes cached memory	5	bug
+357	86170	liggitt	2019-12-11 16:53:19	2019-12-15 05:21:46	[1.17.1] Automated cherry pick of #86168: Increase Burst limit for discovery client	1	bug
+358	86169	clarklee92	2019-12-11 16:39:13	2019-12-23 03:57:33	e2e: move funs of framework/statefulset to e2e/apps & e2e/upgrades	5	cleanup
+359	86168	liggitt	2019-12-11 16:37:54	2019-12-11 23:38:33	Increase Burst limit for discovery client	1	bug
+360	86167	yiyang5055	2019-12-11 16:26:27	2019-12-19 19:33:57	change CounterVec to use Counter in the Kubelet's Pod Lifecycle Event…	5	cleanup
+361	86162	ahg-g	2019-12-11 13:16:45	2020-01-03 06:25:54	Define algorithm providers in terms of plugins instead of predicates/priorities [Migration Phase 2]	1	feature
+362	86160	notpad	2019-12-11 12:35:32	2020-01-03 03:15:42	Define workloads specs by YAML	5	feature
+363	86159	clarklee92	2019-12-11 12:19:37	2019-12-12 20:48:33	e2e: move funs of framework/service to e2e/network	5	cleanup
+364	86158	ialidzhikov	2019-12-11 11:11:20	2019-12-11 13:31:53	Fix k8s.io/sample-apiserver@v1.17.0 that fails the discovery check	5	bug
+365	86157	tanjunchen	2019-12-11 11:08:49	2019-12-11 14:20:00	Add code check gomega.Expect(bool).To(gomega.BeTrue(),explain)	5	cleanup
+366	86156	tanjunchen	2019-12-11 10:53:11	2019-12-19 10:39:57	test/e2e_node/:use framework.Equal() instead of using gomega.Expect(b…	3	cleanup
+367	86155	ialidzhikov	2019-12-11 10:50:45	2019-12-11 13:32:11	k8s.io/sample-apiserver@v1.17.0 fails the discovery check	5	bug
+368	86154	droslean	2019-12-11 10:21:20	2019-12-11 12:58:07	"Revert ""Add an option to specify kubelet flags for heapster node."""	0	feature
+369	86152	ialidzhikov	2019-12-11 09:59:53	2019-12-26 21:43:39	Use Deployment in sample-apiserver examples	3	cleanup
+370	86151	mattiaperi	2019-12-11 09:59:27	2019-12-12 08:00:28	Creation of a pod outside the deployment with common labels causes hpa failure	5	bug
+371	86149	tatsuhiro-t	2019-12-11 09:40:09	2019-12-11 23:38:33	k8s v1.17.0 (client-go v0.17.0) DiscoveryClient throttled	5	bug
+372	86148	tanjunchen	2019-12-11 07:16:12	2019-12-17 12:20:00	test/e2e/: use framework.Equal() replace gomega.Expect(...).To(gomega…	3	cleanup
+373	86147	tanjunchen	2019-12-11 07:05:15	2019-12-11 19:32:25	test/e2e/storage : use framework.Equal() replace gomega.Expect(...).To(gomega.BeTrue(),...)	5	cleanup
+374	86146	oke-py	2019-12-11 05:59:34	2019-12-12 22:43:06	kubectl run change default restart policy to Never	5	bug
+375	86142	raz-bn	2019-12-11 01:14:54	2019-12-17 07:43:59	Adding new job completed event	5	feature
+376	86140	tedyu	2019-12-10 23:46:07	2019-12-13 02:33:08	Do not swallow timeout in manageReplicas	3	bug
+377	86136	alejandrox1	2019-12-10 21:10:50	2019-12-11 19:32:17	Added alejandrox1 to test/approvers	3	cleanup
+378	86133	Huang-Wei	2019-12-10 18:28:14	2019-12-11 14:18:07	Eliminate running paths of Predicates in scheduler	5	cleanup
+379	86129	damemi	2019-12-10 16:36:42	2019-12-13 09:41:05	Remove priority execution path from prioritizeNodes in generic_scheduler	5	cleanup
+380	86123	nerusnayleinad	2019-12-10 14:32:47	2019-12-10 20:26:05	RoleBinding doesn't accept a single letter ServiceAccount	5	bug
+381	86121	iamcryptoki	2019-12-10 12:57:34	2019-12-10 18:04:15	LivenessProbe keep checking on port 80 instead of 8081	5	bug
+382	86120	answer1991	2019-12-10 12:27:11	2019-12-11 00:05:43	change FakeWatcher.Stopped to be a private field	5	cleanup
+383	86119	haosdent	2019-12-10 10:57:58	2019-12-19 08:37:57	e2e: move funs of framework/metrics to e2e_node	5	cleanup
+384	86117	wojtek-t	2019-12-10 10:03:59	2019-12-12 17:38:33	Extend authorization benchmark	2	cleanup
+385	86115	mYmNeo	2019-12-10 09:41:23	2019-12-11 02:25:49	Create and kill containers in parallel	5	feature
+386	86114	squeed	2019-12-10 09:13:15	2019-12-10 21:47:29	shared-informer: send sync updates to all handlers if the store was updated	5	bug
+387	86113	haosdent	2019-12-10 08:24:38	2019-12-17 05:38:55	e2e: remove unused method in e2e/framework/log	3	cleanup
+388	86112	SataQiu	2019-12-10 08:04:21	2019-12-11 19:32:08	Fix staticcheck failures of e2e/storage/utils e2e/storage/vsphere	5	cleanup
+389	86111	tiny1990	2019-12-10 07:48:58	2019-12-10 08:07:56	generic_scheduler.go have a panic?	5	bug
+390	86110	haosdent	2019-12-10 07:42:15	2019-12-11 20:52:59	e2e: move funs of framework/kubelet to e2e/scheduling	5	cleanup
+391	86109	haosdent	2019-12-10 07:06:56	2019-12-19 20:40:43	e2e: move funs of framework/job to e2e/upgrades/apps/job	5	cleanup
+392	86108	jhz1103	2019-12-10 06:51:18	2019-12-10 20:32:30	About watch-event	5	
+393	86107	droslean	2019-12-10 06:45:14	2019-12-11 12:58:06	[Failing Test] gce-cos-master-alpha-features (ci-kubernetes-e2e-gci-gce-alpha-features)	0	failing-test
+394	86106	ggriffiths	2019-12-10 05:40:03	2019-12-10 19:51:32	panic in pkg/kubelet/server/stats when driver does not support volume stats	5	bug
+395	86105	liggitt	2019-12-10 05:25:24	2019-12-10 14:37:31	Update API compatibility data for v1.17.0	1	cleanup
+396	86104	attlee-wang	2019-12-10 03:43:18	2019-12-10 20:30:24	Adding an already deleted node port to service shows already acquired error	5	bug
+397	86100	haosdent	2019-12-10 02:13:55	2019-12-15 17:38:24	e2e: move funs of framework/ingress to e2e/network	5	cleanup
+398	86099	nikhita	2019-12-10 02:00:17	2019-12-10 22:50:29	"Revert ""staging/publishing: temporarily disable publishing tags"""	1	cleanup
+399	86098	tanjunchen	2019-12-10 01:50:43	2019-12-17 05:38:45	move test/e2e/framework/lifecycle/ test/framework/cloud/gcp	5	cleanup
+400	86096	spiffxp	2019-12-10 00:10:48	2019-12-10 22:50:21	Add kind/flake issue template	1	documentation
+401	86095	tpepper	2019-12-09 23:49:41	2019-12-10 01:07:31	Automated cherry pick of #86090: Update v1.17.0 CHANGELOG to match final draft	0	documentation
+402	86094	goodidea-kp	2019-12-09 23:01:31	2019-12-11 20:27:41	Node cannot join	5	bug
+403	86092	robscott	2019-12-09 22:27:26	2019-12-12 16:12:33	Ensuring kube-proxy does not mutate shared EndpointSlices	1	bug
+404	86090	saschagrunert	2019-12-09 22:05:25	2019-12-10 02:53:29	Update v1.17.0 CHANGELOG to match final draft	0	documentation
+405	86088	tallclair	2019-12-09 20:43:32	2019-12-13 00:26:05	WIP: GA seccomp API	2	api-change
+406	86085	robscott	2019-12-09 18:49:52	2019-12-09 22:00:48	Increasing LoadBalancerPollTimeout from 15 to 22 minutes	0	failing-test
+407	86084	cbf123	2019-12-09 17:04:51	2019-12-11 00:05:33	update RBAC rules in e2e aggregator test	5	bug
+408	86082	pierewoj	2019-12-09 16:52:48	2019-12-12 08:26:37	[Failing Test] GCE 5K Performance - prometheus measurement fails	5	failing-test
+409	86081	ProdanLabs	2019-12-09 16:36:18	2019-12-11 13:17:50	"Kubelet flag ""pod-infra-container-image"" is invalid when using CRI-O"	5	feature
+410	86078	feiskyer	2019-12-09 14:22:28	2019-12-11 03:26:06	Make error message and service event message more clear	1	bug
+411	86077	pohly	2019-12-09 14:22:14	2019-12-11 16:42:09	e2e storage: improve instructions for external driver testing	5	documentation
+412	86073	wojtek-t	2019-12-09 13:05:24	2019-12-10 10:12:37	Avoid leaking watch goroutines	2	bug
+413	86067	alenkacz	2019-12-09 11:40:34	2019-12-16 13:46:32	[Flaky test] gce-cos-k8sbeta-default	1	flake
+414	86066	alenkacz	2019-12-09 11:29:18	2019-12-10 22:26:12	[Flaky test] gce-cos-k8sbeta-ingress (ci-kubernetes-e2e-gce-cos-k8sbeta-ingress)	1	flake
+415	86065	serathius	2019-12-09 10:29:07	2019-12-09 12:56:03	Add serathius to metrics-server OWNERS file	5	cleanup
+416	86062	haosdent	2019-12-09 08:43:51	2019-12-29 05:23:40	e2e: move funs of framework/gpu to e2e_node	5	cleanup
+417	86061	haosdent	2019-12-09 08:11:22	2019-12-17 05:38:34	e2e: move funs of framework/deviceplugin to e2e_node	3	cleanup
+418	86059	haosdent	2019-12-09 07:34:22	2019-12-11 20:52:47	e2e: remove unused method in e2e/framework/autoscaling.	3	cleanup
+419	86057	SataQiu	2019-12-09 07:30:57	2019-12-11 02:14:06	Fix staticcheck failures of e2e/storage/drivers e2e/storage/testsuites	3	cleanup
+420	86056	feiskyer	2019-12-09 06:15:17	2019-12-12 16:33:50	Automated cherry pick of #85990: Fix LoadBalancer rule checking so that no unexpected	0	bug
+421	86055	feiskyer	2019-12-09 06:10:00	2019-12-15 06:31:38	Automated cherry pick of #85990: Fix LoadBalancer rule checking so that no unexpected	0	bug
+422	86054	feiskyer	2019-12-09 06:09:16	2019-12-15 21:33:38	Automated cherry pick of #85990: Fix LoadBalancer rule checking so that no unexpected	0	bug
+423	86053	feiskyer	2019-12-09 06:08:29	2019-12-15 05:21:37	Automated cherry pick of #85990: Fix LoadBalancer rule checking so that no unexpected	0	bug
+424	86050	SataQiu	2019-12-09 03:33:13	2019-12-09 22:00:37	e2e: move funs of framework/deployment to e2e/apps	3	cleanup
+425	86049	nilo19	2019-12-09 02:09:16	2019-12-15 09:03:37	cherry pick of #85885: Provider/Azure: Add cache for VMSS.	1	bug
+426	86048	nilo19	2019-12-09 02:06:10	2019-12-15 05:17:38	cherry pick of #85885: Provider/Azure: Add cache for VMSS.	1	bug
+427	86047	nilo19	2019-12-09 01:57:26	2019-12-12 16:33:55	cherry pick of #85885: Provider/Azure: Add cache for VMSS.	1	bug
+428	86046	ahg-g	2019-12-09 01:26:16	2019-12-10 01:39:29	Optimize required pod affinity (2)	5	feature
+429	86045	CriaHu	2019-12-09 00:39:42	2019-12-12 00:15:59	fix broken link:https://github.com/kubernetes-sigs/kustomize/blob/mas…	3	cleanup
+430	86042	dmayle	2019-12-08 19:18:39	2019-12-09 16:46:35	kubectl check existence of resource without error	5	feature
+431	86040	haosdent	2019-12-08 15:28:38	2019-12-17 14:18:28	fix static check in kubectl/pkg/cmd/annotate.	5	cleanup
+432	86039	monotek	2019-12-08 15:27:25	2019-12-09 23:22:55	updated fluentd to 1.7.4 + plugin updates and switch to debian buster	5	flake
+433	86038	rkrgarlapati	2019-12-08 15:22:48	2019-12-23 23:19:37	load-generator busybox - unable to stop/kill it	5	
+434	86036	idealhack	2019-12-08 13:54:58	2019-12-16 01:57:38	Automated cherry pick of #86027: Fix broken SELinux detection	1	bug
+435	86035	idealhack	2019-12-08 13:54:30	2019-12-12 04:20:34	Automated cherry pick of #86027: Fix broken SELinux detection	1	bug
+436	86033	rkrgarlapati	2019-12-08 08:37:37	2019-12-08 13:39:43	AKS - unable to upgrade to apiVersion: apps/v1 from extensions/v1beta1	5	bug
+437	86032	rkrgarlapati	2019-12-08 08:28:58	2019-12-08 11:20:03	"AKS - unable to make HPA working (no matches for kind ""Deployment"")"	5	bug
+438	86030	ahg-g	2019-12-08 05:17:05	2019-12-09 18:38:49	Optimize required pod affinity (1)	5	feature
+439	86029	oke-py	2019-12-08 05:11:23	2019-12-12 22:41:53	Print namespace for kubectl apply dry-run / prune	5	bug
+440	86028	ahg-g	2019-12-07 18:56:58	2019-12-10 16:59:30	Fix inter-pod affinity scheduler benchmarks	5	feature
+441	86027	simonswine	2019-12-07 16:52:15	2019-12-08 01:41:09	Fix broken SELinux detection	1	bug
+442	86025	simonswine	2019-12-07 14:38:35	2019-12-07 15:03:31	Automated cherry pick of #83527: Bump dependency opencontainers/runc@v1.0.0-rc9	5	
+443	86023	xieyanker	2019-12-07 08:30:37	2019-12-09 02:15:10	The number of evicted pods will increase rapidly, it will take up a lot of etcd data storage resources	5	bug
+444	86022	Huang-Wei	2019-12-07 04:58:49	2019-12-09 22:00:27	Return all scheduler predicate failures instead of the first one	5	bug
+445	86020	enj	2019-12-07 02:44:31	2019-12-12 05:00:33	kubectl oidc auth-provider: include cluster address in cache key	2	bug
+446	86019	feiskyer	2019-12-07 01:36:38	2019-12-23 08:29:34	Change Azure global rate limit to per client	1	feature
+447	86016	robscott	2019-12-06 23:46:56	2019-12-17 05:38:20	Ensuring EndpointSlices are not used for Windows kube-proxy implementations	1	bug
+448	86014	sdarwin	2019-12-06 21:28:14	2019-12-07 15:43:53	"kubectl describe shows ""<unset>"" for Port"	5	bug
+449	86013	carlosedp	2019-12-06 21:03:26	2019-12-20 21:11:33	Bump Ginkgo to support building on riscv64 arch	2	cleanup
+450	86009	rphillips	2019-12-06 18:02:18	2019-12-07 01:06:17	kubelet: guarantee at most only one cinfo per containerID	1	bug
+451	86008	nikhita	2019-12-06 16:46:54	2019-12-06 19:55:00	staging/publishing: temporarily disable publishing tags	0	cleanup
+452	86006	andyzhangx	2019-12-06 16:02:40	2019-12-15 03:22:05	Automated cherry pick of #77912: fix azure disk lun error	1	bug
+453	86003	jkaniuk	2019-12-06 13:57:58	2019-12-10 11:40:18	[Failing Test] GCE 5K Performance - one of kube-dns instances not running	0	failing-test
+454	86002	sylr	2019-12-06 13:51:55	2019-12-10 21:15:46	Only log Events starting with log level 4	5	cleanup
+455	86001	hubv	2019-12-06 13:47:49	2019-12-09 09:05:12	Fix IPv6 addresses lost issue in pure ipv6 vsphere environment	1	bug
+456	86000	timoreimann	2019-12-06 13:29:10	2019-12-15 00:11:37	e2e: support long CSI driver names	1	bug
+457	85998	hubv	2019-12-06 13:22:35	2019-12-06 13:24:24	Fix IPv6 addresses lost issue in pure ipv6 vsphere environment	5	bug
+458	85997	hubv	2019-12-06 12:01:45	2019-12-06 13:49:52	Fix IPv6 addresses lost issue in pure ipv6 vsphere environment.	5	bug
+459	85996	monotek	2019-12-06 11:06:36	2019-12-08 15:23:45	updated fluentd to 1.7.4 + plugin updates and switch to debian buster	5	flake
+460	85995	nikhita	2019-12-06 10:29:19	2019-12-11 15:32:07	client-go: update INSTALL.md to include semver tags	1	documentation
+461	85991	lambotchi	2019-12-06 08:51:58	2019-12-06 17:36:52	Is there a way to filter and process login request to kube-api-server?	5	
+462	85990	feiskyer	2019-12-06 08:46:54	2019-12-06 12:06:50	Fix LoadBalancer rule checking so that no unexpected LoadBalancer updates are made	0	bug
+463	85989	feiskyer	2019-12-06 08:03:24	2019-12-06 12:06:50	Azure cloud provider shouldn't send unexpected LoadBalancer updates	5	bug
+464	85985	woohhan	2019-12-06 04:51:17	2019-12-06 04:57:01	Validate ingressrule http is not nil	5	bug
+465	85984	dongjiang1989	2019-12-06 03:53:49	2019-12-06 05:00:17	Does K8s have plans to support chubaofs？	5	feature
+466	85982	woohhan	2019-12-06 02:46:56	2019-12-06 04:58:02	wrong ingress fields when using client-go	5	bug
+467	85981	ZP-AlwaysWin	2019-12-06 02:14:29	2019-12-13 16:24:47	Correcting spelling errors in the log	5	cleanup
+468	85976	cbf123	2019-12-05 23:07:18	2019-12-07 04:26:04	sample apiserver failing due to RBAC issues	5	bug
+469	85975	ldx	2019-12-05 23:05:03	2019-12-27 00:43:39	Fix nil pointer dereference in the azure provider	0	bug
+470	85973	msau42	2019-12-05 22:31:29	2019-12-06 02:44:50	Disable broken pd e2e test	1	failing-test
+471	85971	mtaufen	2019-12-05 21:52:38	2019-12-06 17:05:15	Add current chairs to component base approvers	1	cleanup
+472	85970	liggitt	2019-12-05 20:47:01	2019-12-15 13:45:38	[1.17.1] Automated cherry pick of #85967: Deflake kubectl custom printing test	1	flake
+473	85969	liggitt	2019-12-05 20:46:10	2019-12-06 01:25:04	Automated cherry pick of #85968: Fix bug in apiserver service cluster cidr split	0	bug
+474	85968	liggitt	2019-12-05 20:35:59	2019-12-05 23:55:41	Fix bug in apiserver service cidr split	0	bug
+475	85967	liggitt	2019-12-05 20:26:46	2019-12-05 23:55:30	Deflake kubectl custom printing test	1	flake
+476	85965	neolit123	2019-12-05 19:43:07	2019-12-05 23:55:20	"Revert ""kubeadm: don't check if image exists before pulling"""	2	bug
+477	85962	spiffxp	2019-12-05 18:41:05	2019-12-09 22:00:18	Include cloud/gcp tests in e2e.test	1	cleanup
+478	85959	ahg-g	2019-12-05 17:46:28	2019-12-07 03:49:26	Refactor and optimize preferred (anti) pod affinity 	5	feature
+479	85957	mikedanese	2019-12-05 16:53:14	2019-12-05 21:51:16	increase LRU cache size 8x for authorization webhook	1	bug
+480	85955	RaghunathN	2019-12-05 15:47:21	2019-12-05 16:08:25	"Getting ""Forbidden error while adding more than one volumeClaimTemplate to statefulSet"""	5	
+481	85954	schurterb	2019-12-05 15:39:36	2019-12-12 19:08:12	Cannot replace control plane nodes in high-availability cluster.	5	
+482	85953	St0rmingBr4in	2019-12-05 15:01:48	2019-12-06 13:35:05	kubeadm: Throw an error if the currentContext does not exists	3	bug
+483	85952	Purushotham233	2019-12-05 14:54:18	2019-12-05 16:13:29	kubectl get pods doesnt show apiserver pod after enabling PodSecurityPolicy plugin	5	
+484	85950	krmichel	2019-12-05 13:59:18	2019-12-05 16:08:53	e2e flake: pull-aws-ebs-csi-driver-e2e-single-az	5	failing-test,flake
+485	85949	sylr	2019-12-05 13:50:57	2019-12-22 04:43:30	Azure: use separate rate limiter for VMSS (master)	1	bug
+486	85947	jsafrane	2019-12-05 13:03:55	2019-12-05 20:33:06	Run all csi-hostpath containers as privileged	1	flake
+487	85946	hoegaarden	2019-12-05 10:39:55	2019-12-05 12:22:32	Fix build when `providerless` tags is provided	1	bug
+488	85945	obitech	2019-12-05 10:39:12	2019-12-05 21:51:05	Refactor kubelet component config lenient path decoding	1	cleanup
+489	85943	hoegaarden	2019-12-05 10:29:07	2019-12-05 11:50:34	Fix build when `providerless` tags is provided	1	bug
+490	85942	sylr	2019-12-05 10:21:51	2019-12-07 01:38:11	Azure: Separate VMSS rate limiting	1	bug
+491	85941	hoegaarden	2019-12-05 09:59:11	2019-12-05 14:17:27	Compiling the kubelet in providerless mode is broken for release-1.14 & release-1.15	5	bug
+492	85940	fei922	2019-12-05 09:53:23	2019-12-09 06:56:27	network policy disappeared strangely	5	
+493	85937	darshanime	2019-12-05 06:11:16	2019-12-05 20:45:48	Fix bug in apiserver service cidr split	0	bug
+494	85936	aramase	2019-12-05 04:33:19	2019-12-05 07:49:47	[WIP] test disk e2e test	5	
+495	85935	yuzhiquan	2019-12-05 03:12:45	2019-12-05 05:42:32	fix: typo Snapshoting to Snapshotting	5	cleanup
+496	85934	xueweiz	2019-12-05 03:05:14	2019-12-05 23:55:05	Convert ExpectEqual(err, nil) to ExpectNoError(err)	0	failing-test
+497	85933	xueweiz	2019-12-05 02:48:48	2019-12-05 04:32:04	"e2e_node tests are failing due to ""Refusing to compare <nil> to <nil>"""	0	failing-test
+498	85931	Random-Liu	2019-12-05 02:15:55	2019-12-05 03:26:33	"Revert ""Use ExpectEqual test/e2e_node"""	0	failing-test
+499	85928	ahg-g	2019-12-05 01:55:35	2019-12-19 02:12:47	Move Affinity Priority Metadata calculation to a post-filter plugin [Migration Phase 2] 	1	feature
+500	85925	ahg-g	2019-12-05 01:44:59	2019-12-14 05:19:37	Move EvenPodSpread Predicate Metadata calculation to a pre-filter plugin [Migration Phase 2]	1	feature
+501	85924	ahg-g	2019-12-05 01:41:25	2019-12-24 01:55:47	Break priority metadata computation into post-filter plugins [Migration Phase 2]	1	feature
+502	85916	ahg-g	2019-12-04 18:28:19	2019-12-04 23:44:33	remove max pods from e2e test	5	failing-test
+503	85915	ingvagabund	2019-12-04 17:52:59	2019-12-04 21:29:20	scheduler benchmark: allow to override bench prefix	3	feature
+504	85914	shihan9	2019-12-04 17:38:30	2019-12-04 19:46:10	exclude kmsplugin from readiness probe	5	feature
+505	85913	jkaniuk	2019-12-04 17:17:45	2019-12-05 09:48:33	Fix waiting for logexporter log fetching processes	5	bug
+506	85912	lmdaly	2019-12-04 16:32:31	2019-12-15 06:13:38	Automated cherry pick of #83777: Fixed bug in TopologyManager with SingleNUMANode Policy	5	bug
+507	85907	bogard1203	2019-12-04 15:48:05	2019-12-04 21:29:11	Deleted extra 'phase' in command example	3	cleanup
+508	85906	SataQiu	2019-12-04 15:48:02	2019-12-08 00:31:11	Fix staticcheck failures of test/e2e/storage	5	cleanup
+509	85905	pierewoj	2019-12-04 14:24:54	2019-12-04 18:06:58	Create kubemark cluster as private	5	failing-test
+510	85904	davesargrad	2019-12-04 14:19:28	2019-12-04 16:22:24	Pod fails to download image from private registry	5	documentation
+511	85903	liggitt	2019-12-04 14:14:16	2019-12-14 00:19:37	Remove ability to re-enable serving deprecated APIs	1	api-change,cleanup
+512	85901	etherlai	2019-12-04 12:54:06	2019-12-23 23:18:00	pod multi container start priority	5	feature
+513	85899	gongguan	2019-12-04 12:04:34	2019-12-09 15:20:19	slim down some lister expansions	3	cleanup
+514	85893	tanjunchen	2019-12-04 10:57:36	2019-12-07 01:06:07	fix staticcheck in test/e2e/network/	3	cleanup
+515	85891	wojtek-t	2019-12-04 10:45:25	2019-12-16 01:59:38	Remove old-style conversions registration	2	api-change
+516	85890	tanjunchen	2019-12-04 10:18:52	2019-12-05 08:36:33	fix golint check in test/e2e_node/runner/remote	5	cleanup
+517	85886	hubv	2019-12-04 09:30:22	2019-12-09 09:05:11	ipv6 support issue for vsphere cloud privider	5	bug
+518	85885	nilo19	2019-12-04 09:11:31	2019-12-07 05:43:10	Provider/Azure: Add cache for VMSS.	1	bug
+519	85884	fahedouch	2019-12-04 08:59:48	2019-12-04 11:03:51	preStop does not work with a cronJob	5	bug
+520	85882	braceinhz	2019-12-04 08:14:05	2019-12-04 08:17:51	Fix golint issues in test/e2e/lifecycle/bootstrap	5	cleanup
+521	85879	gongguan	2019-12-04 05:03:46	2019-12-18 14:01:58	hollow-node use remote CRI	2	feature
+522	85875	tedyu	2019-12-04 01:20:00	2019-12-04 20:11:16	Utilize Context with timeout in gce_instances.go	3	cleanup
+523	85874	sambdavidson	2019-12-04 00:53:38	2019-12-09 15:20:04	Kubelet cert TTL via GaugeFunc	5	cleanup
+524	85872	ahg-g	2019-12-04 00:18:45	2019-12-05 17:02:33	Perf benchmarks for preferred (anti)pod affinity	5	feature
+525	85868	logicalhan	2019-12-03 22:58:52	2019-12-21 22:23:33	swap over kube-apiserver manifest to use livez and readyz	5	cleanup
+526	85867	tallclair	2019-12-03 22:58:37	2019-12-03 22:58:39	CVE-2018-1002102: Unvalidated redirect	5	bug
+527	85865	liggitt	2019-12-03 22:43:32	2019-12-06 18:58:51	Automated cherry pick of #85793: Switch addon resizer to 1.8.7	1	bug
+528	85864	liggitt	2019-12-03 22:39:25	2019-12-05 20:33:05	Automated cherry pick of #85793: Switch addon resizer to 1.8.7	1	bug
+529	85863	nan-yu	2019-12-03 22:30:49	2019-12-05 23:54:50	Rename PodDisruptionsAllowed to DisruptionsAllowed in type PodDisruptionBudgetStatus	3	cleanup
+530	85862	ahg-g	2019-12-03 20:54:40	2019-12-04 02:35:24	Partially avoid LabelSelectorAsSelector overhead in anti-pod affinity calculation	5	feature
+531	85860	liggitt	2019-12-03 19:30:56	2019-12-05 21:42:20	Automated cherry pick of #85847: Deflake pod readiness e2e	1	flake
+532	85858	jkaniuk	2019-12-03 17:22:35	2019-12-03 21:18:44	"Revert ""Fix shellcheck failure in log-dump/log-dump.sh"""	5	bug
+533	85857	hnanni	2019-12-03 17:17:37	2019-12-08 17:41:09	Update checks.go	3	cleanup
+534	85854	renjian52	2019-12-03 16:20:09	2019-12-04 15:53:48	scheduler should exit when pod UID in cache is corrupted	5	bug
+535	85853	SataQiu	2019-12-03 15:38:13	2019-12-04 05:51:19	Fix staticcheck failures of test/e2e/upgrade	3	cleanup
+536	85852	rphillips	2019-12-03 15:20:46	2019-12-06 17:44:07	kubelet: CAdvisor sometimes injects old Pod metrics from an old namespaces	5	bug
+537	85849	liggitt	2019-12-03 14:42:40	2019-12-03 21:18:35	Deflake delete grace period e2e	5	flake
+538	85847	liggitt	2019-12-03 14:16:57	2019-12-03 21:17:26	Deflake pod readiness e2e	1	flake
+539	85845	RainbowMango	2019-12-03 13:32:14	2019-12-06 13:34:51	Provide a mechanism to enable hidden metrics in stable collector	1	feature
+540	85844	shaloulcy	2019-12-03 12:24:34	2019-12-04 03:45:13	add PredicateFunc for configmap	5	bug
+541	85843	Itxaka	2019-12-03 10:41:56	2019-12-04 12:08:58	Enhance error message for failed controlplane init	3	documentation
+542	85842	wxq851685279	2019-12-03 08:50:30	2019-12-04 11:45:12	How to mount a storage volume with Windows 10 Docker Desktop k8s	5	
+543	85840	sh0rez	2019-12-03 08:07:03	2019-12-03 15:05:49	Object exceeds last-applied-configured annotation	5	bug
+544	85838	like-inspur	2019-12-03 07:16:01	2019-12-10 22:50:07	optimize some log config	5	bug
+545	85837	pickledrick	2019-12-03 05:17:15	2019-12-12 13:12:32	kubeadm: persist dns replica count on upgrade	3	feature
+546	85836	YangLu1031	2019-12-03 02:42:38	2020-01-02 22:31:42	Add instructions about how to bring up e2e test cluster	1	documentation
+547	85833	msau42	2019-12-03 01:07:51	2019-12-06 23:13:55	Automated cherry pick of #82678: skip e2e tests that run on multi node cluster and require	1	failing-test
+548	85832	aramase	2019-12-03 01:04:09	2019-12-05 07:26:33	Automated cherry pick of #85115: remove disk locks per vm	1	bug
+549	85831	lojies	2019-12-03 01:00:10	2019-12-03 14:29:53	Pod with restartPolicy: Always was not restarted 	5	bug
+550	85830	aramase	2019-12-03 00:56:37	2019-12-05 07:26:34	Automated cherry pick of #85115: remove disk locks per vm	1	bug
+551	85829	msau42	2019-12-03 00:56:00	2019-12-06 23:35:55	Automated cherry pick of #82678: skip e2e tests that run on multi node cluster and require	1	failing-test
+552	85828	shihan9	2019-12-03 00:48:22	2019-12-07 02:11:54	ping kmsplugin gentely when in good state	5	feature
+553	85827	barney-s	2019-12-03 00:10:38	2019-12-06 01:15:28	Replace the hostname in the fluentd config file even if the file exists	1	bug
+554	85825	Random-Liu	2019-12-02 22:14:26	2019-12-03 04:19:12	Use GCS bucket for crictl on windows.	1	cleanup
+555	85824	tedyu	2019-12-02 22:03:14	2019-12-02 22:19:28	Remove unreferenced DryRun field	5	cleanup
+556	85823	Random-Liu	2019-12-02 21:48:24	2019-12-15 15:53:38	Partial cherry pick of #85396: Move hostdns.conf out of CNI config directory.	1	bug
+557	85820	ahg-g	2019-12-02 19:40:35	2019-12-03 19:41:15	Start and stop the scheduling queue consistently	5	cleanup
+558	85817	ereslibre	2019-12-02 17:47:27	2019-12-02 21:49:10	kubeadm: set cluster name on the controller manager	5	bug
+559	85816	hansifer	2019-12-02 17:43:41	2019-12-02 17:47:20	failure after following macOS installation instructions	5	
+560	85813	ralfonso	2019-12-02 17:15:20	2019-12-06 01:24:51	Automated cherry pick of #85705: Fix iscsi refcounter in the case of no Block iscsi volumes	0	bug
+561	85812	ralfonso	2019-12-02 17:14:28	2019-12-06 22:22:52	Automated cherry pick of #85705: Fix iscsi refcounter in the case of no Block iscsi volumes	1	bug
+562	85811	liggitt	2019-12-02 17:04:33	2019-12-03 00:45:00	Automated cherry pick of #85810: Ensure webhook backend requests are not artificially	0	bug
+563	85810	liggitt	2019-12-02 16:41:35	2019-12-02 23:03:10	Ensure webhook backend requests are not artificially rate-limited	0	bug
+564	85808	ahg-g	2019-12-02 16:23:43	2019-12-02 21:49:01	Update number of scheduler perf benchmarks to be more representative	5	feature
+565	85805	dkistner	2019-12-02 15:35:31	2019-12-22 13:59:34	Azure: Existing load balancer is not looked up correctly	5	bug
+566	85801	liggitt	2019-12-02 14:35:24	2019-12-02 16:59:07	Automated cherry pick of #85350: Enable mutation detection	1	failing-test
+567	85800	beautytiger	2019-12-02 13:34:11	2019-12-03 23:47:23	fix: replace TrimLeft with TrimPrefix and TrimRight with TrimSuffix	1	bug
+568	85799	stephan2012	2019-12-02 13:19:04	2019-12-04 14:01:15	kube-proxy does not honor ipvs excludeCIDRs	5	bug
+569	85797	oxddr	2019-12-02 11:59:37	2019-12-06 15:20:51	Add an option to specify kubelet flags for heapster node.	1	feature
+570	85795	ShubhamTatvamasi	2019-12-02 09:10:46	2019-12-02 09:10:50	Update README.md	5	
+571	85793	bskiba	2019-12-02 08:49:33	2019-12-03 22:31:14	Switch addon resizer to 1.8.7	5	cleanup
+572	85791	mailarka	2019-12-02 07:42:14	2019-12-09 08:48:37	Default service account getting access to previledge PSP access	5	
+573	85790	tanjunchen	2019-12-02 06:59:13	2019-12-05 21:50:55	fix staticcheck in pkg/printers	3	cleanup
+574	85789	ZP-AlwaysWin	2019-12-02 06:21:47	2019-12-13 02:32:55	Remove unnecessary nil check in if statement in nodelease controller	5	cleanup
+575	85788	wccsama	2019-12-02 06:04:41	2020-01-03 07:41:15	fix a typo	5	cleanup
+576	85787	tanjunchen	2019-12-02 05:58:51	2019-12-04 05:51:10	Use ExpectEqual test/e2e_node	3	cleanup
+577	85784	ZhaoBaymax	2019-12-02 03:48:24	2019-12-02 15:34:31	can not find statefulset rollback in kubernetes api	5	
+578	85781	tanjunchen	2019-12-02 03:10:07	2019-12-03 11:50:58	Use expect equal test e2e upgrades	3	cleanup
+579	85780	hwdef	2019-12-02 03:10:05	2019-12-05 21:50:46	test/e2e/auth: Fix static check failures	3	cleanup
+580	85778	huchengze	2019-12-02 02:46:23	2020-01-02 11:26:20	Add expand-controller flexvolume prober	5	bug
+581	85777	huchengze	2019-12-02 02:45:13	2019-12-12 16:35:17	Add expand-controller flexvolume prober	5	bug
+582	85776	kenotsolutions	2019-12-01 21:30:46	2019-12-03 14:30:55	Kubernetes commands	5	
+583	85774	alvaroaleman	2019-12-01 15:43:49	2019-12-03 21:14:09	Emit events for errors in the namespace controller to help understand stuck deletion	5	bug
+584	85773	hprateek43	2019-12-01 10:59:10	2019-12-09 16:33:07	WIP: Remove error channels for non blocking operations	5	design
+585	85772	losipiuk	2019-12-01 10:17:27	2019-12-01 18:43:04	Automated cherry pick of #85610: Bump Cluster Autoscaler version to 1.17.0	0	bug
+586	85771	aojea	2019-12-01 07:59:57	2019-12-17 16:32:03	Be more agressive acquiring the iptables lock	5	flake
+587	85770	tanjunchen	2019-12-01 06:53:51	2019-12-04 05:50:57	use ExpectEqual of framework in test/e2e/storage	3	cleanup
+588	85767	aojea	2019-11-30 21:19:51	2019-11-30 21:40:39	Be more agressive acquiring the iptables lock	5	flake
+589	85763	ereslibre	2019-11-30 12:26:58	2019-11-30 22:57:04	kubeadm: Improve resiliency in CreateOrMutateConfigMap	2	bug
+590	85760	tedyu	2019-11-30 03:50:07	2019-12-02 18:27:07	Log error when writing checkpoint fails	3	bug
+591	85759	scopher128	2019-11-30 02:55:11	2019-12-03 04:18:33	SVC Records of headless service for StatefulSet doesnot work normally 	5	bug
+592	85756	liu-cong	2019-11-29 18:31:17	2019-12-05 12:08:33	Nominate liu-cong to be sig-scheduling reviewer.	5	documentation
+593	85755	Fedosin	2019-11-29 16:02:18	2019-12-16 15:20:36	OpenStack: Cloud provider: Allow to get AWS compatible metadata	5	feature
+594	85754	alvaroaleman	2019-11-29 14:16:26	2019-12-18 07:41:58	Remove stale comment re making apiserver common names dynamic	5	cleanup
+595	85753	oxddr	2019-11-29 12:10:01	2019-12-03 21:18:44	[Failing Test] ci-kubernetes-e2e-gce-scale-{performance, correctness} fail due to hanging DumpClusterLogs	0	bug,failing-test
+596	85751	tanjunchen	2019-11-29 10:32:15	2019-12-06 17:05:04	fix staticcheck in   test/e2e/cloud/	3	cleanup
+597	85749	SataQiu	2019-11-29 10:14:24	2019-12-03 14:06:59	Fix golint failures of test/e2e_node/remote	5	cleanup
+598	85748	telefoontoestel	2019-11-29 09:12:05	2019-11-30 14:47:36	The dashboard has uses excessive memory over time	5	
+599	85747	tnqn	2019-11-29 08:13:08	2019-12-17 05:38:05	Fix NetworkPolicy PolicyTypes validation	5	bug
+600	85746	tnqn	2019-11-29 08:10:57	2019-12-17 05:38:05	Incorrect validation result of NetworkPolicy PolicyTypes 	5	bug
+601	85745	aojea	2019-11-29 06:37:13	2019-12-02 23:02:59	kubeadm: default etcd address based on the IP family	5	cleanup
+602	85744	tanjunchen	2019-11-29 06:35:27	2019-12-04 03:44:58	Fix golint issues in test/e2e/lifecycle/	5	cleanup
+603	85742	attlee-wang	2019-11-29 03:13:59	2019-12-27 03:44:21	Node has enough CPU,memory and other resources，but pod status is always belongs pending!	5	bug
+604	85739	wawa0210	2019-11-29 00:22:58	2019-12-06 17:04:51	Update go-winio module version from 0.4.11 to 0.4.14	2	bug
+605	85738	ahg-g	2019-11-28 19:53:38	2019-11-29 21:15:04	Optimize UpdateNodeInfoSnapshot	5	feature
+606	85736	dmage	2019-11-28 16:57:26	2019-11-29 13:27:04	Automated cherry pick of #85687: fix: padded base64 encoded docker auth field	0	bug
+607	85735	alvaroaleman	2019-11-28 16:33:24	2019-12-18 01:35:58	Cloud node controller: Only call once into cloud provider	5	cleanup
+608	85734	dmage	2019-11-28 16:28:10	2019-11-28 16:58:25	1.17: fix: padded base64 encoded docker auth field	5	bug
+609	85733	sttts	2019-11-28 16:16:41	2019-12-02 23:07:29	1.16: apiextensions: filter required nullable to workaround kubectl validation	1	bug
+610	85732	sttts	2019-11-28 16:14:29	2019-12-02 20:06:34	1.17: apiextensions: filter required nullable to workaround kubectl validation	1	bug
+611	85729	wojtek-t	2019-11-28 14:41:34	2019-12-03 21:17:17	Cleanup metav1 conversions	5	api-change
+612	85728	prksu	2019-11-28 14:34:05	2019-12-04 07:08:58	Make APIService.spec.service optional in the openapi v2 spec	3	api-change,bug
+613	85723	weathery	2019-11-28 11:41:20	2019-11-28 18:56:13	kubernetes v1.14.9: watch of *v1.ConfigMap ended with: too old resource version	5	
+614	85722	sttts	2019-11-28 11:25:58	2019-11-28 14:09:28	apiextensions: filter required nullable to workaround kubectl validation	3	bug
+615	85718	dholbach	2019-11-28 09:58:51	2019-12-12 22:22:33	drop KUBE_TIMEOUT in test/cmd/kubeadm.sh	3	cleanup
+616	85717	krzysied	2019-11-28 09:43:10	2019-12-02 11:17:04	Setting kubemark node labels	5	feature
+617	85716	krzysied	2019-11-28 09:27:05	2019-11-28 14:09:17	Fxing kubemark node labels	5	bug
+618	85714	RainbowMango	2019-11-28 09:18:39	2019-12-03 03:07:12	Add API for clear descriptor status	1	feature
+619	85713	saschagrunert	2019-11-28 08:26:52	2019-11-28 19:17:17	Add kind/deprecation to pull request template	2	documentation
+620	85712	kaplanelad	2019-11-28 08:02:27	2019-11-28 08:28:58	interactive filter exex pod	5	feature
+621	85711	tanjunchen	2019-11-28 05:56:33	2019-11-28 14:09:04	use ExpectEqual of framework in test/e2e/autoscaling/	3	cleanup
+622	85710	zhangguanzhang	2019-11-28 03:33:00	2019-11-28 03:52:59	Add extraVolumes support to kubeadm's local etcd	5	feature
+623	85709	tanjunchen	2019-11-28 02:57:24	2019-12-06 19:54:52	correct  invalid  urls	3	cleanup,documentation
+624	85707	dashpole	2019-11-28 00:16:17	2019-11-28 02:09:04	[1.17] Update cAdvisor dependency to v0.35.0	1	bug
+625	85706	tedyu	2019-11-28 00:08:09	2019-12-05 21:50:31	Remove nodes slice in loop of takeByTopology	3	cleanup
+626	85705	ralfonso	2019-11-27 23:46:15	2019-12-02 14:03:06	Fix iscsi refcounter in the case of no Block iscsi volumes	0	bug
+627	85704	yliaog	2019-11-27 23:45:17	2019-11-28 05:03:11	catch the exception raised in Remove-HnsPolicyList	1	bug
+628	85703	robscott	2019-11-27 23:11:39	2019-12-27 01:59:54	Fixing Potential Race Condition in EndpointSlice Controller.	1	bug
+629	85702	ralfonso	2019-11-27 22:43:49	2019-12-02 14:03:06	ISCSI targets remain logged-in after the last attachment detaches	5	bug
+630	85701	immutableT	2019-11-27 22:43:35	2019-12-31 08:15:07	Remove the logic responsible for produce kube-apiserver's audit config from configure-helper.	5	
+631	85700	deads2k	2019-11-27 22:16:57	2019-11-28 00:41:17	stop spamming the log on failures with full objects	1	bug
+632	85699	cpuguy83	2019-11-27 22:13:40	2019-11-28 01:08:14	Customize dockershim runtime name	5	feature
+633	85698	dashpole	2019-11-27 22:09:54	2019-11-28 01:51:17	Update cadvisor dependency to v0.35.0	1	bug
+634	85697	aramase	2019-11-27 20:18:37	2019-12-03 12:20:59	Automated cherry pick of #85115: remove disk locks per vm	1	bug
+635	85695	ahg-g	2019-11-27 19:51:44	2019-11-28 01:51:04	remove redundant definition of the defaultProvider in the scheduler	5	cleanup
+636	85694	sttts	2019-11-27 19:48:16	2019-11-28 14:09:28	Nullable, required fields of null value break kubectl client-side validation	5	bug
+637	85693	tamalsaha	2019-11-27 18:23:58	2019-11-27 18:31:29	k/k ships an invalid go.mod file	5	bug
+638	85689	ahg-g	2019-11-27 17:02:24	2019-11-27 22:23:04	Export scheduler.Snapshot function	1	feature
+639	85688	tedyu	2019-11-27 16:50:35	2019-12-03 01:07:28	Reduce unnecessary Set in updateAllocatedDevices	3	cleanup
+640	85687	dmage	2019-11-27 16:38:35	2019-11-28 19:17:04	fix: padded base64 encoded docker auth field	1	bug
+641	85684	tanjunchen	2019-11-27 14:53:24	2019-11-27 17:37:23	correct invalid urls in CHANGELOG file	3	cleanup,documentation
+642	85682	oxddr	2019-11-27 13:27:12	2019-11-27 14:37:21	[Failing Test] gce-master-scale-performance - load	0	failing-test
+643	85681	withlin	2019-11-27 12:21:00	2019-11-27 23:50:26	webhook response error	5	bug
+644	85680	RainbowMango	2019-11-27 12:17:58	2019-12-03 03:06:58	Refactor custom collector unit test	5	cleanup
+645	85679	droslean	2019-11-27 11:56:32	2019-12-07 15:20:23	[Failing Test] capg-conformance-stable-k8s-master (ci-cluster-api-provider-gcp-make-conformance-stable-k8s-ci-artifacts) 	0	failing-test
+646	85678	droslean	2019-11-27 11:53:05	2019-12-07 15:20:54	[Failing Test] capa-conformance-stable-k8s-master ( ci-cluster-api-provider-aws-make-conformance-stable-k8s-ci-artifacts)	0	failing-test
+647	85676	tanjunchen	2019-11-27 10:20:24	2019-12-07 03:49:09	fix staticcheck in test/integration/apiserver	3	cleanup
+648	85675	jsafrane	2019-11-27 10:04:45	2019-12-01 15:07:04	Fix AWS eventual consistency of AttachDisk	5	bug
+649	85674	348786639	2019-11-27 09:55:57	2019-11-28 02:36:11	Kubernetes can't automatically create token for  serviceaccount and add to service account？	5	
+650	85673	348786639	2019-11-27 09:32:24	2019-11-27 09:52:31	the token can not  automatically created and added to the service account？？	5	
+651	85671	tanjunchen	2019-11-27 08:18:00	2019-11-28 12:53:04	use framework  refactor code in test/e2e/common	3	cleanup
+652	85666	SataQiu	2019-11-27 06:21:07	2019-11-28 11:03:04	e2e: use log functions of core framework on pv, testfiles and volume sub packages	5	cleanup
+653	85664	tanjunchen	2019-11-27 02:43:24	2019-11-28 09:49:18	use framework in  test/e2e/cloud/	3	cleanup
+654	85663	dims	2019-11-27 02:35:45	2019-11-28 05:33:17	Automated cherry pick of #81880: Bumped the number of times a node tries to lookup itself	1	bug
+655	85660	msau42	2019-11-27 01:43:26	2019-11-28 03:29:17	Automated cherry pick of #85620: increase pv controller resync period to try to deflake	1	flake
+656	85658	Random-Liu	2019-11-26 22:57:58	2019-11-28 05:33:04	Automated cherry pick of #85555: Fix GKE upgrade test.	0	bug
+657	85657	liggitt	2019-11-26 22:34:49	2019-11-27 02:23:21	Enable update-bazel.sh outside of GOPATH	3	cleanup
+658	85654	aramase	2019-11-26 19:57:22	2019-11-27 00:51:34	add applyto tests for controller configs	5	cleanup
+659	85653	losipiuk	2019-11-26 19:50:29	2019-11-30 23:25:07	[Do not review] Test PR - try out fixed CA image for 1.17 	5	
+660	85651	deads2k	2019-11-26 19:09:05	2019-11-26 22:29:34	fix kube-apiserver poststarthook additions to avoid duplicating them	1	bug
+661	85649	gnufied	2019-11-26 18:29:38	2019-11-28 07:25:03	Automated cherry pick of #85619: Use plugin name for filtering metrics	1	flake
+662	85648	TomDinunzioMH	2019-11-26 17:16:01	2019-11-28 15:20:22	kubectl diff is returning non-zero for resources applied with --record	5	bug
+663	85644	liggitt	2019-11-26 14:51:37	2019-11-28 18:05:19	Switch TableGenerator/TableConvertor interfaces to metav1	2	api-change,cleanup
+664	85640	RainbowMango	2019-11-26 14:08:30	2019-11-27 05:45:21	Track collectors by fqName	5	feature
+665	85639	rosti	2019-11-26 13:28:18	2019-12-04 01:01:26	kubeadm: Group centric component configs	1	design
+666	85634	hwdef	2019-11-26 09:13:54	2019-12-04 15:18:58	pkg/master: Fix static check failures	3	cleanup
+667	85633	hwdef	2019-11-26 09:01:43	2019-12-03 01:54:06	plugin/pkg: fix staticcheck warning	3	cleanup
+668	85629	CriaHu	2019-11-26 06:37:55	2019-12-02 03:31:05	fix broken link:https://kubernetes.io/docs/concepts/overview/object-m…	3	cleanup,documentation
+669	85628	lubinsz	2019-11-26 06:07:11	2019-11-28 03:49:14	Adding KubeProxyConfigMap19 checking in test-e2e-kubeadm	5	cleanup
+670	85627	RainbowMango	2019-11-26 06:04:42	2019-11-28 03:29:04	Automated cherry pick of #85444: Provided a mechanism to re-register hidden metrics.	0	bug
+671	85626	timyinshi	2019-11-26 04:01:01	2019-11-26 18:53:05	modify the error url of autoscaler	5	documentation
+672	85625	VHariharmath	2019-11-26 03:12:40	2019-11-26 10:52:39	Warning  FailedScheduling  20s (x5 over 4m27s)  default-scheduler  0/1 nodes are available: 1 node(s) had taints that the pod didn't tolerate.	5	bug
+673	85622	RainbowMango	2019-11-26 01:29:32	2019-11-26 04:27:24	Add RainbowMango to owner list of metrics stability framework.	3	feature
+674	85621	chewong	2019-11-26 00:46:07	2019-12-11 06:14:06	Rename Azure driver to Azure Disk driver in e2e test	1	cleanup
+675	85620	msau42	2019-11-26 00:43:31	2019-11-27 03:43:43	decrease test pv controller resync period to try to deflake api update conflicts	1	flake
+676	85619	gnufied	2019-11-25 23:04:09	2019-11-26 16:09:12	Fix attach/detach metric failure	1	flake
+677	85615	MartinKaburu	2019-11-25 21:00:26	2019-11-26 02:17:40	Add --server flag for version command	5	feature
+678	85614	MartinKaburu	2019-11-25 20:50:20	2019-11-27 17:46:59	Kubectl version --server should return the server version	4	feature
+679	85611	ksubrmnn	2019-11-25 18:35:50	2019-11-26 00:43:21	Fix HTTP readiness/liveness probes using NodePort	5	bug
+680	85610	losipiuk	2019-11-25 18:35:42	2019-11-30 16:01:04	Bump Cluster Autoscaler version to 1.17.0	0	bug
+681	85609	Arvinderpal	2019-11-25 17:21:28	2019-11-26 03:11:24	Add support for new dual-stack flags for kubernetes-controller-manager in kubeadm	2	feature
+682	85608	LSmyrnaios	2019-11-25 17:21:05	2019-11-28 05:01:49	"kube-apiserver: failed to enable ""DefaultStorageClass"""	5	
+683	85605	MartinKaburu	2019-11-25 15:17:52	2019-11-25 20:07:19	Fix apply --prune to visit cli specified namespace	5	bug
+684	85603	bart0sh	2019-11-25 12:37:20	2019-11-26 13:27:11	kubeadm: don't check if image exists before pulling	3	cleanup
+685	85601	zhlhahaha	2019-11-25 12:11:29	2019-11-25 17:04:18	fix etcd version check error on ARM	1	bug
+686	85600	zhlhahaha	2019-11-25 12:11:06	2019-11-26 01:10:33	Run local-up-cluster.sh failed on ARM server as etcd version check can not pass.	5	bug
+687	85598	FengyunPan2	2019-11-25 11:09:53	2019-11-26 14:41:26	Ignore the pods of daemonSet when Scheduler selects victims	5	bug,feature
+688	85596	prksu	2019-11-25 10:46:35	2019-11-26 14:46:45	Fix 404 url on k/kubectl/docs	5	cleanup
+689	85595	zhouya0	2019-11-25 10:11:36	2019-11-27 14:03:22	add test coverage with kubectl get components	3	feature
+690	85593	wxq851685279	2019-11-25 08:10:27	2019-12-03 08:50:40	How to mount a storage volume with Windows 10 Docker Desktop k8s	5	bug
+691	85591	willthames	2019-11-25 07:31:51	2019-11-26 03:27:15	Deployments provide wrong observedGeneration when serviceaccount doesn't exist	5	
+692	85590	yuzhiquan	2019-11-25 07:15:46	2019-12-04 16:50:58	handle registry merge error	5	bug,flake
+693	85584	dims	2019-11-24 18:43:30	2019-11-24 18:43:36	Automated cherry pick of #85368 upstream release 1.17	5	
+694	85583	dims	2019-11-24 18:43:00	2019-11-25 17:49:26	Automated cherry pick of #85368: Deep copying EndpointSlices in reconciler before modifying	0	bug
+695	85582	mm4tt	2019-11-24 18:35:04	2019-11-25 17:04:10	"Revert ""remove redundant `source` in shell"""	0	bug
+696	85581	tedyu	2019-11-24 14:52:13	2019-12-04 01:01:11	Utilize Context with timeout in GCE operations	3	bug
+697	85580	cwdsuzhou	2019-11-24 09:00:17	2019-11-29 05:40:06	Bugfix: assumed pods would not removed immediately when pods have been deleted	1	bug
+698	85579	howardjohn	2019-11-24 02:17:24	2019-11-25 22:34:04	startTime on pod is misleading with preemptible nodes	5	bug
+699	85578	sniranjan	2019-11-24 01:45:55	2019-11-24 01:58:00	OpenAPIV3Schema validation for password field	5	
+700	85577	michaelgugino	2019-11-24 01:40:30	2019-12-09 22:00:04	kubectl/drain: add option skip-wait-for-delete-timeout	2	feature
+701	85576	rajathagasthya	2019-11-23 23:02:02	2019-11-25 02:57:53	Add missing EncodePrivateKeyPEM utility function to kubeadm/app/util/pkiutil	4	bug
+702	85575	tedyu	2019-11-23 21:34:40	2019-11-26 03:47:56	Return early in Store#deleteWithoutFinalizers if Delete call encounters not found error	3	cleanup
+703	85574	michaelgugino	2019-11-23 19:05:21	2019-12-02 20:23:12	kubectl/drain: Add context support	2	feature
+704	85573	aramase	2019-11-23 17:57:16	2019-11-24 02:01:51	Automated cherry pick of #85500: Set node cidr mask size ipv4/ipv6 config	0	bug
+705	85571	michaelgugino	2019-11-23 16:49:18	2019-12-04 20:11:01	kubectl/drain: add disable-eviction option	2	feature
+706	85570	aojea	2019-11-23 16:29:07	2019-11-24 00:37:51	"Automated cherry pick of #85527: Revert ""kube-proxy: check KUBE-MARK-DROP"""	0	bug
+707	85569	huchengze	2019-11-23 08:40:26	2019-11-29 02:48:39	flexvolume_expand	5	bug
+708	85568	huchengze	2019-11-23 08:21:57	2019-11-29 02:48:49	flexvolume_expand	5	bug
+709	85567	Huang-Wei	2019-11-23 08:18:05	2019-12-06 20:52:51	Automated cherry pick of #81856: Convert tbe e2e to integration test #84036: Ensure TaintBasedEviction int test not rely on #84766: Fix a TaintBasedEviction integration test flake #84883: Update test logic to simulate NodeReady/False and	1	bug,cleanup,failing-test,flake
+710	85566	Huang-Wei	2019-11-23 07:54:52	2019-12-06 20:54:51	Automated cherry pick of #81856: Convert tbe e2e to integration test #84036: Ensure TaintBasedEviction int test not rely on #84766: Fix a TaintBasedEviction integration test flake #84883: Update test logic to simulate NodeReady/False and	1	bug,cleanup,failing-test,flake
+711	85565	tdihp	2019-11-23 05:19:55	2019-12-29 02:10:56	[Azure loadbalancer] internal LB service stuck in pending due to not able to previous delete public IP Address	5	bug
+712	85563	cwdsuzhou	2019-11-23 04:28:56	2019-11-29 05:39:55	Duplicated pods exist in SnapShot#nodeInfo	5	bug
+713	85562	gkarthiks	2019-11-23 04:01:44	2019-11-27 18:46:46	golint fixes for /pkg/util/iptables/testing	5	cleanup
+714	85561	cwdsuzhou	2019-11-23 03:48:38	2020-01-05 14:23:41	Return when removePod failed	5	cleanup
+715	85558	tedyu	2019-11-22 21:14:37	2019-11-23 09:07:51	Output port as number in error message	2	bug
+716	85556	wojtek-t	2019-11-22 20:41:55	2019-11-25 17:04:02	Cleanup conversions in kubectl	3	cleanup
+717	85555	Random-Liu	2019-11-22 19:05:09	2019-11-24 05:31:50	Fix GKE upgrade test.	0	bug
+718	85554	alewitt2	2019-11-22 18:52:35	2019-11-23 09:07:50	webhookConversionServer Error doesnt show missing port correctly	5	bug
+719	85551	guice	2019-11-22 16:28:53	2019-11-23 05:08:22	kubectl pods --watch no longer shows pod status	5	bug
+720	85550	neolit123	2019-11-22 16:28:09	2019-11-22 19:25:32	Automated cherry pick of #85524: Initialize FeatureGate map for KubeProxy config. #1929	1	bug
+721	85549	notpad	2019-11-22 16:02:56	2020-01-04 03:52:07	Refactor nodeShouldRunDaemonPod	5	cleanup
+722	85547	mcandre	2019-11-22 15:17:33	2019-11-22 22:26:06	How to use Kubernetes directly as CI system?	5	feature
+723	85543	SataQiu	2019-11-22 14:43:43	2019-12-01 02:31:04	Make elasticsearch discovery supports IPv6	5	bug
+724	85542	schrodit	2019-11-22 11:40:06	2019-12-11 00:05:23	Dump namespace if the namespace could not be cleaned up	3	bug,failing-test
+725	85540	pohly	2019-11-22 10:15:45	2019-12-06 01:15:20	e2e storage: public API for testsuites, support CSIInlineVolume type for generic resource	1	cleanup
+726	85539	xieyanker	2019-11-22 10:07:25	2019-12-05 12:39:00	networkpolicy doens't work, only refuese request, cannot accept request from white list	5	bug
+727	85538	millerick	2019-11-22 08:56:44	2019-12-02 17:26:32	kube-controller-manager: add option for concurrent-job-syncs	5	feature
+728	85537	xieyanker	2019-11-22 08:28:45	2019-11-25 15:41:10	stop-kubemark.sh add namespace	5	bug
+729	85534	CriaHu	2019-11-22 07:57:12	2019-11-26 05:43:10	fix broken link : https://github.com/kubernetes/community/blob/master/contributors/devel/container-runtime-interface.md	3	cleanup
+730	85533	CriaHu	2019-11-22 07:51:09	2019-11-25 20:10:10	fix broken link :https://github.com/kubernetes/community/blob/master/…	3	cleanup
+731	85532	CriaHu	2019-11-22 07:36:09	2019-11-22 07:52:51	fix broken link : https://github.com/kubernetes/community/blob/master/contributors/devel/container-runtime-interface.md	5	
+732	85530	CriaHu	2019-11-22 07:29:30	2019-11-22 07:59:08	fix broken links  in  CHANGELOG-1.14.md	5	
+733	85529	danushkaf	2019-11-22 07:24:31	2019-11-22 08:44:42	Connection reset from the application	5	
+734	85528	CriaHu	2019-11-22 07:19:08	2019-12-12 00:16:35	fix broken link : https://kubernetes-csi.github.io/docs/Drivers.html	5	bug
+735	85527	aojea	2019-11-22 05:45:26	2019-11-23 21:19:50	"Revert ""kube-proxy: check KUBE-MARK-DROP"""	0	bug
+736	85526	hex108	2019-11-22 05:20:03	2019-11-27 15:17:22	Print nominated pods when dumping scheduler cached NodeInfo	5	cleanup
+737	85525	Huang-Wei	2019-11-22 04:50:24	2019-12-06 20:56:52	Automated cherry pick of #81856: Convert tbe e2e to integration test #84036: Ensure TaintBasedEviction int test not rely on #84766: Fix a TaintBasedEviction integration test flake #84883: Update test logic to simulate NodeReady/False and	1	bug,cleanup,failing-test,flake
+738	85524	Arvinderpal	2019-11-22 04:49:49	2019-11-22 16:27:30	Initialize FeatureGate map for KubeProxy config. #1929	1	bug
+739	85523	RainbowMango	2019-11-22 03:17:16	2019-11-22 08:10:35	Automated cherry pick of #85402: Remove metric be hidden log temporarily.	5	
+740	85522	YuikoTakada	2019-11-22 02:30:55	2019-12-11 22:30:33	Fix func VerifyLatencyWithinThreshold() to local 	5	cleanup
+741	85521	gaorong	2019-11-22 01:47:07	2019-11-26 06:51:11	check service status value returned by EnsureLoadBalancer	1	bug
+742	85520	chris-short	2019-11-22 01:20:52	2019-11-24 05:17:46	Testing 	5	
+743	85517	andrewsykim	2019-11-22 00:03:38	2019-12-17 20:00:45	support configuration of kube-proxy IPVS tcp,tcpfin,udp timeout	5	api-change,feature
+744	85516	michaelgugino	2019-11-21 22:45:37	2019-11-27 00:51:21	Fix resource version precondition on pod delete	1	bug
+745	85514	tedyu	2019-11-21 21:08:22	2019-12-03 21:35:53	NoNamespaceKeyFunc doesn't need Context parameter	5	feature
+746	85513	liu-cong	2019-11-21 18:32:00	2019-11-28 00:41:04	Fix benchmark artifact parsing.	5	bug
+747	85512	serathius	2019-11-21 18:11:03	2019-12-18 05:05:58	Remove cluster-monitoring	3	cleanup,deprecation
+748	85511	oke-py	2019-11-21 15:43:02	2019-12-13 01:20:55	Fix a bug in port-forward: named port not working with service	1	bug
+749	85510	beautytiger	2019-11-21 15:39:54	2019-11-27 10:47:22	Automated cherry pick of #83953: fix string trim func isBackendPoolOnSameLB in azure	1	bug
+750	85509	beautytiger	2019-11-21 15:32:25	2019-11-27 10:55:22	Automated cherry pick of #83953: fix string trim func isBackendPoolOnSameLB in azure	1	bug
+751	85508	notpad	2019-11-21 13:37:16	2019-11-25 17:03:54	Set default value for TEST_CLUSTER_LOG_LEVEL and KUBE_GCE_INSTANCE_PREFIX	5	bug
+752	85507	notpad	2019-11-21 13:27:06	2019-11-25 17:03:53	start-kubemark.sh fails with unbound variable	5	bug
+753	85505	zhangxingdeppon	2019-11-21 10:13:32	2019-11-22 09:18:11	Possible Bug: /metrics/cadvisor value is wrong, it's larger than docker stats value	5	bug
+754	85503	xieyanker	2019-11-21 08:27:12	2019-11-22 07:29:12	How to add node'role on kubelet v1.16.2 	5	bug
+755	85502	xieyanker	2019-11-21 07:58:26	2019-11-23 02:40:06	fix kubemark output error	5	cleanup,documentation
+756	85501	veezhang	2019-11-21 07:29:54	2019-12-02 02:13:52	How to update the kubernetes-managed hosts file (host network) ？	5	
+757	85500	aramase	2019-11-21 06:10:07	2019-11-23 20:09:51	Set node cidr mask size ipv4/ipv6 config	0	bug
+758	85498	chennakesava1	2019-11-21 05:59:25	2019-11-22 05:58:28	 failed to pull image k8s.gcr.io/kube-controller-manager:v1.16.3	5	
+759	85496	tanjunchen	2019-11-21 03:21:01	2019-11-25 23:25:11	fix 1-12 number urls	3	bug,documentation
+760	85494	tedyu	2019-11-21 03:04:20	2019-11-21 05:01:30	Fill in default node cidr mask size when dual stack is not enabled	1	bug
+761	85493	cofyc	2019-11-21 01:58:12	2019-11-23 01:31:43	Add cofyc as owner of pkg/volume/local	1	cleanup
+762	85492	yuchunyun	2019-11-21 01:21:43	2019-11-21 05:01:29	kubeadm parameter node-cidr-mask-size repeated	5	bug
+763	85491	yuchunyun	2019-11-21 01:07:17	2019-11-23 20:09:51	node-cidr-mask-size-ipv6 can not work	5	bug
+764	85490	sallyom	2019-11-21 00:55:37	2019-11-27 16:25:21	don't error if set-resources patch is empty	2	bug
+765	85485	michaelgugino	2019-11-20 20:06:46	2019-11-27 00:51:21	Graceful deletion mutates object invalidating ResourceVersion in deletion precondition	5	bug
+766	85479	bart0sh	2019-11-20 12:59:23	2019-11-25 22:06:42	kubeadm: check if image exists locally before pulling	3	cleanup
+767	85477	FibonacciPrime	2019-11-20 10:34:53	2019-11-20 10:39:14	"""Peer's Certificate has expired"" when installing K8s from yum repo"	5	
+768	85475	andyzhangx	2019-11-20 05:45:00	2019-12-03 01:07:11	upgrade api-version to fix azure file AuthorizationFailure	1	bug
+769	85473	chendotjs	2019-11-20 05:07:30	2019-11-28 18:05:05	Fix device plugin generator script	3	cleanup
+770	85471	yyrdl	2019-11-20 04:52:56	2019-11-20 05:05:20	LeaseDurationSeconds can't be zero when update lease	5	
+771	85470	cwdsuzhou	2019-11-20 03:38:53	2019-12-04 02:35:11	add pod info when failing to add pod to unschedulableQ	2	cleanup
+772	85469	hwdef	2019-11-20 02:24:35	2019-11-26 20:17:35	test/e2e/apimachinery: fix staticcheck warning	3	cleanup
+773	85468	neolit123	2019-11-20 01:57:25	2019-11-29 17:35:04	kubeadm: simplify discover/token and add detailed unit tests	2	cleanup
+774	85466	pjh	2019-11-20 00:04:12	2019-12-05 02:02:34	Update GCE Windows startup scripts for plugin-based authentication	5	feature
+775	85465	uselessidbr	2019-11-19 23:53:52	2019-11-20 21:45:08	Revert PV deletion in Terminating State	5	feature
+776	85464	coryrc	2019-11-19 23:46:03	2019-11-27 03:43:34	Clarify client-go issue location	3	documentation
+777	85463	AkihiroSuda	2019-11-19 22:40:56	2019-12-11 00:05:07	SafeSysctlWhitelist: add net.ipv4.ping_group_range (allow ping without CAP_NET_RAW)	1	feature
+778	85462	jennybuckley	2019-11-19 21:06:32	2019-12-05 08:42:33	Cherrypick to 1.16 - Update sigs.k8s.io/structured-merge-diff to v1.0.1	1	bug
+779	85461	misterikkit	2019-11-19 19:47:14	2019-12-07 07:33:09	Automated cherry pick of #82152: Fix retry logic in DisruptionController	5	bug
+780	85460	misterikkit	2019-11-19 19:45:23	2019-12-07 07:37:10	Automated cherry pick of #82152: Fix retry logic in DisruptionController	5	bug
+781	85457	BenTheElder	2019-11-19 17:37:06	2019-12-05 21:50:18	Typecheck support for verifying providerless build	1	cleanup
+782	85456	BenTheElder	2019-11-19 17:03:51	2019-11-20 00:21:20	Fix providerless	1	bug
+783	85453	claudiubelu	2019-11-19 15:45:08	2019-12-17 05:37:52	tests: Removes [LinuxOnly] tag from a few tests	5	cleanup
+784	85452	iobuf	2019-11-19 15:38:34	2019-12-11 00:04:51	[pkg/auth/nodeidentifier/default_test.go]: fix testing error message typo	2	cleanup
+785	85451	RubenSerradas	2019-11-19 14:05:26	2019-11-26 00:43:11	Fix golint issues in pkg/kubelet/events/event.go	3	cleanup
+786	85450	r0bj	2019-11-19 13:57:59	2019-11-20 02:12:45	kubelet_running_pod_count metric includes also non-running pods	5	bug
+787	85449	hex108	2019-11-19 11:54:02	2020-01-03 06:32:22	[WIP]Fix scheduler resource leak: deleted pod is not deleted from nominate…	5	bug
+788	85448	retnuh	2019-11-19 11:36:53	2019-11-28 05:02:42	Swagger file missing io.k8s.apimachinery.pkg.apis.meta.v1.unstructured.Unstructured 	5	
+789	85447	hex108	2019-11-19 11:22:35	2020-01-03 06:31:51	Scheduler resource leak: deleted pod is not deleted from nominated pods	5	bug
+790	85446	RainbowMango	2019-11-19 11:13:13	2019-12-10 20:16:21	Remove the derprecated API RawRegister from stability framework	1	feature
+791	85444	RainbowMango	2019-11-19 08:41:14	2019-11-26 04:27:11	Provided a mechanism to re-register hidden metrics	0	bug
+792	85441	liggitt	2019-11-19 07:56:32	2019-11-19 15:19:43	Plumb authorization webhook version from CLI to config	0	bug
+793	85440	gkarthiks	2019-11-19 07:48:25	2019-11-23 01:31:33	Fix lint in /pkg/util/iptables	5	cleanup
+794	85437	danwinship	2019-11-19 04:37:12	2019-11-23 17:36:15	"WIP fix flake in ""It should recreate its iptables rules if they are deleted"""	1	flake
+795	85436	braceinhz	2019-11-19 04:24:26	2019-12-19 03:19:50	Fix golint errors in cmd/cloud-controller-manager/app/apis/config/v1alpha1	5	cleanup
+796	85434	joechan222	2019-11-19 02:42:25	2019-11-21 02:14:02	pod's service cannot reach via Service IP from other node	5	
+797	85432	jadarsie	2019-11-18 23:45:52	2019-11-25 17:03:39	Support Azure Stack dynamic environments	5	feature
+798	85430	ramineni	2019-11-18 23:17:24	2019-11-20 20:06:24	Add WebhookVersion while building AuthorizationConfig	5	bug
+799	85429	castlemilk	2019-11-18 23:07:35	2019-11-19 01:00:26	kubectl get componentstatus incorrectly printing	5	bug
+800	85427	alrs	2019-11-18 20:21:37	2019-11-23 23:31:51	apimachinery: Fix Dropped Test Error	1	bug
+801	85426	davidz627	2019-11-18 19:53:46	2019-11-23 01:31:23	Plumb test state through to fake volume host creation for error handling	3	cleanup
+802	85424	guineveresaenger	2019-11-18 18:02:49	2019-11-23 01:31:14	Hi San Diego	3	cleanup
+803	85420	fozziscrazy77	2019-11-18 14:36:00	2019-11-18 17:15:55	Android	5	
+804	85417	jkaniuk	2019-11-18 13:32:36	2019-11-18 14:31:58	Addon Manager: Fix parsing KUBECTL_EXTRA_PRUNE_WHITELIST	0	bug
+805	85415	alenkacz	2019-11-18 10:34:40	2019-12-03 19:14:38	[Flaky test] Conformance - GCE - 1.17 (ci-kubernetes-gce-conformance-latest-1-17)	0	failing-test
+806	85414	alenkacz	2019-11-18 10:24:37	2019-11-23 21:19:50	[Flaky test] gce-cos-master-alpha-features (ci-kubernetes-e2e-gci-gce-alpha-features)	1	failing-test
+807	85413	rabejens	2019-11-18 09:50:21	2019-11-18 17:19:30	Add an option to increase Client.Timeout for kubeadm init	5	feature
+808	85412	boluisa	2019-11-18 09:48:39	2019-12-03 04:18:58	Kubeadm: upgrade apply & upgrade node always overwrite Kubeadm-env file	2	bug
+809	85411	RainbowMango	2019-11-18 09:19:59	2019-11-26 04:27:11	Metrics registered by import can not be enable after turned off	0	bug
+810	85410	answer1991	2019-11-18 08:47:18	2019-12-10 13:13:30	fix potential memory leak issue in processing watch request	3	bug
+811	85408	answer1991	2019-11-18 07:59:53	2019-11-23 01:31:05	use context to check client closed instead of http.CloseNotifier in processing watch request	5	bug
+812	85406	zhouya0	2019-11-18 07:14:33	2019-12-12 23:48:56	kubectl change podSecurityPolicy group	3	bug
+813	85405	chendave	2019-11-18 06:23:47	2019-11-28 16:07:04	`kube-up.sh` doesn't prompt for downloading	5	bug
+814	85404	yliaog	2019-11-18 05:48:02	2019-11-23 01:30:56	added yliaog to OWNERS	1	cleanup
+815	85402	RainbowMango	2019-11-18 03:43:29	2019-11-22 02:19:30	Remove metric be hidden log temporarily	0	bug
+816	85401	liggitt	2019-11-18 02:00:55	2019-11-23 01:30:45	Test writing configurations with numeric names	5	cleanup
+817	85400	cblecker	2019-11-18 00:00:13	2019-11-18 00:00:27	Rename project to Honkernetes	4	feature
+818	85396	Random-Liu	2019-11-17 19:45:49	2019-12-02 20:22:58	Add containerd windows support on GCE for test.	1	feature
+819	85394	LucaLanziani	2019-11-17 09:54:46	2019-11-18 02:23:15	Problem with marshaling and unmarshaling clusterName	5	bug
+820	85392	Alexc0007	2019-11-17 05:37:21	2019-11-25 09:16:51	add support for cipher-suites flag for etcd used by kubernetes	5	feature
+821	85386	mikedanese	2019-11-16 17:56:17	2019-11-16 20:39:42	cache.Expiring: fix stress test: it's not doing anything	2	cleanup
+822	85385	sttts	2019-11-16 14:37:48	2019-12-02 23:07:21	"1.16: apiextensions: validate list-type and map-type ""atomic"""	0	api-change,bug
+823	85384	sttts	2019-11-16 13:50:40	2019-11-16 14:54:45	1.16: apiextensions: validate list-type map+set uniqueness in CRs	0	api-change,bug
+824	85383	sttts	2019-11-16 13:49:10	2019-11-16 13:49:35	1.16: apiextensions: validate list-type map+set uniqueness in CRs #84920	0	api-change,bug
+825	85381	sttts	2019-11-16 11:34:06	2019-11-16 21:59:41	apiextensions: freeze and document supported v1.16 OpenAPI formats	0	api-change
+826	85378	jpbetz	2019-11-16 03:22:14	2020-01-02 23:57:14	[experimental] Use reflector in server side apply to avoid converting to unstructured	5	
+827	85377	liggitt	2019-11-16 02:17:51	2019-11-16 04:49:56	Skip Node printing in kubectl column test	1	bug,failing-test,flake
+828	85376	liggitt	2019-11-16 01:49:12	2019-11-16 04:41:13	WIP - Log more details about metadatainformer errors	5	cleanup
+829	85375	liggitt	2019-11-16 01:39:58	2019-11-16 04:49:42	Add single-item list/watch to delegated authentication reader role	1	bug
+830	85374	liggitt	2019-11-16 01:33:46	2019-11-16 04:49:42	kube-scheduler gets permission error using dynamic delegated authentication	0	bug
+831	85372	liggitt	2019-11-16 00:21:32	2019-11-16 03:51:42	Automated cherry pick of #85361: Fix label mutation in endpoints controller	0	bug
+832	85371	boylee1111	2019-11-16 00:02:46	2019-11-26 22:29:21	Enable snapshottable e2e test for csi pd driver	1	feature
+833	85370	mikedanese	2019-11-15 23:54:31	2019-11-16 08:29:41	fix terrible bug and inline GC for expiring cache	0	bug
+834	85369	neolit123	2019-11-15 23:50:19	2019-11-22 02:19:30	1.17/1.18 kubelet prints a klog.Warning from --version	2	bug
+835	85368	robscott	2019-11-15 23:47:23	2019-11-24 06:55:51	Deep copying EndpointSlices in reconciler before modifying them	0	bug
+836	85367	aramase	2019-11-15 23:32:53	2019-11-16 03:09:56	[kube controller manager] add comments for compatibility	5	cleanup
+837	85366	NoAnyLove	2019-11-15 23:15:26	2019-11-15 23:51:46	apiserver drops watch connection	5	bug
+838	85365	robscott	2019-11-15 22:34:49	2019-11-16 01:57:51	Disabling EndpointSlice feature gate by default	0	bug
+839	85364	liggitt	2019-11-15 22:27:22	2019-11-25 18:22:15	EndpointSlice controller modifies annotations of shared object	1	
+840	85363	immutableT	2019-11-15 21:39:45	2019-12-03 01:06:58	Add defaulting and validation logic for EncryptionConfiguration type.	2	api-change
+841	85362	enj	2019-11-15 20:47:54	2019-11-16 02:30:19	WIP: Wire token cache context to process exit	5	bug
+842	85361	liggitt	2019-11-15 20:32:22	2019-11-16 00:17:50	Fix label mutation in endpoints controller	0	bug
+843	85359	robscott	2019-11-15 20:20:29	2019-11-15 21:58:58	Reverting managed-by-setup annotation	0	bug
+844	85358	liggitt	2019-11-15 20:05:54	2019-11-16 00:17:50	Endpoints controller modifies shared service object labels in memory	0	
+845	85356	liggitt	2019-11-15 19:31:22	2019-11-15 21:55:21	Avoid modifying informer objects in endpoint slice controller	5	bug
+846	85354	andyzhangx	2019-11-15 18:43:38	2019-12-03 01:07:11	Azure Files PV AuthorizationFailure when using advanced networking 	1	bug,feature
+847	85353	liggitt	2019-11-15 17:50:08	2019-12-27 01:59:53	EndpointSliceController does not react to updated or deleted EndpointsSlice objects	2	bug
+848	85352	adelina-t	2019-11-15 17:15:46	2019-12-17 05:38:19	Kube-proxy with EndpointSlice feature on doesn't work on Windows.	1	bug
+849	85351	rosti	2019-11-15 16:08:16	2019-11-16 03:09:42	kubeadm: Use only stdout when calling kubelet for its version	0	bug
+850	85350	liggitt	2019-11-15 15:43:06	2019-12-02 15:39:05	Enable mutation detection in test-cmd/test-integration/test-e2e-node, improve memory impact	1	failing-test
+851	85349	liggitt	2019-11-15 15:10:24	2019-12-02 22:15:29	Mutation detection is no longer enabled in e2e tests	0	bug
+852	85348	ereslibre	2019-11-15 15:05:15	2019-11-16 00:17:42	kubeadm: use the right name for the no validator function	1	cleanup
+853	85346	andrewsykim	2019-11-15 14:00:42	2019-11-15 19:32:32	service topology: remove redundant API validation for local external traffic policy	5	bug,cleanup
+854	85345	andrewsykim	2019-11-15 13:57:37	2019-11-23 01:30:36	proxier: improve node topology event handler logic	5	cleanup
+855	85344	jkaniuk	2019-11-15 13:50:03	2019-11-18 13:25:43	Addon Manager: Fix parsing KUBECTL_EXTRA_PRUNE_WHITELIST	5	bug
+856	85343	jkaniuk	2019-11-15 13:44:24	2019-11-18 15:12:06	Addon Manager: wrong processing of KUBECTL_EXTRA_PRUNE_WHITELIST	5	bug
+857	85342	mm4tt	2019-11-15 12:10:14	2019-11-15 18:10:51	Kube-proxies EndpointSlice WATCH restarts overloading control-plane	0	bug
+858	85341	gongguan	2019-11-15 11:12:21	2019-12-09 15:20:19	Make GetPodServices as a scheduler helper	5	cleanup
+859	85340	chendave	2019-11-15 11:08:16	2019-11-23 01:30:27	remove redundant `source` in shell	5	cleanup
+860	85339	mm4tt	2019-11-15 10:26:49	2019-11-15 18:10:51	Increase cache size for EndpointSlices.	0	bug
+861	85337	droslean	2019-11-15 09:45:12	2019-11-22 16:25:05	[Failing Tests] gce-windows-master && gce-windows-1.17	0	failing-test
+862	85336	droslean	2019-11-15 09:29:30	2019-11-16 02:59:07	[Failing Test] gce-cos-master-alpha-features (ci-kubernetes-e2e-gci-gce-alpha-features)	0	failing-test
+863	85335	droslean	2019-11-15 09:25:07	2019-11-17 03:43:13	[Failing Test] capa-conformance-stable-k8s-master (ci-cluster-api-provider-aws-make-conformance-stable-k8s-ci-artifacts)	0	failing-test
+864	85333	droslean	2019-11-15 08:49:07	2019-11-17 03:42:44	[Failing Test] capg-conformance-stable-k8s-master (ci-cluster-api-provider-gcp-make-conformance-stable-k8s-ci-artifacts)	0	failing-test
+865	85332	tamalsaha	2019-11-15 08:46:55	2019-11-29 03:46:17	kubectl edit deploy fails with error: map: map[] does not contain declared merge key: name	5	bug
+866	85331	RainbowMango	2019-11-15 08:17:30	2019-11-15 21:58:58	kube-controller-manager panic when setting LabelManagedBy label to endpointSlice	0	bug
+867	85329	nilo19	2019-11-15 07:57:09	2019-11-29 19:47:05	cherry pick of #81262: fix azure load balancer update dns label issue	1	bug
+868	85328	nilo19	2019-11-15 07:43:25	2019-11-29 06:17:05	cherry pick of #84802: Ensure health probes are created for local traffic policy UDP	1	bug
+869	85327	nilo19	2019-11-15 07:32:15	2019-12-02 22:40:59	cherry pick of #84802: Ensure health probes are created for local traffic policy UDP	1	bug
+870	85326	apelisse	2019-11-15 04:54:59	2019-11-16 05:09:50	WIP: Test useless allocs	5	
+871	85324	robscott	2019-11-15 03:59:43	2019-11-15 22:10:59	Fixing EndpointSlice controller panic	0	bug
+872	85323	tanjunchen	2019-11-15 03:50:12	2019-11-27 07:19:35	use ExpectEqual in /e2e/auth	3	cleanup
+873	85322	davidz627	2019-11-15 03:31:29	2019-11-15 09:08:08	"Revert ""Enable snapshot e2e test for csi pd driver"""	0	failing-test
+874	85320	liggitt	2019-11-15 00:58:53	2019-11-27 17:37:49	TestVolumeBinding top flake in pull-kubernetes-integration	5	failing-test
+875	85318	nilo19	2019-11-15 00:54:22	2019-11-29 19:45:04	cherry pick of #81262: fix azure load balancer update dns label issue	1	bug
+876	85317	mikedanese	2019-11-15 00:31:37	2019-11-16 08:29:41	benchmark inline GC in expiring cache and maybe drop the background goroutine	1	feature
+877	85315	jacksontj	2019-11-14 23:40:22	2019-11-15 00:32:45	add API to watch pods on Kubelet	5	feature
+878	85311	jkkill	2019-11-14 21:31:48	2019-11-14 23:26:41	Rename CHANGELOG-1.16.md to Kevinlee Note1.16.md	5	
+879	85310	sarveshkaushal	2019-11-14 21:23:23	2019-11-19 19:27:46	Delete deployment with pods	5	bug
+880	85309	liggitt	2019-11-14 21:20:14	2019-11-15 01:51:34	Avoid constructing table printer on every componentstatus request	0	cleanup
+881	85306	bewing	2019-11-14 20:43:10	2019-11-14 22:14:06	Support externalTrafficPolicy on ClusterIP	5	feature
+882	85305	codenrhoden	2019-11-14 20:35:03	2019-11-15 18:10:40	Remove pkg/util/mount (moved out of tree)	1	cleanup
+883	85304	oomichi	2019-11-14 19:27:35	2019-11-26 12:05:12	Remove e2e/framework/profile_gatherer.go	5	cleanup
+884	85302	porridge	2019-11-14 19:03:34	2019-12-19 20:40:26	Add support for GOBIN to generate-groups.sh.	1	bug
+885	85301	robscott	2019-11-14 18:55:51	2019-11-15 01:29:04	Ensuring EndpointSlice controller does not start when feature gate or API are disabled	0	api-change,bug
+886	85298	liggitt	2019-11-14 18:42:08	2019-11-15 01:51:22	Use CSINodes v1 API in scheduler	0	bug
+887	85297	gnufied	2019-11-14 17:52:27	2019-11-27 20:29:21	Fix PVC condition check for offline resizing	1	flake
+888	85294	ahg-g	2019-11-14 16:26:50	2019-11-14 19:20:15	Rename PluginConfigArgs to AlgorithmConfigArgs	5	cleanup
+889	85293	huffmanca	2019-11-14 16:23:37	2019-12-03 22:30:59	Included FSType in CSI volumes	2	cleanup
+890	85292	neolit123	2019-11-14 15:45:39	2019-12-02 23:07:12	Automated cherry pick of #85156: Remove an infinite poll	1	bug
+891	85291	serathius	2019-11-14 15:42:58	2019-12-10 10:04:33	Remove prometheus master	5	feature
+892	85290	ialidzhikov	2019-11-14 15:38:25	2019-12-04 21:28:58	Clean up cluster-service label from calico-policy-controller	5	cleanup
+893	85287	serathius	2019-11-14 14:57:42	2019-12-11 20:52:34	Reduce visibility of prometheus libs	5	feature
+894	85285	liggitt	2019-11-14 14:26:04	2019-11-15 00:39:05	Fix --resource-version handling in kubectl	1	bug
+895	85284	tedyu	2019-11-14 13:55:24	2019-11-15 18:10:32	Check error return from closing connection	3	bug
+896	85279	RainbowMango	2019-11-14 11:31:05	2019-12-18 08:57:58	Allow show hidden metrics in kube-proxy	5	api-change,feature
+897	85276	oxddr	2019-11-14 10:48:47	2019-11-16 04:27:40	Clusters don't come up in scalability tests	0	failing-test
+898	85275	tedyu	2019-11-14 10:47:40	2019-12-15 08:29:11	Test showing move than one NodeSelectorRequirement with the same key	5	api-change,cleanup
+899	85274	chendave	2019-11-14 10:46:06	2019-11-28 16:07:04	fix the defect in the shell scripts	5	bug
+900	85272	mm4tt	2019-11-14 10:38:10	2019-11-15 12:51:43	pager.go: don't set ResourceVersion on subsequent List calls	0	bug
+901	85271	juanbaio10	2019-11-14 10:14:08	2019-11-14 14:51:17	Unable to manage multiple clusters with same user but different token	5	
+902	85265	SataQiu	2019-11-14 08:16:10	2019-11-23 01:30:18	kubeadm: reset raises warnings if it cannot delete folders	2	bug,feature
+903	85263	matthyx	2019-11-14 08:05:09	2019-12-15 11:31:39	Automated cherry pick of #84179: Fix startup probe test by checking updated values	0	bug
+904	85260	MikeSpreitzer	2019-11-14 06:52:48	2019-11-15 01:51:12	Renamed FeatureGate RequestManagement to APIPriorityAndFairness	5	feature
+905	85259	MikeSpreitzer	2019-11-14 05:39:29	2019-11-15 09:07:58	Brushed up fairqueuing package	5	cleanup
+906	85258	liggitt	2019-11-14 05:04:33	2019-11-14 08:59:45	Include *intstr.IntOrString in API compatibility test fixtures	1	cleanup
+907	85257	tedyu	2019-11-14 04:14:51	2019-11-15 00:38:54	Correct the checking of robinIndex	1	bug
+908	85255	keyingliu	2019-11-14 03:06:24	2019-11-15 07:04:03	Fix issue that kubelet may use stale node info to predicate pods	5	bug
+909	85253	zhucan	2019-11-14 01:54:59	2019-11-15 03:37:28	'ExternalExpanding' Ignoring the PVC: didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC	5	bug
+910	85252	prameshj	2019-11-14 01:42:28	2019-11-15 00:38:40	Specify a port range to ILB firewall rule create.	1	cleanup
+911	85251	leakingtapan	2019-11-14 01:33:10	2019-11-16 11:27:41	Add CSI migration logic for EBS storageclass zone/zones/topology	1	bug
+912	85249	immutableT	2019-11-14 00:40:18	2019-11-15 01:50:58	Move test inputs for EncryptionConfiguration tests into testdata.	5	cleanup
+913	85247	immutableT	2019-11-14 00:19:25	2019-11-14 00:26:26	Duplicate providers test	5	api-change
+914	85246	robscott	2019-11-13 23:05:12	2019-11-14 21:32:10	Updating kube-proxy to support new EndpointSlice address types	1	feature
+915	85245	prameshj	2019-11-13 22:48:51	2019-12-06 22:02:51	"Automated cherry pick of #84622: Create ILB firewall name with prefix ""k8s-fw""."	1	bug
+916	85244	prameshj	2019-11-13 22:34:12	2019-11-13 22:49:38	"Automated cherry pick of #84622: Create ILB firewall name with prefix ""k8s-fw"". "	5	bug
+917	85243	prameshj	2019-11-13 22:31:18	2019-11-13 22:36:15	"Automated cherry pick of #84622: Create ILB firewall name with prefix ""k8s-fw"""	5	api-change,bug
+918	85242	mikedanese	2019-11-13 22:28:42	2019-12-11 00:04:36	share authentication lookups	1	bug
+919	85241	misterikkit	2019-11-13 22:24:01	2019-12-07 01:01:55	Automated cherry pick of #84211: vsphere: check if volume exists before create	1	bug
+920	85240	misterikkit	2019-11-13 22:21:52	2019-12-07 02:53:09	Automated cherry pick of #84211: vsphere: check if volume exists before create	1	bug
+921	85239	misterikkit	2019-11-13 22:19:35	2019-12-07 01:19:54	Automated cherry pick of #84211: vsphere: check if volume exists before create	1	bug
+922	85238	misterikkit	2019-11-13 22:15:48	2019-11-13 22:17:52	vSphere storage plugin: Create volume can fail indefinitely	5	bug
+923	85237	leakingtapan	2019-11-13 22:11:18	2019-11-18 20:33:43	Flip CSIMigrationAWS flag to be beta and off by default	1	feature
+924	85236	liu-cong	2019-11-13 21:39:48	2019-11-14 01:29:19	Update bucket for scheduler framework latency histograms.	5	cleanup,feature
+925	85235	oomichi	2019-11-13 21:18:07	2019-11-23 01:30:05	Move suites.go to e2e package	3	cleanup
+926	85233	msau42	2019-11-13 20:57:31	2019-11-14 21:29:35	CVE-2019-11255: CSI volume snapshot, cloning and resizing features can result in unauthorized volume data access or mutation	5	bug
+927	85232	prameshj	2019-11-13 20:48:47	2019-11-13 22:31:21	"Automated cherry pick of #84622: Create ILB firewall name with prefix ""k8s-fw""."	1	bug
+928	85231	davidz627	2019-11-13 19:59:49	2019-11-16 01:57:42	Flip CSIMigration and CSIMigrationGCE to Beta	1	documentation,feature
+929	85230	oomichi	2019-11-13 19:39:55	2019-11-14 21:31:45	Add TODOs for removing invalid e2e dependencies	5	cleanup
+930	85229	liggitt	2019-11-13 19:01:22	2019-11-14 01:29:08	guard kubeadm dependencies on k8s.io/kubernetes	1	cleanup
+931	85228	YangLu1031	2019-11-13 18:55:18	2019-11-23 01:29:52	Wait for kubelet & kube-proxy to be ready on Windows node within 10s	1	cleanup
+932	85227	apelisse	2019-11-13 18:37:31	2019-11-14 04:02:27	Update structured-merge-diff to latest version	5	cleanup
+933	85226	alculquicondor	2019-11-13 18:25:01	2019-11-14 01:28:52	Wait for terminating pods to be deleted	5	flake
+934	85223	sttts	2019-11-13 16:43:15	2019-11-20 22:23:20	apiextensions: fix items+type logic in API due to broken go-openapi validation	1	bug
+935	85222	deiga	2019-11-13 16:30:00	2019-12-15 14:18:40	Adds all-namespaces support to kubectl logs	5	feature
+936	85221	mm4tt	2019-11-13 16:25:20	2019-11-15 12:51:43	Kube-controller-manager loosing lease watch in large clusters resulting in nodes becoming not-ready	0	bug
+937	85220	liggitt	2019-11-13 15:27:09	2019-11-13 22:52:18	Revert #76586, restructure LICENSES file generation	0	bug
+938	85219	mm4tt	2019-11-13 15:24:28	2019-11-13 22:52:01	Increase cache size for leases	0	bug
+939	85217	kaoskater08	2019-11-13 15:13:34	2019-11-13 22:51:48	fixed golint errors in pkg/apis/extensions register.go and types.go	3	api-change,cleanup
+940	85215	droslean	2019-11-13 15:06:13	2019-11-13 22:52:14	[Failing Test] gce-cos-master-slow (ci-kubernetes-e2e-gci-gce-slow)	0	failing-test
+941	85214	droslean	2019-11-13 15:03:08	2019-11-14 03:34:26	[Failing Test] gce-cos-master-reboot (ci-kubernetes-e2e-gci-gce-reboot)	5	failing-test
+942	85213	droslean	2019-11-13 15:00:25	2019-11-14 03:34:00	[Failing Test] gce-cos-master-default (ci-kubernetes-e2e-gci-gce)	5	failing-test
+943	85212	chrisohaver	2019-11-13 14:53:50	2019-11-26 20:13:22	add workaround for klog/coredns crash issue	1	bug
+944	85211	liggitt	2019-11-13 14:41:38	2019-11-13 14:43:45	WIP - Fix incorrect license location	5	bug
+945	85210	dims	2019-11-13 14:41:04	2019-11-13 15:23:35	LICENSES is the correct name of the file	0	bug
+946	85209	dims	2019-11-13 14:20:32	2019-11-13 15:23:39	Tolerate when LICENSE file is missing in artifacts	5	bug
+947	85208	ahg-g	2019-11-13 13:55:14	2019-11-13 14:08:41	run ./hack/update-openapi-spec.sh	1	failing-test
+948	85205	blurpy	2019-11-13 13:03:01	2019-12-16 13:54:31	1.15 CoreDNS immediately crash if Kubernetes apiserver is unavailable	5	bug
+949	85202	RainbowMango	2019-11-13 12:00:33	2019-11-13 22:51:31	Add Reset() API to stability framework	1	feature
+950	85201	fabriziopandini	2019-11-13 10:50:16	2019-11-14 15:07:36	kubeadm: add retry to etcd calls	0	bug
+951	85200	SataQiu	2019-11-13 10:39:14	2019-11-25 17:03:26	e2e: move LogFailedContainers out of e2e test framework util.go	5	cleanup
+952	85199	zhaofengcumt	2019-11-13 10:34:50	2019-11-14 14:55:10	 if --client-ca-file and --requestheader-client-ca-file have something different	5	bug
+953	85198	behos	2019-11-13 10:13:41	2019-11-15 00:39:05	Using resourceVersion on different annotate requests does not guarantee atomic updates	5	bug
+954	85196	alenkacz	2019-11-13 10:03:23	2019-11-14 03:33:51	[Failing test] gce-cos-master-alpha-features (ci-kubernetes-e2e-gci-gce-alpha-features)	0	failing-test
+955	85195	like-inspur	2019-11-13 09:48:45	2019-12-12 08:15:30	fluentd-es-configmap use old config queue_limit_length	5	bug
+956	85194	hwdef	2019-11-13 09:47:13	2019-11-13 22:51:19	fix wrong link	3	cleanup
+957	85192	MikeSpreitzer	2019-11-13 09:06:47	2019-11-14 04:02:14	Added fair queuing for server requests	5	feature
+958	85189	nilo19	2019-11-13 08:31:29	2019-12-02 21:49:01	Automated cherry pick of #84802: Ensure health probes are created for local traffic policy UDP	1	bug
+959	85188	charleszheng44	2019-11-13 08:30:16	2019-11-23 01:29:44	add ut for scheduler framework	5	cleanup
+960	85187	nilo19	2019-11-13 08:19:42	2019-11-15 07:34:31	Automated cherry pick of #84802: Ensure health probes are created for local traffic policy UDP	1	bug
+961	85185	nilo19	2019-11-13 07:46:27	2019-11-15 07:44:29	Automated cherry pick of #84802: Ensure health probes are created for local traffic policy UDP	1	bug
+962	85184	polar3130	2019-11-13 07:44:59	2019-11-13 08:08:06	fix typo	5	api-change
+963	85183	charleszheng44	2019-11-13 07:44:41	2019-11-13 07:54:55	add unit test for RunFilterPlugins	5	cleanup
+964	85182	nilo19	2019-11-13 07:35:46	2019-11-15 00:51:56	Automated cherry pick of #81262: fix azure load balancer update dns label issue	1	bug
+965	85181	nilo19	2019-11-13 07:33:28	2019-11-15 07:58:40	Automated cherry pick of #81262: fix azure load balancer update dns label issue	1	bug
+966	85180	k-toyoda-pi	2019-11-13 07:32:25	2019-11-13 21:05:31	Use log functions of core framework on e2e/storage/utils	5	cleanup
+967	85179	liggitt	2019-11-13 05:32:30	2019-11-13 23:45:47	WIP - Plumb resourceVersion precondition to storage	5	cleanup
+968	85178	andyzhangx	2019-11-13 05:02:30	2019-12-02 23:31:14	Automated cherry pick of #85158: fix vmss dirty cache issue	1	bug
+969	85177	andyzhangx	2019-11-13 05:01:15	2019-12-02 21:31:00	Automated cherry pick of #85158: fix vmss dirty cache issue	1	bug
+970	85176	andyzhangx	2019-11-13 05:00:09	2019-11-29 20:31:03	Automated cherry pick of #85158: fix vmss dirty cache issue	1	bug
+971	85175	liggitt	2019-11-13 04:56:24	2019-11-14 21:31:31	Add comments to explain golang.org replace directives	3	cleanup
+972	85174	zhouya0	2019-11-13 04:05:08	2019-11-14 19:20:03	add table convertor to componentstatus	2	bug
+973	85172	c3y1huang	2019-11-13 03:11:38	2019-11-27 09:09:22	Fix golint failures for pkg/registry/apps/replicaset	1	cleanup
+974	85170	timyinshi	2019-11-13 02:47:10	2019-12-06 22:27:36	modify dockerID to containerID	5	cleanup
+975	85169	boylee1111	2019-11-13 01:55:57	2019-11-15 01:50:44	Enable snapshot e2e test for csi pd driver	5	feature
+976	85167	hwdef	2019-11-13 01:46:08	2019-11-13 02:22:08	pkg/kubelet/apis: fix staticcheck warning	5	cleanup
+977	85166	tedyu	2019-11-13 01:17:15	2019-11-16 01:29:53	Check for ReadWriteOnce when deciding MultiAttach is forbidden	3	bug
+978	85163	CriaHu	2019-11-13 01:01:29	2019-11-22 06:23:56	fix broken links https://kubernetes-csi.github.io/docs/Drivers.html	3	documentation
+979	85162	apelisse	2019-11-13 00:36:02	2019-11-14 19:19:49	Strip nullable for Server-side apply	5	bug
+980	85161	carnott-snap	2019-11-13 00:31:56	2019-11-13 00:45:58	cannot find replacement package to k8s.io/kubernetes@1.15.4	5	feature
+981	85159	andyzhangx	2019-11-12 23:31:31	2019-11-13 21:04:52	vmss dirty cache issue	1	bug
+982	85158	andyzhangx	2019-11-12 23:16:17	2019-11-13 21:04:52	fix vmss dirty cache issue	1	bug
+983	85157	alculquicondor	2019-11-12 23:00:43	2019-11-13 21:04:37	Store topology spread constraints in metadata with labels.Selector	5	cleanup
+984	85156	chuckha	2019-11-12 22:48:45	2019-11-13 21:04:25	[kubeadm] Remove nested retries	1	bug
+985	85153	codenrhoden	2019-11-12 21:27:08	2019-11-14 01:28:34	Retire mount.Exec for k8s.io/utils/exec	5	cleanup
+986	85152	mikedanese	2019-11-12 21:16:04	2019-11-13 22:51:09	report cache misses in cached token authenticator benchmark	1	bug
+987	85151	hypnoglow	2019-11-12 20:11:55	2019-11-13 21:04:12	scheduler: make algorithm source an option	3	cleanup
+988	85150	ahg-g	2019-11-12 19:31:17	2019-11-13 17:28:24	Pass InformerFactory/SharedLister instead of individual informers/listers in scheduler config logic	5	cleanup
+989	85149	oomichi	2019-11-12 19:28:08	2019-11-14 04:02:01	Move functions from e2e/framework/util.go Part-4	5	cleanup
+990	85147	tedyu	2019-11-12 18:35:08	2019-11-15 00:38:29	Continue removing file in ManagerImpl#removeContents	3	cleanup
+991	85146	monopole	2019-11-12 18:10:55	2019-11-14 05:43:19	WIP: Upgrade kubectl to sigs.k8s.io/kustomize/api@v0.2.0	2	feature
+992	85145	deads2k	2019-11-12 17:46:12	2019-11-19 19:00:25	allow individual ca bundles to be empty in union	1	bug
+993	85144	deads2k	2019-11-12 17:33:55	2019-11-13 22:51:25	create utilities inspecting server TLS certs	1	bug
+994	85143	cardil	2019-11-12 17:21:48	2019-11-12 19:06:08	Passing labels as number results in misleading error	5	bug
+995	85142	PatrickLang	2019-11-12 16:48:19	2019-11-15 21:45:29	Windows CRI-ContainerD: some paths have / instead of \\	5	bug
+996	85141	tedyu	2019-11-12 16:32:52	2019-11-14 15:14:49	Add expired Job to queue when time left is zero	3	bug
+997	85140	alculquicondor	2019-11-12 16:30:38	2019-11-13 21:04:12	Make algorithm source an option of scheduler.New	5	feature
+998	85139	ahg-g	2019-11-12 16:17:03	2019-11-12 19:52:13	Updated NewSnapshot interface to accept a NodeInfoMap	1	feature
+999	85138	liggitt	2019-11-12 14:46:40	2019-11-13 21:04:00	Promote apiserver.config.k8s.io/v1, kind=WebhookAdmissionConfiguration	1	cleanup

@@ -1,65 +1,58 @@
 from github import Github
+import time
+import json
+import re
+import matplotlib.pyplot as plt
 import src.analyzer as a
 import src.crawler as c
 import src.preprocesser as p
+import src.visualizer as v
 
-####################################
+org = "kubernetes"
+repo = "kubernetes"
 
-# get_prs_for_repo("cloudfoundry-incubator", "cf-openstack-validator")
-# get_orgs_for_repo("cloudfoundry-incubator/cf-openstack-validator")
+###########################################################################
+############################## CRAWLING ###################################
+# c.crawl(org, repo)
+# p.preprocess(org, repo)
 
-####################################
 
-# volunteer_acceptance_rate, employee_acceptance_rate = a.calculate_pr_acceptance_rate("kubernetes", "kubernetes")
-# # volunteer_acceptance_rate, employee_acceptance_rate = c.calculate_pr_acceptance_rate("cloudfoundry")
-# print("volunteer_acceptance_rate is: " + str(volunteer_acceptance_rate))
-# print("employee_acceptance_rate is: " + str(employee_acceptance_rate))
+###########################################################################
+####################### ANALYSIS & VISUALIZATION ##########################
 
-####################################
+# metric #1: PR accepteance rate
+print(a.calculate_pr_acceptance_rate_by_companies(org, repo))
 
-# print(a.calculate_issue_processing_time("kubernetes", "kubernetes"))
-p.calculate_issue_processing_time("kubernetes", "kubernetes")
+# metric #2: processing time
+a.calculate_issue_processing_time(org, repo)
+issues = c.get_issues_with_processing_time(org, repo)
+v.boxplot_issue_processing_time(issues)
 
-####################################
+# metric #3: response time
+a.calculate_issue_reponse_time(org, repo)
+issues = c.get_issues_with_response_time(org, repo)
+v.boxplot_issue_reponse_time(issues)
 
-# volunteer_avg_time, employee_avg_time = c.calculate_issue_processing_time("cloudfoundry")
-# print("volunteer_avg_time is: " + str(volunteer_avg_time))
-# print("employee_avg_time is: " + str(employee_avg_time))
+# metric #4: prioritization
+issue_kind_distribution = a.calculate_issue_kind_share_by_company(org, repo)
+v.show_stacked_bar_chart_for_issue_kinds_by_company(issue_kind_distribution)
 
-####################################
+# other metrics
+# print(a.calculate_avg_issue_response_time_by_company(org, repo))
+# print(a.calculate_avg_issue_processing_time_by_company(org, repo))
 
-# with open('github-token', 'r') as token_file:
-#     token = token_file.read().rstrip("\n")
- 
-# g = Github(token)
+# data inspection / controlling variables
+issues = c.get_issues_with_company(org, repo)
+v.show_stacked_bar_chart_for_issue_priorities_by_company(issues)
 
-# # for i in g.get_organization("cloudfoundry").get_issues(filter="all", state="closed"):
-# #     print(i.pull_request)
+plt.show()
 
-# # for issue in g.get_organization("cloudfoundry").get_issues(filter="all"):
-# #     print(issue.title)
 
-# ####################################
+###########################################################################
+############################# PLAYGROUND ##################################
 
-# org = "kubernetes"
-# repo = "kubectl"
+# commentators = set(c.get_issues_with_comments(org, repo)["user_login"].values)
+# for co in commentators:
+#     if "bot" in co:
+#         print(co)
 
-# i = 0
-# print("####### RATE LIMIT: " + str(g.get_rate_limit().core))
-# for pull in g.get_repo(org + "/" + repo).get_pulls(state="closed"):     
-#         i += 1
-#         pull.
-#         user = pull.user.login
-#         print(pull.state)
-#         print(user)
-
-# # i = 0
-# # print("####### RATE LIMIT: " + str(g.get_rate_limit().core))
-# # for issue in g.get_repo(org + "/" + repo).get_issues(state="closed"):     
-# #         i += 1
-# #         user = issue.user.login
-# #         print(issue.pull_request)
-# #         print(user)
-
-# print("####### RATE LIMIT: " + str(g.get_rate_limit().core))
-# print("NUM of pulls: " + str(i))
