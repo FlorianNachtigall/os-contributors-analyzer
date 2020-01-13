@@ -1,3 +1,4 @@
 github-token
 .vscode
+.local-data-backups
 __pycache__/
