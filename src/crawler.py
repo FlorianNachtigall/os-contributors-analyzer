@@ -194,7 +194,10 @@ def get_issue_comments(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
 
 def get_issues_with_comments(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
+    issues = pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
+    if not issues[issues.duplicated()].empty:
+        raise Exception("Aborting. Duplicate rows in dataframe file: " + org + "_" + repo + "_" + issue_file_suffix + "with_comments" + "\nSee duplicates:\n" + str(issues[issues.duplicated()]))
+    return issues
 
 def get_issues(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind"])
