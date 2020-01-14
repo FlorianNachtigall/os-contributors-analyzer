@@ -1,4 +1,5 @@
 from datetime import datetime
+from datetime import timedelta
 import math
 import json
 import pandas as pd
@@ -7,7 +8,7 @@ import src.crawler as c
 def preprocess(org, repo):
     add_company_column_for_users(org, repo)
     add_company_column_for_issues(org, repo)
-    
+
 def add_company_column_for_users(org, repo):
     companies = c.get_companies(org, repo)
     users = c.get_issue_authors(org, repo)
@@ -38,11 +39,13 @@ def calculate_issue_time_difference(org, repo, issues, timeA, timeB):
             timeA: issue[timeA],
             timeB: issue[timeB],
             "time_difference": determine_processing_time(issue[timeA], issue[timeB], time_format, in_seconds=True),
-            "title": issue.title
+            "title": issue.title,
+            "priority": issue.priority,
+            "kind": issue.kind
             }
         issues_with_time_difference.append(issue_dict)
 
-    return pd.DataFrame(issues_with_time_difference, columns=["number", "user_login", "company", timeA, timeB, "time_difference", "title"])
+    return pd.DataFrame(issues_with_time_difference, columns=list(issue_dict.keys()))
 
 def extract_first_comment_per_issue(issue_comments):
     time_format = "%Y-%m-%d %H:%M:%S"
@@ -98,6 +101,20 @@ def compare_users_with_devstats_data(devstats_filename):
         print("# of users: " + str(len(users)))
         print("# of common users: " + str(len(intersection)))
         print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
+
+def find_time_unregularities_in_issues(issues):
+    time_format = "%Y-%m-%d %H:%M:%S"
+    issues = issues.dropna(subset=["updated_at"])
+    updated_at_list = list(issues.updated_at.values)
+    last = datetime.fromtimestamp(0)
+
+    for issue in updated_at_list:
+        current = datetime.strptime(issue, time_format)
+        if (current - last) > timedelta(hours=24):
+            print("### unregularity: ###")
+            print(last)
+            print(current)
+        last = current
 
 def _determine_employer(user, companies):
     user_orgs = user["user_orgs"]

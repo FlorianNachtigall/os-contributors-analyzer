@@ -1,5 +1,6 @@
 from collections import defaultdict
 from collections import Counter
+from datetime import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,19 +13,46 @@ import src.analyzer as a
 
 def boxplot_issue_reponse_time(issues):
     plt.figure()
-    sns.boxplot(x="company", y="response_time", showfliers=False, showmeans=True, whis=[5, 80], data=issues, order=sorted(list(set(issues["company"].values))))
+    _print_company_representation_in_data(issues)
+    sns.boxplot(x="company", y="response_time", showfliers=False, showmeans=True, whis=[5, 75], data=issues, order=sorted(list(set(issues["company"].values))))
 
 def boxplot_issue_processing_time(issues):
     plt.figure()
+    _print_company_representation_in_data(issues)
     sns.boxplot(x="company", y="processing_time", showfliers=False, showmeans=True, whis=[5, 75], data=issues, order=sorted(list(set(issues["company"].values))))
 
 def show_stacked_bar_chart_for_issue_priorities_by_company(df):
     df = df.loc[df["priority"] != 5]
+    _print_company_representation_in_data(df)
     _normalized_stacked_bar_chart(df, "priority", "company")
 
 def show_stacked_bar_chart_for_issue_kinds_by_company(df):
+    print(df.sum())
     df = df.apply(lambda x: x / x.sum())
     df.transpose().plot.bar(stacked=True, figsize=(10,7))   
+
+def filter_issues_for_kind(issues, kind):
+    issues = issues.dropna(subset=["kind", "company"])
+    issues[kind] = issues.apply(_add_dummy_var_for_kind, kind=kind, axis = 1)
+    return issues.loc[issues[kind] == True]
+
+def filter_issues_after(issues, time):
+    issues = issues.dropna(subset=["created_at", "company"])
+    issues["time"] = issues.apply(_add_dummy_var_for_time, time = time, axis = 1)
+    return issues.loc[issues["time"] == True]
+
+def _add_dummy_var_for_kind(issue, kind):
+    if kind in issue["kind"]:
+        return True
+    else:
+        return False
+
+def _add_dummy_var_for_time(issue, time):
+    time_format = "%Y-%m-%d %H:%M:%S"
+    if datetime.strptime(issue.created_at, time_format) > time:
+        return True
+    else:
+        return False
 
 # reverse function of pd.melt()
 def _boxplot_issue_processing_time_with_pd(org, repo):
@@ -43,6 +71,9 @@ def _boxplot_issue_processing_time_with_pd(org, repo):
     print(list(processing_time_by_company.keys()))
     processing_time_by_company_df.boxplot(column=list(processing_time_by_company.keys()))
     
+def _print_company_representation_in_data(df):
+    print(pd.DataFrame.from_dict(Counter(df.company.values), orient='index'))
+
 def _remove_outliers(df, column):
     Q1 = df[column].quantile(0.25)
     Q3 = df[column].quantile(0.75)

@@ -2,6 +2,7 @@ from github import Github
 from github import GithubException
 from collections import Counter
 from datetime import datetime
+from datetime import timedelta
 import pandas as pd
 import os.path
 import time
@@ -184,10 +185,10 @@ def crawl_users(user_logins, org, repo):
     return users
 
 def get_issues_with_processing_time(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_processing_time", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "closed_at", "processing_time", "title"])
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_processing_time_5", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "closed_at", "processing_time", "title", "priority", "kind"])
 
 def get_issues_with_response_time(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title"])
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time_3", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title", "priority", "kind"])
 
 def get_issue_comments(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
@@ -330,7 +331,7 @@ def _get_first_comment(issue):
             comments = issue.get_comments()
             for comment in comments:
                 if comment.user.login != issue.user.login and comment.user.login not in bot_list:
-                    if (comment.created_at - issue.created_at) > datetime.timedelta(seconds=30):
+                    if (comment.created_at - issue.created_at) > timedelta(seconds=30):
                         return comment
                     
                     with open('potential_bots.log', 'a') as f:
@@ -343,9 +344,9 @@ def _get_time_of_last_issue(org, repo):
     time_format = "%Y-%m-%d %H:%M:%S"
     column = get_issues_with_comments(org, repo)["updated_at"]
     if len(column) > 0:
-        return datetime.strptime(column.iloc[-1], time_format) # + datetime.timedelta(seconds=1) to avoid duplicates - alternativly do df.drop_duplicates().reset_index(drop=True)
+        return datetime.strptime(column.iloc[-1], time_format) # + timedelta(seconds=1) to avoid duplicates - alternativly do df.drop_duplicates().reset_index(drop=True)
     else:
-        return datetime.fromtimestamp(1546300800)
+        return datetime.fromtimestamp(1483228800)
 
 def _determine_issue_number(url):
     match = re.search("issues\/(\d+)", url)

@@ -1,5 +1,5 @@
 from github import Github
-import datetime
+from datetime import timedelta
 import math
 import pandas as pd
 import src.crawler as c
@@ -42,7 +42,7 @@ def calculate_avg_issue_response_time_by_company(org, repo):
 
     companies = c.get_companies(org, repo)
     for employer in companies.keys():
-        companies[employer]["response_time"] = datetime.timedelta(0)
+        companies[employer]["response_time"] = timedelta(0)
         companies[employer]["issue_count"] = 0
 
     time_format = "%Y-%m-%d %H:%M:%S"
@@ -66,7 +66,7 @@ def calculate_avg_issue_processing_time_by_company(org, repo):
     time_format = "%Y-%m-%d %H:%M:%S"
     companies = c.get_companies(org, repo)
     for employer in companies.keys():
-        companies[employer]["processing_time"] = datetime.timedelta(0)
+        companies[employer]["processing_time"] = timedelta(0)
         companies[employer]["issue_count"] = 0
 
     issues = c.get_issues(org, repo)
@@ -136,8 +136,8 @@ def calculate_issue_processing_time_for_org_by_employment_status(org):
     
     # timedelta is needed for time calculation because issue.closed_at
     # returns datetime object with '%Y-%m-%dT%H:%M:%SZ format'
-    employee_processing_time = datetime.timedelta(0)
-    volunteer_processing_time = datetime.timedelta(0)
+    employee_processing_time = timedelta(0)
+    volunteer_processing_time = timedelta(0)
     employee_issue_count = 0
     volunteer_issue_count = 0
 
