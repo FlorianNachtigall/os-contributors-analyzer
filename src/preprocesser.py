@@ -1,5 +1,6 @@
 from datetime import datetime
 from datetime import timedelta
+from collections import Counter
 import math
 import json
 import pandas as pd
@@ -84,6 +85,57 @@ def merge_issues_with_issue_comments(issues, issue_comments):
             print(issue)
     return issues
 
+def add_column_for_user_contribution_strength(issues):
+    user_logins = issues["user_login"].values
+    counter = Counter(user_logins)
+    issues["user_contributions"] = issues.apply(lambda issue: counter[issue["user_login"]], axis = 1)
+    return issues
+
+def add_dummy_column_for_pr_merge_state(pulls):
+    pulls["merged"] = pulls.apply(_determine_if_merged, axis = 1)
+    return pulls
+     
+def _determine_if_merged(pull):
+    if pd.notnull(pull["merged_at"]):
+        return 1
+    else:
+        return 0
+
+def add_dummy_column_for_each_kind(issues):
+    issue_kinds = ['failing-test', 'feature', 'cleanup', 'documentation', 'flake', 'api-change', 'design', 'deprecation', 'bug']
+    for kind in issue_kinds:
+        issues[kind] = issues.apply(_determine_if_kind, kind=kind, axis = 1)
+    return issues
+
+def _determine_if_kind(issue, kind):
+    if pd.notnull(issue["kind"]) and kind in issue["kind"]:
+        return 1
+    else:
+        return 0
+
+def filter_issues_for_kind(issues, kind):
+    issues = issues.dropna(subset=["kind", "company"])
+    issues[kind] = issues.apply(_add_dummy_var_for_kind, kind=kind, axis = 1)
+    return issues.loc[issues[kind] == True]
+
+def filter_issues_after(issues, time):
+    issues = issues.dropna(subset=["created_at", "company"])
+    issues["time"] = issues.apply(_add_dummy_var_for_time, time = time, axis = 1)
+    return issues.loc[issues["time"] == True]
+
+def _add_dummy_var_for_kind(issue, kind):
+    if kind in issue["kind"]:
+        return True
+    else:
+        return False
+
+def _add_dummy_var_for_time(issue, time):
+    time_format = "%Y-%m-%d %H:%M:%S"
+    if datetime.strptime(issue.created_at, time_format) > time:
+        return True
+    else:
+        return False
+
 def get_companies_for_contributors(org, repo):
     authors_df = c.get_issue_authors_with_company(org, repo).fillna('')
     return authors_df.set_index('user_login')['company'].to_dict()
@@ -98,7 +150,8 @@ def compare_users_with_devstats_data(devstats_filename):
 
         intersection = {user for user in users if user in devstats_users}
         print(intersection)
-        print("# of users: " + str(len(users)))
+        print("# of crawled users: " + str(len(users)))
+        print("# of dev stats users: " + str(len(devstats_users)))
         print("# of common users: " + str(len(intersection)))
         print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
 

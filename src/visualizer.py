@@ -29,30 +29,7 @@ def show_stacked_bar_chart_for_issue_priorities_by_company(df):
 def show_stacked_bar_chart_for_issue_kinds_by_company(df):
     print(df.sum())
     df = df.apply(lambda x: x / x.sum())
-    df.transpose().plot.bar(stacked=True, figsize=(10,7))   
-
-def filter_issues_for_kind(issues, kind):
-    issues = issues.dropna(subset=["kind", "company"])
-    issues[kind] = issues.apply(_add_dummy_var_for_kind, kind=kind, axis = 1)
-    return issues.loc[issues[kind] == True]
-
-def filter_issues_after(issues, time):
-    issues = issues.dropna(subset=["created_at", "company"])
-    issues["time"] = issues.apply(_add_dummy_var_for_time, time = time, axis = 1)
-    return issues.loc[issues["time"] == True]
-
-def _add_dummy_var_for_kind(issue, kind):
-    if kind in issue["kind"]:
-        return True
-    else:
-        return False
-
-def _add_dummy_var_for_time(issue, time):
-    time_format = "%Y-%m-%d %H:%M:%S"
-    if datetime.strptime(issue.created_at, time_format) > time:
-        return True
-    else:
-        return False
+    df.transpose().plot.bar(stacked=True, figsize=(10,7))
 
 # reverse function of pd.melt()
 def _boxplot_issue_processing_time_with_pd(org, repo):

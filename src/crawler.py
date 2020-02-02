@@ -97,7 +97,7 @@ def crawl_issues_with_comments(org, repo):
 
                 if len(issues) % buffer_size == 0:
                     issues_df = pd.DataFrame(issues, columns=list(issue_dict.keys()))
-                    issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix + "with_comments", sep='\t', index=False, mode='a', header=False)
+                    issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_comments", sep='\t', index=False, mode='a', header=False)
                     issues = []
                 _respectRateLimit()
 
@@ -106,7 +106,7 @@ def crawl_issues_with_comments(org, repo):
             continue
 
         issues_df = pd.DataFrame(issues, columns=list(issue_dict.keys()))
-        issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix + "with_comments", sep='\t', index=False, mode='a', header=False)
+        issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_comments", sep='\t', index=False, mode='a', header=False)
         break
         
 def crawl_issue_comments(org, repo):
@@ -191,12 +191,15 @@ def get_issues_with_response_time(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time_3", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title", "priority", "kind"])
 
 def get_issue_comments(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
+    return pd.read_csv("small_28000_" + org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
+
+def raise_for_duplicates(df):
+    if not df[df.duplicated()].empty:
+        raise Exception("Aborting. Duplicate rows in dataframe. \nSee duplicates:\n" + str(df[df.duplicated()]))
+    return df
 
 def get_issues_with_comments(org, repo):
-    issues = pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
-    if not issues[issues.duplicated()].empty:
-        raise Exception("Aborting. Duplicate rows in dataframe file: " + org + "_" + repo + "_" + issue_file_suffix + "with_comments" + "\nSee duplicates:\n" + str(issues[issues.duplicated()]))
+    issues = pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
     return issues
 
 def get_issues(org, repo):
@@ -349,7 +352,7 @@ def _get_time_of_last_issue(org, repo):
     if len(column) > 0:
         return datetime.strptime(column.iloc[-1], time_format) # + timedelta(seconds=1) to avoid duplicates - alternativly do df.drop_duplicates().reset_index(drop=True)
     else:
-        return datetime.fromtimestamp(1483228800)
+        return datetime.fromtimestamp(0)
 
 def _determine_issue_number(url):
     match = re.search("issues\/(\d+)", url)
