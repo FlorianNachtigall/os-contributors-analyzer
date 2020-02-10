@@ -1,15 +1,18 @@
 from github import Github
 from datetime import timedelta
+from datetime import datetime
 import math
+import numpy as np
 import pandas as pd
 import src.crawler as c
 import src.preprocesser as p
 
 def calculate_issue_processing_time(org, repo):
     issues = c.get_issues(org, repo)
-    issues_w_processing_time = p.calculate_issue_time_difference(org, repo, issues, "created_at", "closed_at")
-    issues_w_processing_time.rename(columns = {'time_difference':'processing_time'}, inplace = True) 
-    issues_w_processing_time.to_csv(org + "_" + repo + "_" + c.issue_file_suffix + "_with_processing_time_5", sep='\t')
+    for based_on_devstats_data in True,False:
+        issues_w_processing_time = p.calculate_issue_time_difference(org, repo, issues, "created_at", "closed_at", based_on_devstats_data)
+        issues_w_processing_time.rename(columns = {'time_difference':'processing_time'}, inplace = True) 
+        issues_w_processing_time.to_csv(org + "_" + repo + "_" + c.issue_file_suffix + "_with_processing_time_based_on_devstats_" + str(based_on_devstats_data) , sep='\t')
 
 def calculate_issue_reponse_time(org, repo):
     issues_w_comments = c.get_issues_with_comments(org, repo)
@@ -20,12 +23,13 @@ def calculate_issue_reponse_time(org, repo):
         issue_comments = p.extract_first_comment_per_issue(issue_comments)
         issues_w_comments = p.merge_issues_with_issue_comments(issues, issue_comments)
 
-    issues_w_response_time_df = p.calculate_issue_time_difference(org, repo, issues_w_comments, "created_at", "commented_at")
-    issues_w_response_time_df.rename(columns = {'time_difference':'response_time'}, inplace = True) 
-    issues_w_response_time_df.to_csv(org + "_" + repo + "_" + c.issue_file_suffix + "_with_response_time_3", sep='\t')
+    for based_on_devstats_data in True,False:
+        issues_w_response_time_df = p.calculate_issue_time_difference(org, repo, issues_w_comments, "created_at", "commented_at", based_on_devstats_data)
+        issues_w_response_time_df.rename(columns = {'time_difference':'response_time'}, inplace = True) 
+        issues_w_response_time_df.to_csv(org + "_" + repo + "_" + c.issue_file_suffix + "_with_response_time_based_on_devstats_" + str(based_on_devstats_data) , sep='\t')
 
-def calculate_pr_acceptance_rate_by_companies(org, repo):
-    companies = _calculate_pr_composition_by_companies(org, repo)
+def calculate_pr_acceptance_rate_by_companies(org, repo, based_on_devstats_data=False):
+    companies = _calculate_pr_composition_by_companies(org, repo, based_on_devstats_data)
     pr_acceptance_rate = {}
     for company in companies.keys():
         closed_pulls_count = len(companies[company]["closed_pulls"])
@@ -33,6 +37,7 @@ def calculate_pr_acceptance_rate_by_companies(org, repo):
         total_pulls_count = merged_pulls_count + closed_pulls_count
         companies[company]["pr_acceptance_rate"] = merged_pulls_count / total_pulls_count if total_pulls_count else 0
         pr_acceptance_rate[company] = merged_pulls_count / total_pulls_count if total_pulls_count else 0
+    print("\nPR Acceptance Rate (based_on_devstats_data: " + str(based_on_devstats_data) + "):\n" + str(pr_acceptance_rate))
     return pr_acceptance_rate
     
 def calculate_avg_issue_response_time_by_company(org, repo):
@@ -46,7 +51,7 @@ def calculate_avg_issue_response_time_by_company(org, repo):
         companies[employer]["issue_count"] = 0
 
     time_format = "%Y-%m-%d %H:%M:%S"
-    for index, issue in issues_w_comments.iterrows():
+    for _, issue in issues_w_comments.iterrows():
         employer = p.get_employer(issue.user_login_x, org, repo) # TODO make more generic / change merge behavior
         open_issue = type(issue.created_at_y) is float and math.isnan(issue.created_at_y)
         if employer is None or open_issue:
@@ -61,6 +66,16 @@ def calculate_avg_issue_response_time_by_company(org, repo):
 
     return companies
 
+def calculate_overall_pr_acceptance_rate(org, repo):
+    pulls = c.get_pulls(org, repo).dropna(subset=["closed_at"]) 
+    accepted_pulls = pulls.loc[~pulls["merged_at"].isnull()]
+    acceptance_rate = len(accepted_pulls.index) / len(pulls.index)
+    print("Total # of PRs: \t" + str(len(pulls)))
+    print("-> # of rejected PRs: \t" + str(len(pulls.loc[~pulls["merged_at"].isnull()])))
+    print("-> # of merged PRs: \t" + str(len(pulls.loc[pulls["merged_at"].isnull()])))
+    print("PR Acceptance Rate: \t" + str(acceptance_rate))
+    return acceptance_rate
+
 def calculate_avg_issue_processing_time_by_company(org, repo):
     # note that PRs are included here as they are a special type of an issue
     time_format = "%Y-%m-%d %H:%M:%S"
@@ -72,7 +87,7 @@ def calculate_avg_issue_processing_time_by_company(org, repo):
     issues = c.get_issues(org, repo)
 
     print("Start iterating over issues...")
-    for index, issue in issues.iterrows():
+    for _, issue in issues.iterrows():
         employer = p.get_employer(issue.user_login, org, repo)
         still_open = type(issue.closed_at) is float and math.isnan(issue.closed_at)
         if employer is None or still_open:
@@ -89,12 +104,14 @@ def calculate_avg_issue_processing_time_by_company(org, repo):
 
     return companies
 
-def calculate_issue_kind_share_by_company(org, repo):
+def calculate_issue_kind_share_by_company(issues, companies):
     issue_kinds = ['failing-test', 'feature', 'cleanup', 'documentation', 'flake', 'api-change', 'design', 'deprecation', 'bug']
-    companies = c.get_companies(org, repo).keys()
     distribution = {key: dict.fromkeys(issue_kinds, 0) for key in companies}
-    issues = c.get_issues_with_company(org, repo).dropna(subset=["kind", "company"]) 
-    for index, issue in issues.iterrows():
+    issues = issues.dropna(subset=["kind", "company"]) 
+    issues = issues.loc[issues['company'].isin(companies)]
+
+    # issues = c.get_issues_with_company(org, repo).dropna(subset=["kind", "company"]) 
+    for _, issue in issues.iterrows():
         kinds = issue.kind.split(",")
         for kind in kinds:
             distribution[issue.company][kind] += 1 / len(kinds)
@@ -102,16 +119,20 @@ def calculate_issue_kind_share_by_company(org, repo):
 
 ###################################### PRIVATE ############################################
 
-def _calculate_pr_composition_by_companies(org, repo):
+def _calculate_pr_composition_by_companies(org, repo, company_affiliation_based_on_devstats_data):
     # only consider 'closed' PRs for our analysis
+    time_format = "%Y-%m-%d %H:%M:%S"
     pulls = c.get_pulls(org, repo)
     companies = c.get_companies(org, repo)
-    contributors_companies = p.get_companies_for_contributors(org, repo)
-    for index, pull in pulls.iterrows():
+    contributors_companies = p.get_employer_for_contributors(org, repo, based_on_devstats_data=company_affiliation_based_on_devstats_data)
+    for _, pull in pulls.iterrows():
         user = pull["user_login"]
         employer = contributors_companies.get(user)
-        if not employer:
+        if company_affiliation_based_on_devstats_data and employer:
+            employer = p.harmonize_company_name(p.determine_historic_employer(employer, datetime.strptime(pull["created_at"], time_format)))
+        if employer not in companies.keys():
             continue
+
         merged_at = pull["merged_at"]
         is_merged = not (type(merged_at) is float and math.isnan(merged_at))
 

@@ -41,7 +41,7 @@ def crawl_pulls(org, repo):
             }
         pulls.append(pull_dict)
     pulls_df = pd.DataFrame(pulls, columns=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
-    pulls_df.to_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t')
+    pulls_df.to_csv("data/" + org + "_" + repo + "_" + pull_file_suffix, sep='\t')
 
 def crawl_issues(org, repo):
     repo_object = g.get_repo(org + "/" + repo)
@@ -165,11 +165,11 @@ def crawl_users(user_logins, org, repo):
             user = g.get_user(user_login_name)
         except GithubException:
             with open('log-data/users_not_found.log', 'a') as f:
-                f.write(user_login_name)
+                f.write(str(user_login_name) + "\n")
             continue
         except:
             with open('log-data/failing_users.log', 'a') as f:
-                f.write(user_login_name)
+                f.write(str(user_login_name) + "\n")
             continue
             
         user_orgs = []
@@ -184,18 +184,24 @@ def crawl_users(user_logins, org, repo):
         users.append(user_dict)
     return users
 
-def get_issues_with_processing_time(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_processing_time_5", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "closed_at", "processing_time", "title", "priority", "kind"])
+def get_issues_with_processing_time(org, repo, based_on_devstats_data=False):
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_processing_time_based_on_devstats_" + str(based_on_devstats_data), sep='\t', header=1, names=["number", "user_login", "company", "created_at", "closed_at", "processing_time", "title", "priority", "kind"])
 
-def get_issues_with_response_time(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time_3", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title", "priority", "kind"])
+def get_issues_with_response_time(org, repo, based_on_devstats_data=False):
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time_based_on_devstats_" + str(based_on_devstats_data), sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title", "priority", "kind"])
 
 def get_issue_comments(org, repo):
     return pd.read_csv("data/" + org + "_" + repo + "_" + issue_comments_file_suffix + "_cache.csv", sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
 
+# def get_all_issues_with_comments(org, repo):
+#     issues_df = pd.concat([get_issues_with_comments_before_2017(org, repo), get_issues_with_comments(org, repo)]).drop_duplicates().reset_index(drop=True).sort_values(by=["number"])
+#     issues_df.to_csv(org + "_" + repo + "_" + issue_file_suffix + "_all_with_comments", sep='\t', header=1)
+
 def get_issues_with_comments(org, repo):
-    issues = pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
-    return issues
+    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_all_with_comments", sep='\t', header=1, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
+
+def get_issues_with_comments_before_2017(org, repo):
+    return pd.read_csv("testing-data/" + org + "_" + repo + "_" + issue_file_suffix + "_before_2017_with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
 
 def get_issues(org, repo):
     return pd.read_csv("data/" + org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind"])
@@ -204,7 +210,7 @@ def get_issues_with_company(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "with_employer", sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind", "company"])
 
 def get_pulls(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
+    return pd.read_csv("data/" + org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
 
 def get_issue_authors(org, repo):
     return pd.read_csv("data/" + org + "_" + repo + "_" + user_file_suffix + ".csv", sep='\t', header=None, names=["user_login", "user_company", "user_mail", "user_orgs"])
@@ -212,12 +218,12 @@ def get_issue_authors(org, repo):
 def get_issue_authors_with_company(org, repo):
     return pd.read_csv("data/" + org + "_" + repo + "_" + user_file_suffix + "_with_company.csv", sep='\t', header=1, names=["user_login", "user_company", "user_mail", "user_orgs", "company"])
 
-def get_companies(org, repo):
-    with open("data/" + org + "_" + repo + "_" + company_file_suffix, 'r') as f:
-        return json.load(f)
-
 def get_devstats_user():
     with open("data/CNCF-devstats-users.json", 'r') as f:
+        return json.load(f)
+
+def get_companies(org, repo):
+    with open("data/" + org + "_" + repo + "_" + company_file_suffix, 'r') as f:
         return json.load(f)
 
 def raise_for_duplicates(df):
@@ -326,7 +332,7 @@ def _get_top_user_logins(pulls, number_of_pulls):
     return top_user_logins
 
 def _get_first_comment(issue):
-    bot_list = ["goodluckbot, k8s-cherrypick-bot", "athenabot", "k8s-github-robot", "googlebot", "k8s-reviewable", "k8s-ci-robot", "k8s-bot", "fejta-bot" "kubernetes-bot", "miabbot", "timbot"]
+    bot_list = ["goodluckbot", "k8s-cherrypick-bot", "athenabot", "k8s-github-robot", "googlebot", "k8s-reviewable", "k8s-ci-robot", "k8s-bot", "fejta-bot" "kubernetes-bot", "miabbot", "timbot", "k8s-oncall"]
     for attempt in range(10):
         try:
             comments = issue.get_comments()
@@ -367,9 +373,9 @@ def _determine_priority(labels):
         "critical-urgent": 0,
         "important-soon": 1,
         "important-longterm": 2,
-        "backlog": 3,
+        "   ": 3,
         "awaiting-more-evidence": 4,
-        "not-prioritized": 5,
+        "not-prioritized/need-priority": 5,
         "P0": 0,
         "P1": 1,
         "P2": 2,
@@ -379,4 +385,4 @@ def _determine_priority(labels):
         prio = re.search("priority\/(.+)", label.name)
         if prio is not None:
             return priority_mapping[prio.group(1)]
-    return 5 # not-prioritized
+    return 5 # not-prioritized or label need-priority
