@@ -14,7 +14,7 @@ def add_company_column_for_users(org, repo):
     companies = c.get_companies(org, repo)
     users = c.get_issue_authors(org, repo)
     users_with_company = merge_users_with_company(users, companies)
-    users_with_company.to_csv(org + "_" + repo + "_" + c.user_file_suffix + "_with_company", sep='\t')
+    users_with_company.to_csv(org + "_" + repo + "_" + c.user_file_suffix + "_with_company.csv", sep='\t')
 
 def add_company_column_for_issues(org, repo):
     users = c.get_issue_authors_with_company(org, repo)
@@ -140,20 +140,100 @@ def get_companies_for_contributors(org, repo):
     authors_df = c.get_issue_authors_with_company(org, repo).fillna('')
     return authors_df.set_index('user_login')['company'].to_dict()
 
-def compare_users_with_devstats_data(devstats_filename):
-    with open(devstats_filename, 'r') as f:
-        datastore = json.load(f)
-        df = pd.DataFrame(datastore)
-        devstats_users = list(set(df["login"].values))
-        users_df = c.get_issue_authors("kubernetes", "kubernetes")
-        users = list(set(users_df["user_login"].values))
+def get_companies_for_contributors_based_on_devstats_data(org, repo):
+    authors_df = get_preprocessed_devstats_user().fillna('')
+    return authors_df.set_index('user_login')['company'].to_dict()
 
-        intersection = {user for user in users if user in devstats_users}
-        print(intersection)
-        print("# of crawled users: " + str(len(users)))
-        print("# of dev stats users: " + str(len(devstats_users)))
-        print("# of common users: " + str(len(intersection)))
-        print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
+def compare_users_with_devstats_data():
+    datastore = c.get_devstats_user()
+    df = pd.DataFrame(datastore)
+    devstats_users = list(set(df["login"].values))
+    users_df = c.get_issue_authors_with_company("kubernetes", "kubernetes")
+    users = list(set(users_df["user_login"].values))
+
+    intersection = {user for user in users if user in devstats_users}
+    print("# of crawled users: " + str(len(users)))
+    print("# of dev stats users: " + str(len(devstats_users)))
+    print("# of common users: " + str(len(intersection)))
+    print("percentage of users covered by devstats: " + str(len(intersection) / len(users)))
+    
+    users_df["company"].fillna('unknown', inplace=True)
+    users_df_without_company = users_df.loc[users_df["company"] == "unknown"]
+    users_without_company = list(set(users_df_without_company["user_login"].values))
+    print("# of users without company affiliation: " + str(len(users_without_company)))
+    user_w_company_in_devstats = {user for user in users_without_company if user in devstats_users}
+    print("# of users with company affiliation in devstats: " + str(len(user_w_company_in_devstats)))
+
+def determine_bots_based_on_devstats_data():
+    devstats_users = pd.DataFrame(c.get_devstats_user())
+    bots = devstats_users.loc[devstats_users["affiliation"] == "(Robots)"]
+    return list(set(bots["login"].values))
+
+def find_bot_comments(org, repo):
+    bots = determine_bots_based_on_devstats_data()
+    issues = c.get_issues_with_comments(org, repo)
+    issues_w_bot_comment = issues.loc[issues["commentator"].isin(bots)]
+    print(issues_w_bot_comment)
+    return issues_w_bot_comment
+
+def determine_company_share_of_issues_based_on_devstats_data(org, repo):
+    issues = c.get_issues(org, repo)
+    users = get_preprocessed_devstats_user()
+    issues_with_company = merge_issues_with_company_column(issues, users)
+    return Counter(issues_with_company.company.values)
+
+def compare_company_share_of_issues_with_devstats_data(org, repo):
+    company_issue_counter = Counter(c.get_issues_with_company(org, repo).company.values)
+    company_issue_counter_devstats = determine_company_share_of_issues_based_on_devstats_data(org, repo)
+    print(_filter_by_frequency(company_issue_counter, 500))
+    print(_filter_by_frequency(company_issue_counter_devstats, 500))
+
+def get_preprocessed_devstats_user():
+    devstats_users = pd.DataFrame(c.get_devstats_user())
+    devstats_users = devstats_users.rename(columns = {"login":"user_login"}).drop_duplicates(subset=["user_login"]).dropna(subset=["affiliation"]) 
+    devstats_users["company"] = devstats_users.apply(_determine_last_employer_in_devstats, axis = 1)
+    return devstats_users
+
+def determine_company_share_of_contributors_based_on_devstats_data(org, repo):
+    devstats_users = get_preprocessed_devstats_user()
+    employee_counter = Counter(devstats_users.last_employer.values)
+    print(_filter_by_frequency(employee_counter, 50))
+
+def compare_contributor_company_affiliation_with_devstats_data(org, repo):
+    companies = list(c.get_companies(org, repo).keys())
+    crawled_users = c.get_issue_authors_with_company(org, repo)
+    devstats_users = get_preprocessed_devstats_user()
+    devstats_users.rename(columns = {'company':'last_employer'}, inplace = True) 
+    users_with_devstats_info = pd.merge(crawled_users, devstats_users[["user_login", "email", "affiliation", "last_employer"]], how="left", on=["user_login"])
+
+    # users identified overall
+    users_identified_with_devstats = users_with_devstats_info.loc[users_with_devstats_info["last_employer"].isin(companies)]
+    users_identified = users_with_devstats_info.loc[users_with_devstats_info["company"].isin(companies)]
+    print("Overall users: " + str(len(users_with_devstats_info.index)) + "\n-> with identified employers: " + str(len(users_identified.index)) + "\n-> with devstats user affiliaton data identified employers: " + str(len(users_identified_with_devstats.index)) + "\n")
+
+    # users identified in just on dataset (either with crawled  or with devstats information)
+    users_not_identified = users_with_devstats_info.loc[users_with_devstats_info["company"].isnull()]
+    users_identified_with_devstats = users_not_identified.loc[users_not_identified["last_employer"].isin(companies)]
+    print(users_identified_with_devstats)
+    users_not_identified_with_devstats = users_with_devstats_info.loc[~users_with_devstats_info["last_employer"].isin(companies)]
+    users_identified = users_not_identified_with_devstats.loc[users_not_identified_with_devstats["company"].notnull()]
+    print(users_identified)
+
+    # users' company affiliation conflicting with devstats data
+    users_with_devstats_info = users_with_devstats_info.dropna(subset=["company"]) 
+    users_with_devstats_info = users_with_devstats_info.dropna(subset=["last_employer"]) 
+    users_with_devstats_info = users_with_devstats_info.loc[users_with_devstats_info["last_employer"].isin(companies)]
+    conflicting_users = users_with_devstats_info.loc[users_with_devstats_info["company"] != users_with_devstats_info["last_employer"]]
+    print(conflicting_users)
+     
+def _determine_last_employer_in_devstats(user):  
+    if user["affiliation"] == "?":
+        return  
+    last_employer = user["affiliation"].rsplit(',', 1)[-1].strip()
+    if last_employer == "Red Hat":
+        last_employer = "RedHat"
+    return last_employer
+
 
 def find_time_unregularities_in_issues(issues):
     time_format = "%Y-%m-%d %H:%M:%S"
@@ -178,6 +258,10 @@ def _determine_employer(user, companies):
         if user_company in companies[company]["companies"] or user_mail in companies[company]["mail_addresses"]:
             return company
     print("##### Company could not be identified.")
+
+def _filter_by_frequency(counter, frequency_level):
+    filtered_counter = {x : counter[x] for x in counter if counter[x] >= frequency_level}
+    return pd.DataFrame.from_dict(filtered_counter, orient='index').sort_values(by=counter[1])
 
 ########################## DEPRECATED BELOW ################################
 

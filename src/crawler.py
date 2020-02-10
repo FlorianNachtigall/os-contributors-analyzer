@@ -17,8 +17,8 @@ g = Github(token)
 company_file_suffix = "companies.json"
 pull_file_suffix = "pulls.csv"
 issue_file_suffix = "issues.csv"
-issue_comments_file_suffix = "issues_comments.csv"
-user_file_suffix = "users.csv"
+issue_comments_file_suffix = "issues_comments"
+user_file_suffix = "users"
 
 def crawl(org, repo):
     crawl_pulls(org, repo)
@@ -131,15 +131,15 @@ def crawl_issue_comments(org, repo):
         i = i + 1
         if i % 1000 == 0:
             issue_comments_df = pd.DataFrame(issue_comments, columns=["issue", "user_login", "created_at", "author_association", "comment"])
-            issue_comments_df.to_csv("small_" + str(i) + "_" + org + "_" + repo + "_desc_" + issue_comments_file_suffix, sep='\t')
+            issue_comments_df.to_csv("data/" + org + "_" + repo + "_desc_" + issue_comments_file_suffix + "_cache.csv", sep='\t')
         _respectRateLimit()
 
     issue_comments_df = pd.DataFrame(issue_comments, columns=["issue", "user_login", "created_at", "author_association", "comment"])
-    issue_comments_df.to_csv(org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t')
+    issue_comments_df.to_csv("data/" + org + "_" + repo + "_" + issue_comments_file_suffix + ".csv", sep='\t')
 
 def crawl_issue_authors(issues, org, repo):
     batch_size = 100
-    user_login_file = "users_left.csv"
+    user_login_file = "log-data/users_left.csv"
     user_logins = _get_user_logins(issues)
     _ensure_user_file_exists(user_login_file, user_logins)
     
@@ -151,7 +151,7 @@ def crawl_issue_authors(issues, org, repo):
         
         users = crawl_users(user_logins[:batch_size], org, repo)
         users_df = pd.DataFrame(users, columns=["user_login", "user_company", "user_mail", "user_orgs"])
-        users_df.to_csv(org + "_" + repo + "_" + user_file_suffix + "all_cache", sep='\t', index=False, mode='a', header=False)
+        users_df.to_csv(org + "_" + repo + "_" + user_file_suffix + "_cache.csv", sep='\t', index=False, mode='a', header=False)
 
         with open(user_login_file, 'w') as filehandle:
             json.dump(user_logins[batch_size:], filehandle)
@@ -164,11 +164,11 @@ def crawl_users(user_logins, org, repo):
         try:
             user = g.get_user(user_login_name)
         except GithubException:
-            with open('users_not_found.log', 'a') as f:
+            with open('log-data/users_not_found.log', 'a') as f:
                 f.write(user_login_name)
             continue
         except:
-            with open('failing_users.log', 'a') as f:
+            with open('log-data/failing_users.log', 'a') as f:
                 f.write(user_login_name)
             continue
             
@@ -191,19 +191,14 @@ def get_issues_with_response_time(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_response_time_3", sep='\t', header=1, names=["number", "user_login", "company", "created_at", "commented_at", "response_time", "title", "priority", "kind"])
 
 def get_issue_comments(org, repo):
-    return pd.read_csv("small_28000_" + org + "_" + repo + "_" + issue_comments_file_suffix, sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
-
-def raise_for_duplicates(df):
-    if not df[df.duplicated()].empty:
-        raise Exception("Aborting. Duplicate rows in dataframe. \nSee duplicates:\n" + str(df[df.duplicated()]))
-    return df
+    return pd.read_csv("data/" + org + "_" + repo + "_" + issue_comments_file_suffix + "_cache.csv", sep='\t', header=0, names=["issue", "user_login", "created_at", "author_association", "comment"])
 
 def get_issues_with_comments(org, repo):
     issues = pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "_with_comments", sep='\t', header=None, names=["number", "user_login", "commentator", "author_association", "created_at", "commented_at", "updated_at", "closed_at", "title", "comment", "priority", "kind"])
     return issues
 
 def get_issues(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind"])
+    return pd.read_csv("data/" + org + "_" + repo + "_" + issue_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind"])
 
 def get_issues_with_company(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + issue_file_suffix + "with_employer", sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "title", "priority", "kind", "company"])
@@ -211,24 +206,24 @@ def get_issues_with_company(org, repo):
 def get_pulls(org, repo):
     return pd.read_csv(org + "_" + repo + "_" + pull_file_suffix, sep='\t', header=1, names=["number", "user_login", "created_at", "closed_at", "merged_at", "title"])
 
-def get_users(org, repo):
-    return get_issue_authors(org, repo) # concating not needed as PRs are subset of issues pd.concat([get_pull_authors(org, repo), get_issue_authors(org, repo)]).drop_duplicates().reset_index(drop=True)
-        
-def get_pull_authors(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + user_file_suffix + "all_cache", sep='\t', header=None, names=["user_login", "user_company", "user_mail", "user_orgs"])
-
-def get_pull_authors_with_company(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + user_file_suffix + "_with_company", sep='\t', header=1, names=["user_login", "user_company", "user_mail", "user_orgs", "company"])
-
 def get_issue_authors(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + user_file_suffix + "issues_all_cache", sep='\t', header=None, names=["user_login", "user_company", "user_mail", "user_orgs"])
+    return pd.read_csv("data/" + org + "_" + repo + "_" + user_file_suffix + ".csv", sep='\t', header=None, names=["user_login", "user_company", "user_mail", "user_orgs"])
 
 def get_issue_authors_with_company(org, repo):
-    return pd.read_csv(org + "_" + repo + "_" + user_file_suffix + "_issues_with_company", sep='\t', header=1, names=["user_login", "user_company", "user_mail", "user_orgs", "company"])
+    return pd.read_csv("data/" + org + "_" + repo + "_" + user_file_suffix + "_with_company.csv", sep='\t', header=1, names=["user_login", "user_company", "user_mail", "user_orgs", "company"])
 
 def get_companies(org, repo):
-    with open(org + "_" + repo + "_" + company_file_suffix, 'r') as f:
+    with open("data/" + org + "_" + repo + "_" + company_file_suffix, 'r') as f:
         return json.load(f)
+
+def get_devstats_user():
+    with open("data/CNCF-devstats-users.json", 'r') as f:
+        return json.load(f)
+
+def raise_for_duplicates(df):
+    if not df[df.duplicated()].empty:
+        raise Exception("Aborting. Duplicate rows in dataframe. \nSee duplicates:\n" + str(df[df.duplicated()]))
+    return df
             
 def extract_mail_domain(mail_address):
     if mail_address is None:
@@ -305,7 +300,7 @@ def determine_companies(org, repo):
         companies[k]["merged_pulls"] = []
         companies[k]["closed_pulls"] = []
 
-    with open(org + "_" + repo + "_" + company_file_suffix, 'w') as f:
+    with open("data/" + org + "_" + repo + "_" + company_file_suffix, 'w') as f:
         json.dump(companies, f, sort_keys=True, indent=4)
 
 def _ensure_user_file_exists(user_login_file, user_logins):
