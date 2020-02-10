@@ -120,5 +120,13 @@
         ],
         "merged_pulls": [],
         "regex_identifier": "zte"
+    },
+    "IBM": {
+        "closed_pulls": [],
+        "merged_pulls": []
+    },
+    "Fujitsu": {
+        "closed_pulls": [],
+        "merged_pulls": []
     }
 }
